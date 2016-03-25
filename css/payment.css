@@ -1,0 +1,94 @@
+body {
+  font-family: 'Open Sans', sans-serif;
+}
+
+.payment-left {
+  width: 40%;
+  height: 640px;
+  float: left;
+  background-color: red;
+}
+
+.payment-right {
+  width: 60%;
+  height: 640px;
+  float: right;
+  background-color: blue;
+}
+
+.submit-button {
+  width: 100%;
+  height: 320px;
+  background-color: black;
+  clear: both;
+}
+
+/* payment-card */
+
+.card {
+  width: 326px;
+  height: 460px;
+  border: 3px solid #8d8f8f;
+  border-radius: 5px;
+  box-shadow: 0 5px 3px -3px rgba(0,0,0,0.4);
+  margin: auto;
+  margin-top: 15%;
+  background-color: #fff;
+}
+
+.card-img {
+  margin-bottom: 20px;
+}
+
+.info {
+  float: left;
+  margin-left: 20px;
+  font-size: 12px;
+  color: #8d8f8f;
+}
+
+.price {
+  float: right;
+  margin-right: 40px;
+  font-size: 12px;
+}
+
+.card-info h3 {
+  clear: both;
+  text-align: center;
+  padding-top: 20px;
+  font-size: 16px;
+  font-weight: bold;
+}
+
+.card-info p {
+  width: 280px;
+  height: 60px;
+  margin: auto;
+  font-size: 12px;
+  margin-top: 20px;
+  line-height: 150%;
+}
+
+.card-line {
+  margin: 10px 0px 15px 14px;
+}
+
+.card-icon {
+  margin-left: 40px;
+}
+
+.nametag {
+  float: right;
+  margin: 10px 140px 0 0;
+  line-height: 120%
+}
+
+.nametag .namae {
+  font-size: 14px;
+}
+
+.nametag .shozoku {
+  font-size: 12px;
+  color: #8d8f8f;
+}
