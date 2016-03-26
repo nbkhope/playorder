@@ -2,162 +2,77 @@ body {
   font-family: 'Open Sans', sans-serif;
 }
 
-.front {
+.shop-top {
   width: 100%;
+  height: 845px;
+  background-color: #f5f5f5;
+}
+
+.shop-layer {
+  width: 1100px;
+  height: 845px;
+  margin: auto;
+  background-color: blue;
+}
+
+.shop-bottom {
+  width: 100%;
+  height: 690px;
 }
 
 .shop-title {
-  margin-top: 70px;
+  width: 100%;
+  height: 165px;
+  background-color: red;
 }
-
-/* shop-title */
-.shop-title {
-  margin: 60px 0 30px 0;
-  text-align: center;
-}
-
-.shop-title h1 {
-  font-size: 30px;
-  margin-bottom: 20px;
-}
-
-.shop-location img {
-  margin: 0 1px -3px 0;
-}
-
-.shop-location span {
-  color: #8f8c8c;
-}
-
-.shop-genre img {
-  margin: 0 1px -1px 0;
-}
-
-.shop-genre span {
-  color: #8f8c8c;
-}
-
-.shop-prime {
-  display: block;
-  width: 300px;
-  margin: 0 auto;
-}
-
-.shop-location {
-  width: 150px;
-  float: left;
-}
-
-.shop-genre {
-  width: 150px;
-  float: right;
-}
-
-/* shop-left */
 
 .shop-left {
-  width: 50%;
+  width: 685px;
+  height: 440px;
   float: left;
-  height: 600px;
-}
-
-.shop-left img {
-  margin: 80px 0 50px 70px;
+  background-color: pink;
 }
 
 .shop-right {
-  width: 50%;
+  width: 415px;
+  height: 440px;
   float: right;
-  padding: 80px 0 0 0;
-  height: 520px;
+  background-color: black;
 }
 
-.shop-right h1 {
-  font-size: 72px;
-  margin: 30px 0px 20px 190px;
-}
-
-.shop-right p {
-  font-size: 18px;
-  margin: 0 0 20px 200px;
-  color: #8d8f8f;
-}
-
-.shop-owner-text {
-  width: 60%;
-  float: left;
-}
-
-.shop-owner-image {
-  width: 40%;
-  float: right;
-}
-
-.shop-owner-text h3 {
-  font-size: 24px;
-  margin: 60px 0 10px 200px;
-}
-
-.shop-owner-text p {
-  font-size: 16px;
-  margin: 0 0 10px 200px;
-}
-
-.shop-owner-social {
-  float: left;
-  margin: 0 0 0 200px;
-}
-
-.shop-owner-social li {
-  display: inline-block;
-}
-
-.shop-owner-text a {
-  font-size: 12px;
-  margin: 0 0 0 10px;
-}
-
-.shop-owner-image {
-  margin: -65px -24px 0px 25px;
-}
-
-.shop-qupte {
+.shop-right-top {
   width: 100%;
-  text-align: center;
+  height: 340px;
+  background-color: green;
 }
 
-.shop-quote h2 {
-  font-size: 28px;
-  line-height: 140%;
-  text-align: center;
+.shop-right-bottom {
+  width: 100%;
+  height: 100px;
+  background-color: yellow;
 }
 
-.shop-share {
+.shop-owner-info {
+  width: 415px;
+  height: 100%;
+  float: left;
+  background-color: grey;
+}
+
+.shop-owner-description {
+  float: left;
+}
+
+.shop-owner-icon {
   width: 200px;
+  height: 100%;
+  float: right;
+  background-color: skyblue;
 }
 
-.shop-share {
-	list-style-type: none;
-	padding-left: 0;
-  width: 600px;
-  margin: auto;
-  padding: 30px 0 0 0;
-  overflow: hidden;
-}
-.shop-share li {
-  float: left;
-  margin: 5px 5px 60px 5px;
-}
-
-.shop-nav {
-  float: left;
+.shop-top-bottom {
   width: 100%;
-  margin: 30px 0 60px 85px;
-  display:block;
-}
-
-.shop-nav li {
-  display: inline-block;
-  font-size: 18px;
-  margin: 0 0 0 35px;
+  height: 240px;
+  background-color: orange;
+  float: left;
 }

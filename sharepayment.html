@@ -1,9 +1,9 @@
 <html>
   <head>
-    <title>Playorder - view</title>
+    <title>Playorder - sharepayment</title>
     <link rel="stylesheet" type="text/css" href="./css/reset.css">
     <link rel="stylesheet" type="text/css" href="./css/header.css">
-    <link rel="stylesheet" type="text/css" href="./css/view.css">
+    <link rel="stylesheet" type="text/css" href="./css/sharepayment.css">
     <link rel="stylesheet" type="text/css" href="./css/footer.css">
   </head>
   <body>
@@ -44,23 +44,11 @@
     </header>
 
     <div class='layer'>
-      <section class='view-profile'>
-        <h2>Shun Yamada</h2>
-        <p><img src='./img/view/view-location.png' /><span>San Francisco</span></p>
-        <p><img class='view-icon' src='./img/view/view-icon.png' /></p>
-        <!--
-          Using Modernizr.js for smartphone.
-          http://modernizr.com
-        -->
-        <div class="general-button">
-          <div class="button-content">
-            <span class="button-text">CONTACT</span>
-          </div>
-        </div>
-      </section>
+      <h1>Playorder Information</h1>
 
-      <section class='view-playshop'>
+      <section class='sharepayment-playshop'>
         <h2>Playshop</h2>
+        <p>Your friend and family has picked up this playshop as a gift this time.</p>
         <div class='card'>
           <div class='card-img'>
             <img src='./img/payment/payment-main.png' />
@@ -78,6 +66,65 @@
               <span class='namae'>Yuuki Asano</span><br>
               <span class='shozoku'>Realm</span>
             </div>
+          </div>
+        </div>
+      </section>
+
+      <section class='sharepayment-payorderer'>
+        <h2>Playorderer</h2>
+        <div class='share-name-box'>
+          <img src='./img/sharepayment/sharepayment-icon.png' />
+          <div class='share-namaetag'>
+            <span class='share-namae'>Shun Yamada</span><br>
+            <span class='share-shozoku'>Playorder</span>
+        </div>
+      </div>
+
+      <div class="share-balloon">
+        Hey, whats up guys! I am Shun, freerider. So, let&#39;s get started celebration to your friends.
+      <div class="share-triangle"></div>
+      </div>
+      </section>
+
+      <section class='sharepayment-payment'>
+        <h2>Payment</h2>
+        <p>You can choose price payment easily</p>
+        <ul class='sharepayment-form'>
+          <li>
+            <input id='money' type='text' name='share-name' placeholder='$' size='40' />
+          </li>
+          <ul class='sharepayment-form-1'>
+            <li>
+              <input id='cardnumber' type='text' name='share-cardnumber' placeholder='CARD NUMBER' size='40' />
+            </li>
+            <li>
+              <input id='csv' type='text' name='share-csv' placeholder='CSV' size='15' />
+            </li>
+          </ul>
+          <ul class='sharepayment-form-2'>
+            <li>
+              <input id='month' type='text' name='share-month' placeholder='MONTH' size='15' />
+            </li>
+            <li>
+              <input id='year' type='text' name='share-year' placeholder='YEAR' size='15' />
+            </li>
+            <li>
+              <input id='zcode' type='text' name='share-zcode' placeholder='ZIPCODE' size='15' />
+            </li>
+          </ul>
+        </ul>
+      </section>
+
+      <section class='sharepayment-amount'>
+        <h2>Amount</h2>
+        <p>Amount money will show here.</p>
+        <span>$560</span>
+      </section>
+
+      <section class='sharepayment-button'>
+        <div class="general-button">
+          <div class="button-content">
+            <span class="button-text">SUBMIT</span>
           </div>
         </div>
       </section>
