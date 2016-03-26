@@ -1,0 +1,47 @@
+body {
+  font-family: 'Open Sans', sans-serif;
+}
+
+.container {
+  float: left;
+  width: 100%;
+  margin-top: 30px;
+  display:block;
+}
+
+.container li {
+  display: inline-block;
+  font-size: 14px;
+  margin: 0 25px 50px 0;
+}
+
+.layer {
+  width: 960px;
+  margin: auto;
+}
+
+.profile {
+  height: 960px;
+  width: 340px;
+  display: block;
+}
+
+.profile-img {
+  float: left;
+}
+
+.profile-text {
+  float: right;
+  margin: 20px 110px 0 0;
+  line-height: 120%;
+}
+
+.namae {
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.shozoku {
+  font-size: 12px;
+  color: #8d8f8f;
+}
