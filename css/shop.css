@@ -12,7 +12,7 @@ body {
   width: 1100px;
   height: 845px;
   margin: auto;
-  background-color: blue;
+
 }
 
 .shop-bottom {
@@ -23,40 +23,41 @@ body {
 .shop-title {
   width: 100%;
   height: 165px;
-  background-color: red;
+
 }
 
 .shop-left {
   width: 685px;
   height: 440px;
   float: left;
-  background-color: pink;
+
 }
 
 .shop-right {
   width: 415px;
   height: 440px;
   float: right;
-  background-color: black;
+
 }
 
 .shop-right-top {
   width: 100%;
   height: 340px;
-  background-color: green;
+
 }
+
 
 .shop-right-bottom {
   width: 100%;
   height: 100px;
-  background-color: yellow;
+
 }
 
 .shop-owner-info {
   width: 415px;
   height: 100%;
   float: left;
-  background-color: grey;
+
 }
 
 .shop-owner-description {
@@ -67,12 +68,84 @@ body {
   width: 200px;
   height: 100%;
   float: right;
-  background-color: skyblue;
+
 }
 
 .shop-top-bottom {
   width: 100%;
   height: 240px;
-  background-color: orange;
   float: left;
+
+}
+
+h2 {
+  font-size: 28px;
+  font-weight: bold;
+  text-align: center;
+  padding: 50px 0 25px 0;
+  line-height: 150%;
+}
+
+/* shop-title */
+.shop-titile {
+  padding: auto;
+}
+
+.shop-title-list {
+  text-align: center;
+}
+
+.shop-title-list li {
+  display: inline;
+  margin: auto;
+  color: #8d8f8f;
+  margin: 0 10px 0 10px;
+}
+
+.shop-title-list li span {
+  margin-left: 10px;
+}
+
+/* shop-left */
+.shop-right-top h1 {
+  font-size: 64px;
+  font-weight: bold;
+  padding: 40px 0 15px 0;
+}
+
+.shop-right-top p {
+  font-size: 22px;
+  color: #8d8f8f;
+}
+
+.shop-owner-description {
+  padding-top: 10px;
+}
+
+h3 {
+  font-size: 26px;
+  margin-bottom: 5px;
+}
+
+.shop-owner-description p {
+  margin-bottom: 5px;
+}
+
+.shop-social-icon li {
+  display: inline;
+}
+
+.shop-main-owner-img {
+  margin-top: 10px;
+}
+
+.shop-share-button {
+  text-align: center;
+}
+
+.shop-share-button li {
+  display: inline;
+  margin: 10 10 10 10;
+  font-size: 14px;
+  color: #8d8f8f;
 }
