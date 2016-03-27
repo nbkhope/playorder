@@ -15,21 +15,21 @@ body {
 .global-nav {
   width: 100%;
   height: 100px;
-  background-color: blue;
 }
 
 .index-roll {
   width: 100%;
   height: 1000px;
-  background-color: green;
+  float: left;
 }
 
 .hiw {
   width: 100%;
   height: 455px;
-  background-color: yellow;
+  float: left;
 }
 
+/* slider */
 .slider {
   bottom: 0;
 }
@@ -38,11 +38,149 @@ body {
   color: #fff;
   font-size: 42px;
   font-weight: bold;
+  margin-bottom: 10px;
 }
 
 .slider p {
   width: 700px;
   color: #fff;
   font-size: 18px;
-  line-height: 120%;
+  line-height: 140%;
+}
+
+.slider-left {
+  float: left;
+  margin: 400px 0 0 36px;
+}
+
+.slider-right {
+  float: right;
+  margin: 440px 35px 0 0;
+}
+
+.slider-right span {
+  font-size: 34px;
+  color: #fff;
+  border: 4px solid;
+  border-radius: 4px;
+  border-color: #fff;
+  padding: 10px 18px 10px 18px;
+}
+
+/* global-nav */
+.global-nav {
+  float: left;
+  width: 840px;
+  text-align: center;
+  display: block;
+}
+
+.global-nav li {
+  display: inline-block;
+  font-size: 16px;
+  margin-top: 30px;
+  padding: 0 20px 0 20px;
+}
+
+/* card */
+
+.ca-all-contents-list {
+  margin-left: 8.5%;
+}
+
+.card {
+  border: 3px solid #8d8f8f;
+  border-radius: 5px;
+  box-shadow: 0 5px 3px -3px rgba(0,0,0,0.4);
+  background-color: #fff;
+  width: 305px;
+  height: 440px;
+  float: left;
+  margin: 0px 0px 20px 30px;
+  padding: 0 10px 15px 10px;
+}
+
+.card-img {
+  margin: 0 0px 20px -10px;
+}
+
+.info {
+  float: left;
+  margin-left: 10px;
+  font-size: 12px;
+  color: #8d8f8f;
+}
+
+.price {
+  float: right;
+  margin-right: 10px;
+  font-size: 12px;
+}
+
+.card-info h3 {
+  clear: both;
+  text-align: center;
+  padding-top: 10px;
+  font-size: 16px;
+  font-weight: bold;
+}
+
+.card-info p {
+  width: 200px;
+  height: 40px;
+  margin: auto;
+  font-size: 10px;
+  margin-top: 15px;
+  line-height: 150%;
+}
+
+.card-line {
+  margin: 40px 0px 15px 14px;
+}
+
+.card-icon {
+  margin-left:20px;
+}
+
+.nametag {
+  float: right;
+  margin: 5px 40px 0 0;
+  line-height: 120%
+}
+
+.nametag .namae {
+  font-size: 14px;
+}
+
+.nametag .shozoku {
+  font-size: 12px;
+  color: #8d8f8f;
+}
+
+/* how it works */
+.hiw {
+  width: 100%;
+  background-color: #f5f5f5;
+}
+
+.how-it-works {
+  text-align: center;
+  margin-top: 80px;
+}
+
+.how-it-works li {
+  display: inline-block;
+  margin: 0 100px 20px 0;
+}
+
+.how-it-works li h2 {
+  color: #ed65c8;
+  font-size: 24px;
+  margin: 34px 0 0 0;
+}
+
+.how-it-works li p {
+  color: #8d8f8f;
+  font-size: 14px;
+  margin: 10 10 10 10;
 }
