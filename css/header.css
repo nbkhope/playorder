@@ -36,3 +36,11 @@ header {
     float: right;
     margin: 30px -95px 0px 10px;
 }
+.header-menu span {
+  background: #ED65C8;
+  height: 5px;
+  display: block;
+  position: absolute;
+  width: 50px;
+  left: 0;
+}
