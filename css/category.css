@@ -89,6 +89,10 @@ body {
   display: block;
 }
 
+.nav-index li {
+  cursor: pointer;
+}
+
 .ca-nav li {
   display: inline-block;
   font-size: 16px;

@@ -142,6 +142,15 @@ textarea {
   margin-top: 18%;
 }
 
+.nav-category {
+  cursor: pointer;
+}
+
+/* jQuery */
+.hide {
+  display: none;
+}
+
 /* button */
 @font-face {
   font-family: "LigatureSymbols";

@@ -3,6 +3,7 @@ header {
   width: 100%;
   height: 80px;
   background-color: #ffffff;
+  border-bottom: 1px solid #8d8f8f;
 }
 
 .header-logo {
@@ -37,10 +38,6 @@ header {
   margin: 10 10 10 10;
 }
 
-.header-arrow {
-    float: right;
-    margin: 30px -95px 0px 10px;
-}
 .header-menu span {
   background: #ED65C8;
   height: 5px;
@@ -50,6 +47,31 @@ header {
   left: 0;
 }
 
-.header-profile {
+.header-account {
+  background-color: red;
+}
+
+#menubar div {
   float: right;
+  width: 180px;
+  margin: 10 10 10 10;
+}
+
+.menu-arrow {
+  float: right;
+  margin: 10 10 10 10;
+}
+
+.header-tub {
+  float: left;
+  margin: 10 10 10 10;
+}
+
+#menubar span {
+  cursor: pointer;
+}
+
+#menubar ul {
+  display: none;
+  position: absolute;
 }

@@ -5,6 +5,20 @@
     <link rel="stylesheet" type="text/css" href="./css/header.css">
     <link rel="stylesheet" type="text/css" href="./css/category.css">
     <link rel="stylesheet" type="text/css" href="./css/footer.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <script>
+    /* nav-toggle */
+
+    $(function(){
+      $(".nav-index li").on("click" , function(){
+        var num = $(".nav-index li").index(this);
+        $(".contents").fadeOut();
+        $(".contents").eq(num).fadeIn();
+        $(".nav-index li").removeClass('select');
+        $(".nav-index li").eq(num).addClass('select');
+      });
+    });
+  </script>
   </head>
   <body>
     <header>
@@ -73,14 +87,14 @@
         </section>
 
         <nav class='ca-nav'>
-          <ul>
-            <li>POPULAR</li>
-            <li>PRICE</li>
-            <li>ARRIVING</li>
+          <ul class='nav-index'>
+            <li class='select'><a class='nav-category'>POPULAR</li>
+            <li><a class='nav-category'>PRICE</li>
+            <li><a class='nav-category'>ARRIVING</li>
           </ul>
         </nav>
 
-        <section class='ca-contents-list'>
+        <section class='ca-contents-list contents'>
           <ul class='ca-all-contents-list'>
             <li>
               <div class='card'>
@@ -229,11 +243,11 @@
       </ul>
       <img class='footer-line' src='./img/footer/footer-line.png' />
       <ul class='general'>
-        <li>HOME</li>
-        <li>ABOUT</li>
-        <li>CONTACT</li>
-        <li>PLIBACY POLICY</li>
-        <li>TERMS</li>
+        <li><a href='./index.html'>HOME</a></li>
+        <li><a href='./about.html'>ABOUT</a></li>
+        <li><a href='#'>CONTACT</a></li>
+        <li><a href='#'>PLIBACY POLICY</a></li>
+        <li><a href='#'>TERMS</a></li>
       </ul>
       <p class='copyright'>Copyright Playorder Inc, 2016 All Rights Reserved</p>
     </footer>

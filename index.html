@@ -9,24 +9,49 @@
     <!-- Bootstrap -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
     <script>
-      $(document).ready(function() {
-        console.log( "ready!" );
-        $('.nav-category').click(function (e) {
-          //$('#wear-category').hide(50, function(){
-            //$('#eat-category').show(300);
-          //});
-          $('#wear-category').animate({
-            opacity: 0
-          }, 200, function(){
-            $('#wear-category').css('display', 'none');
-            $('#eat-category').css('display', 'block');
-            $('#eat-category').animate({
-              opacity: 1
-            }, 300);
-          });
-        })
+    /* pulldown-menu */
+    $(function () {
+      $('#menubar span').click(function() {
+        if ($(this).attr('class') == 'selected') {
+          // メニュー非表示
+          $(this).removeClass('selected').next('#menubar sul').slideUp('fast');
+        } else {
+          // 表示しているメニューを閉じる
+          $('#menubar span').removeClass('selected');
+          $('#menubar ul').hide();
+
+          // メニュー表示
+          $(this).addClass('selected').next('#menubar ul').slideDown('fast');
+        }
       });
-    </script>
+
+      // マウスカーソルがメニュー上/メニュー外
+      $('#menubar span, #menubar ul').hover(function(){
+        over_flg = true;
+      }, function(){
+        over_flg = false;
+      });
+
+      // メニュー領域外をクリックしたらメニューを閉じる
+      $('body').click(function() {
+        if (over_flg == false) {
+          $('#menubar span').removeClass('selected');
+          $('#menubar ul').slideUp('fast');
+        }
+      });
+    });
+
+    /* nav-toggle */
+    $(function(){
+      $(".nav-index li").on("click" , function(){
+        var num = $(".nav-index li").index(this);
+        $(".contents").fadeOut();
+        $(".contents").eq(num).fadeIn();
+        $(".nav-index li").removeClass('select');
+        $(".nav-index li").eq(num).addClass('select');
+      });
+    });
+  </script>
   </head>
   <body>
     <header>
@@ -49,20 +74,19 @@
         </nav>
       </div>
 
-      <div class='header-profile'>
-        <a><img class='header-icon' src='./img/header/header-icon.png' /></a>
-        <a><span class="glyphicon glyphicon-chevron-down color-grey" aria-hidden="true"></span></a>
-      </div>
-
-      <div hidden>
-        <ul>
-          <li>Profile</li>
-          <li>Activity</li>
-          <li>Message</li>
-          <li>PlayShop</li>
-          <li>Settings</li>
-          <li>Sign Out</li>
-        </ul>
+      <div id='menubar'>
+        <div>
+          <span a href='./account.html'><img class='header-icon' src='./img/header/header-icon.png' /></a></span>
+          <span><img class='menu-arrow' class='header-arrow' src='./img/header/header-arrow.png' /></span>
+          <ul class='header-tub'>
+            <li a href='./account.html'>Profile</a></li>
+            <li a href='./account.html'>Activity</a></li>
+            <li a href='./account.html'>Message</a></li>
+            <li a href='./account.html'>PlayShop</a></li>
+            <li a href='./setting.html'>Settings</a></li>
+            <li a href='#'>Sign Out</a></li>
+          </ul>
+        </div>
       </div>
     </header>
     <section class='slider'>
@@ -77,7 +101,7 @@
 
     <nav class='global-nav'>
       <ul class='nav-index'>
-        <li><a class='nav-category'>WEAR</a></li>
+        <li class='select'><a class='nav-category'>WEAR</a></li>
         <li><a class='nav-category'>EAT</a></li>
         <li><a class='nav-category'>TOUCH</a></li>
         <li><a class='nav-category'>DISPLAY</a></li>
@@ -88,7 +112,7 @@
 
     <section class='index-roll'>
       <!-- Wear category -->
-      <ul class='ca-all-contents-list' id='wear-category'>
+      <ul class='contents'>
         <li>
           <div class='card'>
             <div class='card-img'>
@@ -223,7 +247,7 @@
       </ul>
 
       <!-- Eat category -->
-      <ul class='ca-all-contents-list' id='eat-category'>
+      <ul class='contents hide' id='eat-category'>
         <li>
           <div class='card'>
             <div class='card-img'>

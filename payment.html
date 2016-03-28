@@ -5,6 +5,20 @@
     <link rel="stylesheet" type="text/css" href="./css/header.css">
     <link rel="stylesheet" type="text/css" href="./css/payment.css">
     <link rel="stylesheet" type="text/css" href="./css/footer.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <script>
+    /* nav-toggle */
+    $(function(){
+      $(".nav-index li").on("click" , function(){
+        var num = $(".nav-index li").index(this);
+        $(".contents").fadeOut();
+        $(".contents").eq(num).fadeIn();
+        $(".nav-index li").removeClass('select');
+        $(".nav-index li").eq(num).addClass('select');
+      });
+    });
+    </script>
+
   </head>
   <body>
     <header>
@@ -68,16 +82,16 @@
 
     <section class='payment-right'>
       <nav class='payment-nav'>
-        <ul>
-          <li>RECIPANT</li>
-          <li>WRITE A NOTE</li>
-          <li>SHARE ORDER</li>
+        <ul class='nav-index'>
+          <li class='select'><a class='nav-category'>RECIPANT</a></li>
+          <li><a class='nav-category'>WRITE A NOTE</a></li>
+          <li><a class='nav-category'>SHARE ORDER</a></li>
         </ul>
       </nav>
       <!-- recipant-form -->
-      <div hidden class='recipant-form'>
+      <div class='recipant-form contents'>
         <form>
-            <input type="text" class="hoge" placeholder="playhop ttitle" />
+            <input type="text" class="hoge" placeholder="playhop title" />
         </form>
         <form>
             <input type="text" class="hoge" placeholder="firstname" />
@@ -97,7 +111,7 @@
       </div>
 
       <!-- writeanote-form -->
-      <div hidden class='recipant-form'>
+      <div class='recipant-form contents hide'>
         <ul>
           <li>
             <input type="text" class="hoge" placeholder="TO" />
@@ -115,7 +129,7 @@
       </div>
 
       <!-- share-order -->
-      <div class='recipant-form'>
+      <div class='recipant-form contents hide'>
         <textarea name='email' wor="5" cols="60">Please insert email or account</textarea>
       </div>
 

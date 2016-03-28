@@ -23,13 +23,16 @@ footer {
 .general {
   text-align: center;
   padding: 30px 0 30px 0;
-  color: #fff;
   font-size: 14px;
 }
 
 .general li {
   display: inline-block;
   margin: 0 10px 0 10px;
+}
+
+.general li a {
+  color: #fff;
 }
 
 .copyright {

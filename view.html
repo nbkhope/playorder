@@ -5,6 +5,7 @@
     <link rel="stylesheet" type="text/css" href="./css/header.css">
     <link rel="stylesheet" type="text/css" href="./css/view.css">
     <link rel="stylesheet" type="text/css" href="./css/footer.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
   </head>
   <body>
     <header>
@@ -53,7 +54,7 @@
           Using Modernizr.js for smartphone.
           http://modernizr.com
         -->
-        <div class="general-button">
+        <div class="general-button button-link" id="modal-open">
           <div class="button-content">
             <span class="button-text">CONTACT</span>
           </div>
@@ -85,6 +86,42 @@
         </a>
       </section>
     </div>
+
+    <!-- modal-window -->
+    <div id="modal-content">
+    	<p>Message from Shun Yamada</p>
+    	<p><a id="modal-close" class="button-link">Closed</a></p>
+    </div>
+    <div id="modal-overlay"></div>
+
+    <script>
+    $(function(){
+      $("#modal-open").click(
+      	function(){
+      		//[id:modal-open]をクリックしたら起こる処理
+          $(this).blur() ;	//ボタンからフォーカスを外す
+          if($("#modal-overlay")[0]) return false ;		//新しくモーダルウィンドウを起動しない [下とどちらか選択]
+          //if($("#modal-overlay")[0]) $("#modal-overlay").remove() ;		//現在のモーダルウィンドウを削除して新しく起動する [上とどちらか選択]
+
+          //オーバーレイ用のHTMLコードを、[body]内の最後に生成する
+          $("body").append('<div id="modal-overlay"></div>');
+
+          //[$modal-overlay]をフェードインさせる
+          $("#modal-overlay").fadeIn("slow");
+          //[$modal-content]をフェードインさせる
+          $("#modal-content").fadeIn("slow");
+          //センタリングをする関数
+          function centeringModalSyncer();
+          $("#modal-overlay, #modal-close").unbind().click(function(){
+            //[#modal-overlay]と[#modal-close]をフェードアウトする
+            $("#modal-content, #modal-overlay").fadeOut("slow",function(){
+            	//フェードアウト後、[#modal-overlay]をHTML(DOM)上から削除
+            	$("#modal-overlay").remove();
+            });
+          });
+      	});
+    });
+    </script>
 
     <footer>
       <ul class='social-icon'>
