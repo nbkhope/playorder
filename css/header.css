@@ -32,6 +32,11 @@ header {
     margin: 10px 55px 0px 4px;
 }
 
+.color-grey {
+  color: #8d8f8f;
+  margin: 10 10 10 10;
+}
+
 .header-arrow {
     float: right;
     margin: 30px -95px 0px 10px;
@@ -43,4 +48,8 @@ header {
   position: absolute;
   width: 50px;
   left: 0;
+}
+
+.header-profile {
+  float: right;
 }
