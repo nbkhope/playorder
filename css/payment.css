@@ -1,5 +1,7 @@
 body {
   font-family: 'Open Sans', sans-serif;
+  min-width: 1100px;
+  max-width: 1366px;
 }
 
 .payment-left {
@@ -90,8 +92,6 @@ body {
   color: #8d8f8f;
 }
 
-/* payment-form */
-
 .payment-nav {
   float: left;
   width: 100%;
@@ -105,21 +105,37 @@ body {
   padding: 0 20px 0 20px;
 }
 
-input {
+/* payment-form */
+
+.payment-right input {
   padding:10px;
   font-size:12px;
   font-family:Arial, sans-serif;
   color:#aaa;
-  border:solid 1px #ccc;
+  border:solid 1px #f26ecf;
   border-radius: 5px;
   margin:0 0 20px;
-  width:300px;
+  width:400px;
   -moz-box-shadow: inset 1px 4px 9px -6px rgba(0,0,0,0.5);
   -webkit-box-shadow: inset 1px 4px 9px -6px rgba(0, 0, 0, 0.5);
   box-shadow: inset 1px 4px 9px -6px rgba(0,0,0,0.5);
 }
 
-.payment-form {
+textarea {
+  padding:10px;
+  font-size:12px;
+  font-family:Arial, sans-serif;
+  color:#aaa;
+  border:solid 1px #f26ecf;
+  border-radius: 5px;
+  margin:0 0 20px;
+  width:400px;
+  -moz-box-shadow: inset 1px 4px 9px -6px rgba(0,0,0,0.5);
+  -webkit-box-shadow: inset 1px 4px 9px -6px rgba(0, 0, 0, 0.5);
+  box-shadow: inset 1px 4px 9px -6px rgba(0,0,0,0.5);
+}
+
+.recipant-form {
   margin: 0 0 0 22px;
   width: 640px;
   height: 460px;

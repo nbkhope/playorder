@@ -1,6 +1,6 @@
 <html>
   <head>
-    <title>PlayOrder - payment</title>
+    <title>Playorder - payment</title>
     <link rel="stylesheet" type="text/css" href="./css/reset.css">
     <link rel="stylesheet" type="text/css" href="./css/header.css">
     <link rel="stylesheet" type="text/css" href="./css/payment.css">
@@ -9,12 +9,13 @@
   <body>
     <header>
       <div class='header-logo'>
-        <a><img class='header-logo' src='./img/header/header-logo.png' /></a>
+        <a href='./index.html'><img class='header-logo' src='./img/header/header-logo.png' /></a>
       </div>
       <nav class='header-menu'>
         <ul>
-          <li><a>Discovery</a></li>
-          <li><a>About</a></li>
+          <li><a href='./category.html'>Discovery</a></li>
+          <li><a href='./start.html'>Startup</a></li>
+          <li><a href='./about.html'>About</a></li>
         </ul>
       </nav>
       <input class='header-search' type="search">
@@ -73,7 +74,8 @@
           <li>SHARE ORDER</li>
         </ul>
       </nav>
-      <div class='payment-form'>
+      <!-- recipant-form -->
+      <div hidden class='recipant-form'>
         <form>
             <input type="text" class="hoge" placeholder="playhop ttitle" />
         </form>
@@ -93,6 +95,30 @@
             <input type="text" class="hoge" placeholder="zip code" />
         </form>
       </div>
+
+      <!-- writeanote-form -->
+      <div hidden class='recipant-form'>
+        <ul>
+          <li>
+            <input type="text" class="hoge" placeholder="TO" />
+          </li>
+          <li>
+            <input type="text" class="hoge" placeholder="FROM" />
+          </li>
+        </ul>
+        <form>
+          <textarea name='describe' rows="5" cols="60">Describe your thinking</textarea><br>
+        </form>
+        <form>
+          <textarea name='addcomment' rows="5" cols="60">Comment here</textarea><br>
+        </form>
+      </div>
+
+      <!-- share-order -->
+      <div class='recipant-form'>
+        <textarea name='email' wor="5" cols="60">Please insert email or account</textarea>
+      </div>
+
       </section>
 
     <section class='submit-button'>
@@ -100,11 +126,11 @@
         Using Modernizr.js for smartphone.
         http://modernizr.com
       -->
-      <div class="general-button">
+      <a href='./payment-confirmation.html'<div class="general-button">
         <div class="button-content">
           <span class="button-text">SUBMIT</span>
         </div>
-      </div>
+      </div></a>
     </section>
 
     <footer>

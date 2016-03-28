@@ -1,9 +1,9 @@
 <html>
   <head>
-    <title>PlayOrder</title>
+    <title>Playorder - payment confirmation</title>
     <link rel="stylesheet" type="text/css" href="./css/reset.css">
     <link rel="stylesheet" type="text/css" href="./css/header.css">
-    <link rel="stylesheet" type="text/css" href="./css/account.css">
+    <link rel="stylesheet" type="text/css" href="./css/payment-confirmation.css">
     <link rel="stylesheet" type="text/css" href="./css/footer.css">
   </head>
   <body>
@@ -45,30 +45,37 @@
     </header>
 
     <div class='layer'>
+      <h1>Confirmation</h1>
 
-      <nav class='container'>
-        <ul>
-          <li>PROFILE</li>
-          <li>ACTIVITY</li>
-          <li>MESSAGE</li>
-          <li>PLAYSHOP</li>
-        </ul>
-      </nav>
-      <!-- profile -->
-      <section class='profile' style='display: none;'>
-        <div class='profile-img'>
-          <img src='./img/account/profile-icon-img.png' />
-        </div>
-        <div class='profile-text'>
-          <span class='namae'>Shun Yamada</span><br>
-          <span class='shozoku'>Playshop</span>
-        </div>
-      </section>
+      <article class='confirmation-body'>
+        <section class='confirmation-text'>
+          <div class='confirmation-roll'>
+            <h2>Recipant</h2>
+            <ul class='confirmation-contents'>
+              <li>Kouichi Tanaka</li>
+              <li>Instabed<span class='blank'></span>+81 90 7614 7412</li>
+              <li>755 Ofarrel Street, San Francisco, CA</li>
+            </ul>
+          </div>
 
-      <!-- activity -->
-      <section class='activity' style='display: none;'>
-        <p>March 18th</p>
-        <a href='feed.html'>
+          <div class='confirmation-roll'>
+            <h2>Write a Note</h2>
+            <ul class='confirmation-contents'>
+              <li><span class='grey'>TO: </span>Kouichi<span class='blank'></span><span class='grey'>FROM: </span>Shun</li>
+              <li>Thanks so much everyday, its helpful for us to do.This is present for you with Yuuki.</li>
+              <li><span class='grey-comment'>Shipping: 15th March, and please be surprising</span></li>
+            </ul>
+          </div>
+
+          <div class='confirmation-roll'>
+            <h2>Share Order</h2>
+            <ul class='confirmation-contents'>
+              <li>shunyamady@gmail.com</li>
+            </ul>
+          </div>
+
+        </section>
+        <section class='confirmation-card'>
           <div class='card'>
             <div class='card-img'>
               <img src='./img/payment/payment-main.png' />
@@ -88,37 +95,16 @@
               </div>
             </div>
           </div>
-        </a>
-      </section>
+        </section>
+      </article>
 
-      <!-- message -->
-
-      <!-- playshop -->
-      <section class='playshop'>
-        <p>March 12th</p>
-        <a href='edit.html'>
-          <div class='card'>
-            <div class='card-img'>
-              <img src='./img/account/account-playshop-main.png' />
-            </div>
-            <div class='card-info'>
-              <span class='info'>WEAR</span>
-              <span class='price'>$400</span>
-              <h3>Good Shirts from SHUNYAMADA</h3>
-              <p>Tell us about your needs and we&#39;ll introduce you to several experienced professionals in your area who are ready to complete your project</p>
-            </div>
-            <div class='card-name'>
-              <img class='card-line' src='./img/payment/payment-card-line.png' />
-              <img class='card-icon' src='./img/account/account-playshop-icon.png' />
-              <div class='nametag' style='margin-right: 110px;'>
-                <span class='namae'>Shun Yamada</span><br>
-                <span class='shozoku'>Playorder</span>
-              </div>
-            </div>
+      <section class='confirmation-bottom'>
+        <div class="general-button">
+          <div class="button-content">
+            <span class="button-text">SUBMIT</span>
           </div>
-        </a>
+        </div>
       </section>
-
     </div>
 
     <footer>
