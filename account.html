@@ -1,10 +1,23 @@
 <html>
   <head>
-    <title>PlayOrder</title>
+    <title>Playorder - account</title>
     <link rel="stylesheet" type="text/css" href="./css/reset.css">
     <link rel="stylesheet" type="text/css" href="./css/header.css">
     <link rel="stylesheet" type="text/css" href="./css/account.css">
     <link rel="stylesheet" type="text/css" href="./css/footer.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <script>
+    /* nav-toggle */
+    $(function(){
+      $(".nav-index li").on("click" , function(){
+        var num = $(".nav-index li").index(this);
+        $(".contents").fadeOut();
+        $(".contents").eq(num).fadeIn();
+        $(".nav-index li").removeClass('select');
+        $(".nav-index li").eq(num).addClass('select');
+      });
+    });
+    </script>
   </head>
   <body>
     <header>
@@ -47,15 +60,15 @@
     <div class='layer'>
 
       <nav class='container'>
-        <ul>
-          <li>PROFILE</li>
-          <li>ACTIVITY</li>
-          <li>MESSAGE</li>
-          <li>PLAYSHOP</li>
+        <ul class='nav-index'>
+          <li><a class='nav-category'>PROFILE</a></li>
+          <li><a class='nav-category'>ACTIVITY</a></li>
+          <li><a class='nav-category'>MESSAGE</a></li>
+          <li><a class='nav-category'>PLAYSHOP</a></li>
         </ul>
       </nav>
       <!-- profile -->
-      <section class='profile' style='display: none;'>
+      <section class='profile contents hide'>
         <div class='profile-img'>
           <img src='./img/account/profile-icon-img.png' />
         </div>
@@ -66,7 +79,7 @@
       </section>
 
       <!-- activity -->
-      <section class='activity' style='display: none;'>
+      <section class='activity contents hide'>
         <p>March 18th</p>
         <a href='feed.html'>
           <div class='card'>
@@ -92,9 +105,62 @@
       </section>
 
       <!-- message -->
+      <section class='message contents select'>
+        <div class='inbox-head'>
+          <h4>Inbox</h4>
+        </div>
+        <div class='conversation-head'>
+          <h4>Conversation</h4>
+        </div>
+        <div class='inbox-body'>
+          <div class='inbox-mail'>
+            <img src='./img/account/yuuki-chat.png' />
+            <ul>
+              <li class='namae'>Yuuki<li>
+              <li class='shozoku'>Realm</li>
+            </ul>
+          </div>
+          <div class='inbox-mail'>
+            <img src='./img/account/yukke-chat.png' />
+            <ul>
+              <li class='namae'>Yuuki<li>
+              <li class='shozoku'>Realm</li>
+            </ul>
+          </div>
+        </div>
+        <div class='conversation-body'>
 
+          <div class='shop-one-comment'>
+            <div class='shop-one-comment-left'>
+              <img src='./img/shop/shun-comment.png' /><br><br>
+            </div>
+            <div class='shop-one-comment-right'>
+              <p>Awesome! How many Gpants do you have?</p>
+            </div>
+          </div>
+          <div class='shop-one-comment'>
+            <a href='./view.html'>
+              <div class='shop-one-comment-left'>
+                <img src='./img/shop/yuuki-comment.png' /><br><br>
+              </div>
+           </a>
+            <div class='shop-one-comment-right'>
+              <p>Good question man! Last ... 10!!</p>
+            </div>
+          </div>
+
+          <div class='shop-comment-area'>
+            <textarea name='shop-comment-leave' rows="5" cols="60">Leave a message.</textarea><br>
+          </div>
+          <div class="general-button button-submit">
+            <div class="button-content">
+              <span class="button-text">SUBMIT</span>
+            </div>
+          </div>
+        </div>
+      </section>
       <!-- playshop -->
-      <section class='playshop'>
+      <section class='playshop contents hide'>
         <p>March 12th</p>
         <a href='edit.html'>
           <div class='card'>

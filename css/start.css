@@ -34,6 +34,14 @@ body {
   clear: both;
 }
 
+.hide {
+  display: none;
+}
+
+.nav-index li {
+  cursor: pointer;
+}
+
 /* Start-Prime */
 
 .start-prime h1 {

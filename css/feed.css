@@ -50,6 +50,10 @@ body {
   height: 1450px;
 }
 
+.feed-invite {
+  height: 1000px;
+}
+
 h1 {
   font-size: 44px;
   color: #f26ecf;
@@ -59,6 +63,10 @@ h1 {
 
 h2 {
   font-size: 22px;
+}
+
+.hide {
+  display: none;
 }
 
 /* feed-left */
@@ -191,6 +199,10 @@ h2 {
   color: #8d8f8f;
 }
 
+.nav-index {
+  cursor: pointer;
+}
+
 /* feed-activity */
 .activity-talk {
   width: 100%;
@@ -226,7 +238,7 @@ h2 {
   font-weight: bold;
 }
 
-.shop-comment-area textarea {
+textarea {
   width: 960px;
   height: 140px;
   padding:10px;

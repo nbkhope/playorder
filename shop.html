@@ -5,6 +5,19 @@
     <link rel="stylesheet" type="text/css" href="./css/header.css">
     <link rel="stylesheet" type="text/css" href="./css/shop.css">
     <link rel="stylesheet" type="text/css" href="./css/footer.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <script>
+    /* nav-toggle */
+    $(function(){
+      $(".nav-index li").on("click" , function(){
+        var num = $(".nav-index li").index(this);
+        $(".contents").fadeOut();
+        $(".contents").eq(num).fadeIn();
+        $(".nav-index li").removeClass('select');
+        $(".nav-index li").eq(num).addClass('select');
+      });
+    });
+    </script>
   </head>
   <body>
     <header>
@@ -63,6 +76,17 @@
             <h1>14 days</h1>
             <p>Delivery Guidance<b>&#040;About&#041;</b></p>
           </div>
+
+          <div class='shop-right-middle'>
+            <a href='./payment.html'>
+              <div class="general-button order-button">
+                <div class="button-content">
+                  <span class="button-text">ORDER NOW</span>
+                </div>
+              </div>
+            </a>
+          </div>
+
           <div class='shop-right-bottom'>
             <div class='shop-owner-info'>
               <div class='shop-owner-description'>
@@ -95,15 +119,15 @@
     <article class='global-shop'>
 
       <nav class='shop-nav'>
-        <ul>
+        <ul class='nav-index'>
           <li>STORY</li>
           <li>COMMENT</li>
         </ul>
       </nav>
 
       <!--- story-contents -->
-      <div hidden>
-        <section class='shop-story'>
+      <div>
+        <section class='shop-story contents'>
           <div class='shop-story-contents'>
             <h1>We get started everything with Asano GPants!</h1>
             <p>This is my life</p>
@@ -111,8 +135,8 @@
         </section>
       </div>
 
-      <!--- story-contents -->
-      <section class='shop-comment'>
+      <!--- comment-contents -->
+      <section class='shop-comment contents hide'>
         <div class='shop-one-comment'>
           <div class='shop-one-comment-left'>
             <img src='./img/shop/shun-comment.png' /><br><br>
@@ -136,7 +160,7 @@
         <div class='shop-comment-area'>
           <textarea name='shop-comment-leave' rows="5" cols="60">Leave a message.</textarea><br>
         </div>
-        <div class="general-button">
+        <div class="general-button button-submit">
           <div class="button-content">
             <span class="button-text">SUBMIT</span>
           </div>

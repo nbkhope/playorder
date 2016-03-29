@@ -35,6 +35,10 @@ body {
   background-color: #fff;
 }
 
+.card:hover {
+  opacity: 0.8;
+  cursor: pointer;
+}
 .card-img {
   margin-bottom: 20px;
 }

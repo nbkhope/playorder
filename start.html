@@ -1,10 +1,23 @@
 <html>
   <head>
-    <title>PlayOrder</title>
+    <title>Playorder - start</title>
     <link rel="stylesheet" type="text/css" href="./css/reset.css">
     <link rel="stylesheet" type="text/css" href="./css/header.css">
     <link rel="stylesheet" type="text/css" href="./css/start.css">
     <link rel="stylesheet" type="text/css" href="./css/footer.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <script>
+    /* nav-toggle */
+    $(function(){
+      $(".nav-index li").on("click" , function(){
+        var num = $(".nav-index li").index(this);
+        $(".contents").fadeOut();
+        $(".contents").eq(num).fadeIn();
+        $(".nav-index li").removeClass('select');
+        $(".nav-index li").eq(num).addClass('select');
+      });
+    });
+    </script>
   </head>
   <body>
     <header>
@@ -68,13 +81,13 @@
       </section>
 
       <nav class='container'>
-        <ul>
+        <ul class='nav-index'>
           <li>BASIC</li>
           <li>STORY</li>
         </ul>
       </nav>
       <!-- start-basic -->
-      <div hidden class='start-basic'>
+      <div class='start-basic contents'>
         <h2>Basic</h2>
         <p>Make a good first impression: introduce your playshop objectives and entice people to learn more. This basic information will represent your playshop
 on your playshop page, on your playshop card, and in searches.</p>
@@ -97,7 +110,7 @@ on your playshop page, on your playshop card, and in searches.</p>
             <select id='category' type='text' name='category'>
               <option value='eat'>EAT</option>
               <option value='wear'>WEAR</option>
-            </div>
+            </select>
           </li>
           <li>
             <label for='tags'>Tags</label><br>
@@ -111,7 +124,7 @@ on your playshop page, on your playshop card, and in searches.</p>
       </div>
 
       <!-- start-story -->
-      <section class='start-story'>
+      <section class='start-story contents hide'>
         <h2>Story</h2>
         <p>Make a good first impression: introduce your playshop objectives and entice people to learn more. This basic information will represent your playshop
 on your playshop page, on your playshop card, and in searches.</p>
@@ -146,11 +159,13 @@ on your playshop page, on your playshop card, and in searches.</p>
           Using Modernizr.js for smartphone.
           http://modernizr.com
         -->
-        <div class="general-button">
-          <div class="button-content">
-            <span class="button-text">SUBMIT</span>
+        <a href='./sent.html'>
+          <div class="general-button">
+            <div class="button-content">
+              <span class="button-text">SUBMIT</span>
+            </div>
           </div>
-        </div>
+        </a>
       </section>
     </div>
     <footer>

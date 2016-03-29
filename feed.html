@@ -5,6 +5,20 @@
     <link rel="stylesheet" type="text/css" href="./css/header.css">
     <link rel="stylesheet" type="text/css" href="./css/feed.css">
     <link rel="stylesheet" type="text/css" href="./css/footer.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <script>
+    /* nav-toggle */
+    $(function(){
+      $(".nav-index li").on("click" , function(){
+        var num = $(".nav-index li").index(this);
+        $(".contents").fadeOut();
+        $(".contents").eq(num).fadeIn();
+        $(".nav-index li").removeClass('select');
+        $(".nav-index li").eq(num).addClass('select');
+      });
+    });
+    </script>
+
   </head>
   <body>
     <header>
@@ -110,13 +124,13 @@
         </div>
       </section>
 
-      <section class='feed-activity'>
         <nav class='feed-activity-nav'>
-          <ul>
+          <ul class='nav-index'>
             <li>ACTIVITY</li>
             <li>INVITE</li>
           </ul>
         </nav>
+        <section class='feed-activity contents'>
         <div class='activity-talk'>
           <div class='activity-talk-left'>
             <img src='./img/feed/feed-icon.png' /><br><br>
@@ -128,6 +142,17 @@
         </div>
         <div class='shop-comment-area'>
           <textarea name='shop-comment-leave' rows="5" cols="60">Leave a message.</textarea><br>
+        </div>
+        <div class="general-button">
+          <div class="button-content">
+            <span class="button-text">SUBMIT</span>
+          </div>
+        </div>
+      </section>
+
+      <section class='feed-invite contents hide'>
+        <div class='recipant-form'>
+          <textarea name='email' wor="5" cols="60">Please insert email or account</textarea>
         </div>
         <div class="general-button">
           <div class="button-content">

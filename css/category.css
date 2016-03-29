@@ -112,6 +112,11 @@ body {
 
 }
 
+.card:hover {
+  opacity: 0.8;
+  cursor: pointer;
+}
+
 .card-img {
   margin-bottom: 15px;
 }
