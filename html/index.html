@@ -10,35 +10,12 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
     <script>
     /* pulldown-menu */
-    $(function () {
-      $('#menubar span').click(function() {
-        if ($(this).attr('class') == 'selected') {
-          // メニュー非表示
-          $(this).removeClass('selected').next('#menubar sul').slideUp('fast');
-        } else {
-          // 表示しているメニューを閉じる
-          $('#menubar span').removeClass('selected');
-          $('#menubar ul').hide();
-
-          // メニュー表示
-          $(this).addClass('selected').next('#menubar ul').slideDown('fast');
-        }
-      });
-
-      // マウスカーソルがメニュー上/メニュー外
-      $('#menubar span, #menubar ul').hover(function(){
-        over_flg = true;
-      }, function(){
-        over_flg = false;
-      });
-
-      // メニュー領域外をクリックしたらメニューを閉じる
-      $('body').click(function() {
-        if (over_flg == false) {
-          $('#menubar span').removeClass('selected');
-          $('#menubar ul').slideUp('fast');
-        }
-      });
+    $(function(){
+    	$('.pull-menu ul').hide();
+    	$('.pull-menu ul li').css("display", "table");
+    	$('.btn-menu').click(function(){
+    		$('.pull-menu ul').slideToggle();
+    	});
     });
 
     /* nav-toggle */
@@ -74,20 +51,26 @@
         </nav>
       </div>
 
-      <div id='menubar'>
-        <div>
-          <span a href='./account.html'><img class='header-icon' src='./img/header/header-icon.png' /></a></span>
-          <span><img class='menu-arrow' class='header-arrow' src='./img/header/header-arrow.png' /></span>
-          <ul class='header-tub'>
-            <li a href='./account.html'>Profile</a></li>
-            <li a href='./account.html'>Activity</a></li>
-            <li a href='./account.html'>Message</a></li>
-            <li a href='./account.html'>PlayShop</a></li>
-            <li a href='./setting.html'>Settings</a></li>
-            <li a href='#'>Sign Out</a></li>
-          </ul>
-        </div>
-      </div>
+        <div class='infomation'>
+          <ul>
+            <li>
+              <span a href='./account.html'><img class='header-icon' src='./img/header/header-icon.png' /></a></span>
+            </li>
+            <li>
+              <div class="btn-menu"><img class='menu-arrow' class='header-arrow' src='./img/header/header-arrow.png' /></div>
+              <div class="pull-menu">
+                <ul>
+                  <li><a href='./account.html'>Profile</a></li>
+                  <li><a href='./account.html'>Activity</a></li>
+                  <li><a href='./account.html'>Message</a></li>
+                  <li><a href='./account.html'>PlayShop</a></li>
+                  <li><a href='./setting.html'>Settings</a></li>
+                  <li><a href='#'>Sign Out</a></li>
+                </ul>
+              </div>
+            </div>
+          </li>
+      </ul>
     </header>
     <section class='slider'>
       <div class='slider-left'>
