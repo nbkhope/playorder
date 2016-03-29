@@ -1,0 +1,6 @@
+
+tmp/cache/*
+log/*
+tmp/*
+
+log/development.log
