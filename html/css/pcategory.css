@@ -1,0 +1,66 @@
+/* category */
+
+h2 {
+  margin-bottom: 20px;
+}
+
+.bar li {
+  font-size: 14px;
+  cursor: pointer;
+  line-height: 140%;
+}
+
+.sidebar {
+  width: 200px;
+  height: 1630px;
+  float: left;
+}
+
+.mainbar {
+  width: 900px;
+  height: 1510px;
+  float: right
+}
+
+/* top bar */
+.top-contents {
+  width: 100%;
+  height: 280px;
+  background-image: url('../img/discovery/ca-top.png');
+  background-repeat: no-repeat;
+  background-position: bottom left;
+}
+
+.box li {
+  display: inline-block;
+}
+
+.text-box {
+  margin: 195px 10px 0 15px;
+  padding: 10px 20px 10px 20px;
+  border: 4px solid;
+  border-color: #fff;
+  border-radius: 4px;
+}
+
+/* main bar */
+
+.top-contents p span {
+  color: #eb64c6;
+}
+
+.text-box span {
+  color: #fff;
+  font-size: 27px;
+}
+
+.describe {
+  color: #fff;
+  font-size: 14px;
+}
+
+/* learn more */
+.general-button {
+  top: 80px;
+  left: 40%;
+}

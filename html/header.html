@@ -1,0 +1,164 @@
+<html>
+  <head>
+    <title>playorder - index</title>
+    <link rel="stylesheet" type="text/css" href="./css/reset.css">
+    <link rel="stylesheet" type="text/css" href="./css/main.css">
+    <link rel="stylesheet" type="text/css" href="./css/sindex.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <script>
+    $(function() {
+      $(".panel-btn").click(function(){
+        var clickPanel = $("+.panel",this);
+        clickPanel.toggle();
+        $(".panel").not(clickPanel).slideUp(0);
+        return false;
+      });
+    });
+    </script>
+  </head>
+  <body>
+    <header>
+      <div class='logo'>
+        <a href='./index.html'><img class='header-logo' src='./img/header/logo.png' /></a>
+      </div>
+      <nav class='header-nav'>
+        <ul>
+          <li><a href='./category.html'>Discovery</a></li>
+          <li><a href='./start.html'>Startup</a></li>
+          <li><a href='./about.html'>About</a></li>
+          <li><input type="search" /></li>
+        </ul>
+      </nav>
+      <div class='header-log'>
+        <!-- signin -->
+        <div class='signin'>
+          <div class='header-icon'>
+            <img src='./img/header/header-icon.png'>
+          </div>
+          <div class='header-arrow'>
+            <div class='panel-wrap'>
+
+              <div class='panel-wrap'>
+                <a href='#' class='panel-btn'>
+                  <img src='./img/header/header-arrow.png' />
+                </a>
+                <div class='panel'>
+                  <ul>
+                    <li><a href='./account.html'>Profile</a></li>
+                    <li><a href='./account.html'>Activity</a></li>
+                    <li><a href='./account.html'>Message</a></li>
+                    <li><a href='./account.html'>PlayShop</a></li>
+                    <li><a href='./setting.html'>Settings</a></li>
+                    <li><a href='#'>Sign Out</a></li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- signout -->
+        <div class='signout'>
+        </div>
+      </div>
+    </header>
+  </body>
+
+</html>
+
+<style>
+  a {
+    text-decoration: none;
+    color: #000;
+  }
+  header {
+    width: 100%;
+    height: 70px;
+  }
+  .logo {
+    width: 200px;
+    height: 100%;
+    float: left;
+  }
+  .header-logo {
+    margin: 22px 0 0 14px;
+  }
+  .header-nav {
+    width: 480px;
+    height: 100%;
+    float: left;
+  }
+  .header-log {
+    width: 180px;
+    height: 100%;
+    float: right;
+  }
+  .header-nav {
+    float: left;
+    text-decoration: none;
+    }
+  .header-nav li {
+    display: inline-block;
+    font-size: 16px;
+    margin: 25px 10px 0 20px;
+  }
+  /* signin */
+  .header-icon {
+    width: 80%;
+    height: 100%;
+    float: left;
+  }
+  .header-arrow {
+    width: 20%;
+    height: 100%;
+    float: right;
+  }
+  .header-icon img {
+    float: right;
+    margin: 5px 15px 0 0;
+  }
+  .panel-wrap{
+    position: relative;
+    float: left;
+    padding: 0;
+  }
+  .panel-wrap a{
+    font-size: 14px;
+    text-decoration: none;
+  }
+  a.panel-btn{
+    display: block;
+    position: relative;
+    float: left;
+    z-index: 100;
+    padding: 30px 0px 0 0px;
+    font-size: 14px;
+    text-decoration: none;
+  }
+  .panel {
+    display: none;
+    position: absolute;
+    top: 80px;
+    left: 0px;
+    z-index: 1000;
+    width: 100px;
+    margin-left: -100px;
+    padding: 10px;
+    background: #fff;
+    border: 5px solid #ed28b9;
+    border-radius: 3px;
+    box-shadow: 0 2px 5px 1px #f26ecf;
+    line-height: 170%;
+  }
+  .panel:after,#panel:before {
+    content: "";
+    position: absolute;
+    height: 0;
+    width: 0;
+  }
+  .panel:after {
+    top: -35px;
+    left: 35px;
+    border: 15px solid transparent;
+    border-bottom: 15px solid #ed28b9;
+  }
+</style>

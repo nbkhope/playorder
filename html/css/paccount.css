@@ -1,0 +1,81 @@
+/* account */
+.profile, .activity, .playshop {
+  height: 960px;
+  width: 340px;
+  display: block;
+}
+
+.message {
+  height: 960px;
+  width: 1100px;
+}
+
+.dates {
+  font-size: 16px;
+  color: #8d8f8f;
+  margin-bottom: 30px;
+}
+
+.profile-text {
+  float: right;
+  margin: 20px 110px 0 0;
+  line-height: 130%;
+}
+
+.pronamae {
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.proshozoku {
+  font-size: 12px;
+  color: #8d8f8f;
+}
+
+/* message */
+.message h4 {
+  color: #f26ecf;
+}
+
+.inbox {
+  width: 30%;
+  height: 24px;
+  float: left;
+}
+
+.conversation {
+  width: 70%;
+  height: 24px;
+  float: left;
+}
+
+.inbody {
+  width: 30%;
+  height: 600px;
+  float: left;
+}
+
+.conbody {
+  width: 70%;
+  height: 600px;
+  float: left;
+}
+
+.inmail {
+  width: 90%;
+  height:70px;
+  border-top: 2px solid #8d8f8f;
+  padding-top: 20px;
+  line-height: 140%;
+}
+
+.inmail img {
+  padding-left: 40px;
+}
+
+.inmail ul {
+  float: right;
+  padding: 10px 80px 0 0;
+}
+
+/* playshop */

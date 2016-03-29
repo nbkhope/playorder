@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <title>playorder - index</title>
+    <link rel="stylesheet" type="text/css" href="./css/reset.css">
+    <link rel="stylesheet" type="text/css" href="./css/main.css">
+    <link rel="stylesheet" type="text/css" href="./css/pindex.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <script>
+    /* header pulldown */
+    $(function() {
+      $(".panel-btn").click(function(){
+        var clickPanel = $("+.panel",this);
+        clickPanel.toggle();
+        $(".panel").not(clickPanel).slideUp(0);
+        return false;
+      });
+    });
+    /* nav-toggle */
+    $(function(){
+      $(".nav-index li").on("click" , function(){
+        var num = $(".nav-index li").index(this);
+        $(".contents").fadeOut();
+        $(".contents").eq(num).fadeIn();
+        $(".nav-index li").removeClass('select');
+        $(".nav-index li").eq(num).addClass('select');
+      });
+    });
+    </script>
+  </head>
+  <body>
+    <header>
+      <div class="logo">
+        <a href="./index.html"><img class="header-logo" src="./img/header/logo.png" /></a>
+      </div>
+      <nav class="header-nav">
+        <ul>
+          <li><a href="./category.html">Discovery</a></li>
+          <li><a href="./start.html">Startup</a></li>
+          <li><a href="./about.html">About</a></li>
+          <li><input type="search" /></li>
+        </ul>
+      </nav>
+      <div class="header-log">
+        <!-- signin -->
+        <div class="signin">
+          <div class="header-icon">
+            <img src="./img/header/header-icon.png">
+          </div>
+          <div class="header-arrow">
+            <div class="panel-wrap">
+
+              <div class="panel-wrap">
+                <a href="#" class="panel-btn">
+                  <img src="./img/header/header-arrow.png" />
+                </a>
+                <div class="panel">
+                  <ul>
+                    <li><a href="./account.html">Profile</a></li>
+                    <li><a href="./account.html">Activity</a></li>
+                    <li><a href="./account.html">Message</a></li>
+                    <li><a href="./account.html">PlayShop</a></li>
+                    <li><a href="./setting.html">Settings</a></li>
+                    <li><a href="#">Sign Out</a></li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- signout -->
+        <div class="signout">
+        </div>
+      </div>
+    </header>
+
+    <!-- slider -->
+    <section class="slider">
+      <!-- slider 1 -->
+      <div class="slider-1">
+        <span class="sign">Hot-Air Balloon Ride</span>
+        <span class="explain">There&#39;s nothing quite like floating over the yellow grasses of the Serengeti while lions and zebras frolic just a hundred feet below.</span>
+        <span class="tag">TRAVEL</span>
+      </div>
+      <!-- slider 2 -->
+      <div class="slider-1">
+        <span class="sign">This is Gift with your Dearest</span>
+        <span class="explain">There&#39;s nothing quite like floating over the yellow grasses of the Serengeti while lions and zebras frolic just a hundred feet below.</span>
+        <span class="tag">FEEL</span>
+      </div>
+      <!-- slider 3 -->
+      <div class="slider-1">
+        <span class="sign">Playing Guitar Behind Dewn</span>
+        <span class="explain">There&#39;s nothing quite like floating over the yellow grasses of the Serengeti while lions and zebras frolic just a hundred feet below.</span>
+        <span class="tag">LISTEN</span>
+      </div>
+    </section>
+    <script>
+
+    $('.slider div:gt(0)').hide();
+    setInterval(function() {
+        $('.slider :first-child').fadeOut().next('div').fadeIn().end().appendTo('.slider');
+    }, 4500);
+
+    </script>
+
+    <div class="container-2">
+      <!-- global nav -->
+      <nav class="global-nav">
+        <ul class="nav-index">
+          <li class="select">WEAR</li>
+          <li>EAT</li>
+          <li>TOUCH</li>
+          <li>DISPLAY</li>
+          <li>TRAVEL</li>
+          <li>LISTEN</li>
+        </ul>
+      </nav>
+
+      <!-- card roll -->
+      <section class="card-roll">
+        <!-- wear roll -->
+        <ul class="contents">
+          <li>
+            <div class="card">
+              <img src="./img/index/fkorean-card.png">
+              <div class="info">
+                <span class="genre">WEAR</span>
+                <span class="price">$40</span>
+                <h3>Korean wear mode cute</h3>
+                <p>Tell us about your needs and we&#39;ll introduce you to several experienced professionals in your area who are ready to complete your project</p>
+              </div>
+              <div class="name">
+                <img class="line" src="./img/index/card-line.png" />
+                <img class="icon" src="./img/index/korean-icon.png" />
+                <ul class="namaetag">
+                  <li class="namae">Min Heong Kang</li>
+                  <li class="shozoku">Joys Place Coffee</li>
+                </ul>
+              </div>
+            </div>
+          </li>
+
+          <li>
+            <div class="card">
+              <img src="./img/index/fyukke-card.png">
+              <div class="info">
+                <span class="genre">WEAR</span>
+                <span class="price">$200</span>
+                <h3>Super suits like Iron man</h3>
+                <p>Tell us about your needs and we&#39;ll introduce you to several experienced professionals in your area who are ready to complete your project</p>
+              </div>
+              <div class="name">
+                <img class="line" src="./img/index/card-line.png" />
+                <img class="icon" src="./img/index/yukke-icon.png" />
+                <ul class="namaetag">
+                  <li class="namae">Yuusuke Nakamura</li>
+                  <li class="shozoku">Startup Cast</li>
+                </ul>
+              </div>
+            </div>
+          </li>
+
+          <li>
+            <div class="card">
+              <img src="./img/index/fyuuki-card.png">
+              <div class="info">
+                <span class="genre">WEAR</span>
+                <span class="price">$400</span>
+                <h3>GPants from Yuuki</h3>
+                <p>Tell us about your needs and we&#39;ll introduce you to several experienced professionals in your area who are ready to complete your project</p>
+              </div>
+              <div class="name">
+                <img class="line" src="./img/index/card-line.png" />
+                <img class="icon" src="./img/index/yuuki-icon.png" />
+                <ul class="namaetag">
+                  <li class="namae">Yuuki Asano</li>
+                  <li class="shozoku">Realm</li>
+                </ul>
+              </div>
+            </div>
+          </li>
+
+          <li>
+            <div class="card">
+              <img src="./img/index/fkorean-card.png">
+              <div class="info">
+                <span class="genre">WEAR</span>
+                <span class="price">$40</span>
+                <h3>Korean wear mode cute</h3>
+                <p>Tell us about your needs and we&#39;ll introduce you to several experienced professionals in your area who are ready to complete your project</p>
+              </div>
+              <div class="name">
+                <img class="line" src="./img/index/card-line.png" />
+                <img class="icon" src="./img/index/korean-icon.png" />
+                <ul class="namaetag">
+                  <li class="namae">Min Heong Kang</li>
+                  <li class="shozoku">Joys Place Coffee</li>
+                </ul>
+              </div>
+            </div>
+          </li>
+
+          <li>
+            <div class="card">
+              <img src="./img/index/fyukke-card.png">
+              <div class="info">
+                <span class="genre">WEAR</span>
+                <span class="price">$200</span>
+                <h3>Super suits like Iron man</h3>
+                <p>Tell us about your needs and we&#39;ll introduce you to several experienced professionals in your area who are ready to complete your project</p>
+              </div>
+              <div class="name">
+                <img class="line" src="./img/index/card-line.png" />
+                <img class="icon" src="./img/index/yukke-icon.png" />
+                <ul class="namaetag">
+                  <li class="namae">Yuusuke Nakamura</li>
+                  <li class="shozoku">Startup Cast</li>
+                </ul>
+              </div>
+            </div>
+          </li>
+
+          <li>
+            <div class="card">
+              <img src="./img/index/fyuuki-card.png">
+              <div class="info">
+                <span class="genre">WEAR</span>
+                <span class="price">$400</span>
+                <h3>GPants from Yuuki</h3>
+                <p>Tell us about your needs and we&#39;ll introduce you to several experienced professionals in your area who are ready to complete your project</p>
+              </div>
+              <div class="name">
+                <img class="line" src="./img/index/card-line.png" />
+                <img class="icon" src="./img/index/yuuki-icon.png" />
+                <ul class="namaetag">
+                  <li class="namae">Yuuki Asano</li>
+                  <li class="shozoku">Realm</li>
+                </ul>
+              </div>
+            </li>
+
+            <li>
+              <div class="card">
+                <img src="./img/index/fyukke-card.png">
+                <div class="info">
+                  <span class="genre">WEAR</span>
+                  <span class="price">$200</span>
+                  <h3>Super suits like Iron man</h3>
+                  <p>Tell us about your needs and we&#39;ll introduce you to several experienced professionals in your area who are ready to complete your project</p>
+                </div>
+                <div class="name">
+                  <img class="line" src="./img/index/card-line.png" />
+                  <img class="icon" src="./img/index/yukke-icon.png" />
+                  <ul class="namaetag">
+                    <li class="namae">Yuusuke Nakamura</li>
+                    <li class="shozoku">Startup Cast</li>
+                  </ul>
+                </div>
+              </div>
+            </li>
+
+            <li>
+              <div class="card">
+                <img src="./img/index/fyuuki-card.png">
+                <div class="info">
+                  <span class="genre">WEAR</span>
+                  <span class="price">$400</span>
+                  <h3>GPants from Yuuki</h3>
+                  <p>Tell us about your needs and we&#39;ll introduce you to several experienced professionals in your area who are ready to complete your project</p>
+                </div>
+                <div class="name">
+                  <img class="line" src="./img/index/card-line.png" />
+                  <img class="icon" src="./img/index/yuuki-icon.png" />
+                  <ul class="namaetag">
+                    <li class="namae">Yuuki Asano</li>
+                    <li class="shozoku">Realm</li>
+                  </ul>
+                </div>
+              </div>
+            </li>
+          </div>
+        </ul>
+      </section>
+      <!-- how it works -->
+      <section class="hiw">
+        <ul class='how-it-works'>
+          <li>
+            <img src='./img/index/hiw-1.png' />
+            <h2>1. Pick a Gift</h2>
+            <p>Choose around huge Payorder plattform</p>
+          </li>
+          <li>
+            <img src='./img/index/hiw-2.png' />
+            <h2>2. Share Payment</h2>
+            <p>Let&#39;s share payment with your friends</p>
+          </li>
+          <li>
+            <img src='./img/index/hiw-3.png' />
+            <h2>3. Deliver Amazingly</h2>
+            <p>Enjoy this amazing experience</p>
+          </li>
+
+        </ul>
+      </section>
+
+      <footer>
+        <ul class='social-icon'>
+          <li><a href='#'><img src='./img/footer/facebook.png' /></a></li>
+          <li><a href='#'><img src='./img/footer/twitter.png' /></a></li>
+          <li><a href='#'><img src='./img/footer/youtube.png' /></a></li>
+          <li><a href='#'><img src='./img/footer/contact.png' /></a></li>
+        </ul>
+        <img class='footer-line' src='./img/footer/footer-line.png' />
+        <ul class='general'>
+          <li><a href='#'>HOME</a></li>
+          <li><a href='#'>ABOUT</a></li>
+          <li><a href='#'>CONTACT</a></li>
+          <li><a href='#'>PLIBACY POLICY</a></li>
+          <li><a href='#'>TERMS</a></li>
+        </ul>
+        <p class='copyright'>Copyright Playorder Inc, 2016 All Rights Reserved</p>
+      </footer>
+    </div>
+  </body>
+</html>

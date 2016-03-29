@@ -194,7 +194,6 @@ body {
 .general-button  {
   border-radius: 9px;
   background-color: #f26ecf;
-  margin: 0 0 0 -230px;
 }
 
 .general-button:before  {

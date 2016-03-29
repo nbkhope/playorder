@@ -1,0 +1,145 @@
+/* feed */
+.title {
+  width: 100%;
+  height: 155px;
+}
+
+.left {
+  width: 400px;
+  height: 500px;
+  float: left;
+}
+
+.right {
+  width: 700px;
+  height: 500px;
+  float: right;
+}
+
+.top {
+  height: 60%;
+  margin: 10px;
+}
+
+.bottom {
+  height: 40%;
+  margin: 10px;
+}
+
+.bottom-1 {
+  width: 50%;
+  height: 100%;
+  float: left;
+}
+
+.bottom-2 {
+  width: 21%;
+  height: 100%;
+  float: left;
+}
+
+.activity {
+  height: 1450px;
+}
+
+.invite {
+  height: 1000px;
+}
+
+/* title */
+.title h1 {
+  font-size: 44px;
+  color: #f26ecf;
+  text-align: center;
+  padding-top: 50px;
+}
+
+/* right */
+.ordererbox {
+  width: 230px;
+  margin-left: 20px;
+}
+
+.orderertag {
+  float: right;
+  margin: 20px 40px 0 0;
+}
+
+.orderername {
+  font-size: 16px;
+}
+
+.orderershozoku {
+  font-size: 12px;
+  color: #8d8f8f;
+}
+
+.balloon {
+  position: relative;
+  width: 520px;
+  height: 40px;
+  background-color: #fbc8ed;
+  text-align: center;
+  border-radius: 5px;
+  padding: 20px;
+  margin: 25px 0 0 20px;
+  line-height: 160%;
+  font-size: 14px;
+  box-shadow: 0 0 10px rgba(0,0,0,.3);
+}
+.balloon .triangle {
+  position: absolute;
+  top: -10px;
+  left: 5%;
+  margin-right: -10px;
+  width: 0;
+  height: 0;
+  border-bottom: 10px solid #fbc8ed;
+  border-left: 10px solid transparent;
+  border-right: 10px solid transparent;
+}
+
+.total{
+  margin-bottom: 50px;
+}
+
+.funds {
+  font-size: 44px;
+  font-weight: bold;
+}
+
+.duration {
+  font-size: 16px;
+  color: #8d8f8f;
+}
+
+/* activity */
+.talk {
+  width: 100%;
+  height: 500px;
+  float: left;
+}
+
+.talk-left {
+  margin-left: 20px;
+  float: left;
+}
+
+.talk-right {
+  float: left;
+  margin: 20px 0px 0px 100px;
+}
+
+.talk-name {
+  font-size: 16px;
+  font-weight: bold;
+}
+
+/* button */
+.order {
+  padding: 10 10 10 10;
+}
+
+.contribute {
+  margin: 10 10 10 10;
+}

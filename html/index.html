@@ -10,14 +10,14 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
     <script>
     /* pulldown-menu */
-    $(function(){
-    	$('.pull-menu ul').hide();
-    	$('.pull-menu ul li').css("display", "table");
-    	$('.btn-menu').click(function(){
-    		$('.pull-menu ul').slideToggle();
-    	});
+    $(function() {
+      $(".panel-btn").click(function(){
+        var clickPanel = $("+.panel",this);
+        clickPanel.toggle();
+        $(".panel").not(clickPanel).slideUp(0);
+        return false;
+      });
     });
-
     /* nav-toggle */
     $(function(){
       $(".nav-index li").on("click" , function(){
@@ -32,7 +32,7 @@
   </head>
   <body>
     <header>
-      <div class='header-logo'>
+      <div class='logo'>
         <a href='./index.html'><img class='header-logo' src='./img/header/header-logo.png' /></a>
       </div>
       <nav class='header-menu'>

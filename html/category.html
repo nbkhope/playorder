@@ -18,6 +18,18 @@
         $(".nav-index li").eq(num).addClass('select');
       });
     });
+
+    $(function() {
+      $(".panel-btn").click(function(){
+        var clickPanel = $("+.panel",this);
+        clickPanel.toggle();
+        $(".panel").not(clickPanel).slideUp(0);
+        $(".panel:visible").prev().css("background","#283948");
+        $(".panel:hidden").prev().css("background","#2e4153");
+        return false;
+      });
+    });
+
   </script>
   </head>
   <body>
@@ -41,20 +53,18 @@
         </nav>
       </div>
 
-      <div>
-        <a><img class='header-icon' src='./img/header/header-icon.png' /></a>
-        <a><img class='header-arrow' src='./img/header/header-arrow.png' /></a>
-      </div>
-
-      <div hidden>
-        <ul>
-          <li>Profile</li>
-          <li>Activity</li>
-          <li>Message</li>
-          <li>PlayShop</li>
-          <li>Settings</li>
-          <li>Sign Out</li>
-        </ul>
+      <div class="panel-wrap">
+        <a href="#" class="panel-btn"><img class='header-icon' src='./img/header/header-icon.png' /><img class='header-arrow' src='./img/header/header-arrow.png' /></a>
+        <div hidden class="panel">
+          <ul>
+            <li>Profile</li>
+            <li>Activity</li>
+            <li>Message</li>
+            <li>PlayShop</li>
+            <li>Settings</li>
+            <li>Sign Out</li>
+          </ul>
+        </div>
       </div>
     </header>
 

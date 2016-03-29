@@ -1,0 +1,142 @@
+
+header {
+  width: 100%;
+  height: 80px;
+  background-color: #ffffff;
+  border-bottom: 1px solid #8d8f8f;
+}
+
+.header-logo {
+  float: left;
+  margin: 13px 0px 0px 10px;
+}
+
+.header-menu {
+  float: left;
+  width: 300px;
+  height: 50px;
+  margin: 10px 0px 0px 10px;
+}
+
+.header-menu li {
+  display: inline-block;
+  margin: 20px 0 0 20px;
+}
+
+.header-search {
+    float: left;
+    margin: 27px 0 0 -5px;
+}
+
+.header-icon {
+    float: right;
+    margin: 10px 55px 0px 4px;
+}
+
+.color-grey {
+  color: #8d8f8f;
+  margin: 10 10 10 10;
+}
+
+.header-menu span {
+  background: #ED65C8;
+  height: 5px;
+  display: block;
+  position: absolute;
+  width: 50px;
+  left: 0;
+}
+
+/*
+
+.infomation {
+  width: 30px;
+  height: 80px;
+  float: right;
+  z-index: 1;
+}
+
+.infomation li {
+  width: 30px;
+  height: 30px;
+  display: inline-block;
+}
+
+.pull-menu ul li {
+	display: none;
+	width: 180px;
+	height: 15px;
+	background: #fff;
+  opacity: 0.7;
+  z-index: 2;
+  line-height: 140%;
+  float: right;
+  position: relative;
+}
+
+.pull-menu ul li:last-child {
+	border-bottom: none;
+}
+
+*/
+
+.panel-wrap{
+  position: relative;
+  float: left;
+  padding: 0;
+  border-right: 1px solid #22303d;
+}
+.panel-wrap a{
+  font-size: 14px;
+  text-decoration: none;
+}
+a.panel-btn{
+  display: block;
+  position: relative;
+  float: left;
+  z-index: 100;
+  padding: 0 30px 0 50px;
+  color: #cfdae4;
+  font-size: 14px;
+  line-height: 40px;
+  text-decoration: none;
+}
+.panel-btn:before {
+  position: absolute;
+  top: 10px;
+  left: 20px;
+  color: #cfdae4;
+  font: 20px 'FontAwesome';
+  content: "\f0d7";
+}
+a.panel-btn:hover,
+a.panel-btn:hover:before
+{
+  color: #fff;
+}
+.panel {
+  display: none;
+  position: absolute;
+  top: 45px;
+  left: 0px;
+  z-index: 1000;
+  width: 200px;
+  margin-left: -30px;
+  padding: 10px;
+  background: #fff;
+  border: 5px solid #9fb5cb;
+  border-radius: 3px;
+  box-shadow: 0 2px 5px 1px rgba(0,0,0,.2);
+}
+.panel:after,#panel:before {
+  content: "";
+  position: absolute;
+  height: 0;
+  width: 0;
+}
+.panel:after {
+  top: -35px;
+  left: 35px;
+  border: 15px solid transparent;
+  border-bottom: 15px solid #9fb5cb;
+}
