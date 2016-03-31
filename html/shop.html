@@ -1,11 +1,22 @@
-<html>
+<!DOCTYPE html>
+<html lang="en">
   <head>
-    <title>Playorder - shop</title>
-    <link rel="stylesheet" type="text/css" href="./css/reset.css">
-    <link rel="stylesheet" type="text/css" href="./css/header.css">
-    <link rel="stylesheet" type="text/css" href="./css/shop.css">
-    <link rel="stylesheet" type="text/css" href="./css/footer.css">
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <title>playorder - shop</title>
+
+    <!-- Bootstrap -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
     <script>
     /* nav-toggle */
     $(function(){
@@ -20,171 +31,203 @@
     </script>
   </head>
   <body>
-    <header>
-      <div class='header-logo'>
-        <a href='./index.html'><img class='header-logo' src='./img/header/header-logo.png' /></a>
-      </div>
-      <nav class='header-menu'>
-        <ul>
-          <li><a href='./category.html'>Discovery</a></li>
-          <li><a href='./start.html'>Startup</a></li>
-          <li><a href='./about.html'>About</a></li>
-        </ul>
-      </nav>
-      <input class='header-search' type="search">
-
-      <div hidden>
-        <nav>
-          <span>Sign Up</span>
-          <span>Log in</span>
-        </nav>
-      </div>
-
-      <div hidden>
-        <ul>
-          <li>Profile</li>
-          <li>Activity</li>
-          <li>Message</li>
-          <li>PlayShop</li>
-          <li>Settings</li>
-          <li>Sign Out</li>
-        </ul>
-      </div>
-      <div>
-        <a><img class='header-icon' src='./img/header/header-icon.png' /></a>
-        <a><img class='header-arrow' src='./img/header/header-arrow.png' /></a>
-      </div>
-    </header>
-
-    <section class='shop-top'>
-      <div class='shop-layer'>
-        <div class='shop-title'>
-          <h2>GPants from YUUKI ASANO</h2>
-          <ul class='shop-title-list'>
-            <li><img src='./img/shop/location-icon.png' /><span>San Francisco</span></li>
-            <li><img src='./img/shop/wear-icon.png' /><span>WEAR</span></li>
-          </ul>
-        </div>
-
-        <div class='shop-left'>
-          <img class='.img/shop/shop-main-img.png' src='./img/shop/shop-main-img.png' />
-        </div>
-        <div class='shop-right'>
-          <div class='shop-right-top'>
-            <h1>$400</h1>
-            <p>Price</p>
-            <h1>14 days</h1>
-            <p>Delivery Guidance<b>&#040;About&#041;</b></p>
-          </div>
-
-          <div class='shop-right-middle'>
-            <a href='./payment.html'>
-              <div class="general-button order-button">
-                <div class="button-content">
-                  <span class="button-text">ORDER NOW</span>
-                </div>
-              </div>
+    <!-- header -->
+    <header class="container">
+      <nav class="navbar">
+        <div class="container-fluid">
+          <!-- Brand and toggle get grouped for better mobile display -->
+          <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+              <span class="sr-only">Toggle navigation</span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="./index.html">
+              <img src="./img/header/logo.png" />
             </a>
           </div>
 
-          <div class='shop-right-bottom'>
-            <div class='shop-owner-info'>
-              <div class='shop-owner-description'>
+          <!-- Collect the nav links, forms, and other content for toggling -->
+          <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+            <ul class="nav navbar-nav">
+              <li><a href="./discover.html">Discover</a></li>
+              <li><a href="./startup.html">Startup</a></li>
+              <li><a href="./about.html">About</a></li>
+            </ul>
+            <form class="navbar-form navbar-left" role="search">
+              <div class="form-group">
+                <input type="text" class="form-control" placeholder="Search">
+              </div>
+              <button type="submit" class="btn btn-default">Submit</button>
+            </form>
+            <ul class="nav navbar-nav navbar-right">
+              <li class="dropdown">
+                <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
+                  <img src="./img/header/header-icon.png" width="28" height="28" />
+                  <span class="caret"></span>
+                </a>
+                <ul class="dropdown-menu">
+                  <li><a href="./account.html">Profile</a></li>
+                  <li><a href="./account.html">Activity</a></li>
+                  <li><a href="./account.html">Message</a></li>
+                  <li><a href="./account.html">PlayShop</a></li>
+                  <li><a href="./setting.html">Settings</a></li>
+                  <li><a href="#">Sign Out</a></li>
+                </ul>
+              </li>
+            </ul>
+          </div><!-- /.navbar-collapse -->
+        </div><!-- /.container-fluid -->
+      </nav>
+    </header>
+
+    <div class="shop-cover">
+      <div class="container-2">
+        <article class="shop-top">
+
+          <section class="bigsign">
+            <h2>Global Pants Around the World</h2>
+            <ul class='title-list'>
+              <li><img src='./img/shop/location-icon.png' /><span>San Francisco</span></li>
+              <li><img src='./img/shop/wear-icon.png' /><span>WEAR</span></li>
+            </ul>
+          </section>
+
+          <section class="shop-middle">
+
+            <div class="shop-main">
+              <img src='./img/shop/shop-main-img.png' />
+            </div>
+
+            <div class="sright">
+
+              <section class="number">
+                <h1>$400</h1>
+                <p>Price</p>
+                <h1>14 days</h1>
+                <p>Delivery Guidance<b>&#040;About&#041;</b></p>
+              </section>
+
+              <section class="shopbutton">
+                <p>Let's order soon!</p>
+                <a href="./payment.html">
+                  <button type="button" class="btn btn-danger btn-lg">ORDER NOW</button>
+                </a>
+              </section>
+
+          </div>
+
+        </section>
+
+          <section class="smallsign">
+
+            <div class="shop-phase">
+              <h2>Have you every tried to wear GLOBAL PANTS,<br>Amazing experience makes you change at all.</h2>
+              <ul class='share-b'>
+                <li><span>Share: </span></li>
+                <li><img class='twitter' src='./img/shop/share-twitter.png' /></li>
+                <li><img class='facebook' src='./img/shop/share-facebook.png' /></li>
+                <li><img class='embed' src='./img/shop/share-embed.png' /></li>
+                <li><img class='pinterest' src='./img/shop/share-pinterest.png' /></li>
+              </ul>
+            </div>
+
+            <div class="profile">
+
+              <div class='owner-describe'>
                 <h3><a href='./view.html'>Yuuki Asano</a></h3>
                 <p>Realm</p>
-                <ul class='shop-social-icon'>
+                <ul class='social-i'>
                   <li><img src='./img/shop/shop-twitter.png' /></li>
                   <li><img src='./img/shop/shop-facebook.png' /></li>
                   <li><img src='./img/shop/internet.png' /></li>
                 </ul>
               </div>
-              <div class='shop-owner-icon'>
-                <img class='shop-main-owner-img' src='./img/shop/shop-main-owner-img.png' />
+              <div class='owner-icon'>
+                <img class='main-owner' src='./img/shop/shop-main-owner-img.png' />
               </div>
-           </div>
-        </div>
+
+            </div>
+
+          </section>
+
+        </article>
       </div>
-      <div class='shop-top-bottom'>
-        <h2>Have you every tried to wear GLOBAL PANTS,<br>amazing experience makes you change at all.</h2>
-        <ul class='shop-share-button'>
-          <li><span>Share: </span></li>
-          <li><img class='share-twitter' src='./img/shop/share-twitter.png' /></li>
-          <li><img class='share-facebook' src='./img/shop/share-facebook.png' /></li>
-          <li><img class='share-embed' src='./img/shop/share-embed.png' /></li>
-          <li><img class='share-pinterest' src='./img/shop/share-pinterest.png' /></li>
-        </ul>
-      </div>
-    </section>
+    </div>
 
-    <article class='global-shop'>
+    <div class="container">
+      <article class="shop-bottom">
 
-      <nav class='shop-nav'>
-        <ul class='nav-index'>
-          <li>STORY</li>
-          <li>COMMENT</li>
-        </ul>
-      </nav>
+        <!-- global nav -->
+        <nav class='global-nav'>
+          <ul class='nav-index'>
+            <li>STORY</li>
+            <li>COMMENT</li>
+          </ul>
+        </nav>
 
-      <!--- story-contents -->
-      <div>
-        <section class='shop-story contents'>
-          <div class='shop-story-contents'>
+        <!-- story -->
+        <section class='story contents'>
+          <div class='story-contents'>
             <h1>We get started everything with Asano GPants!</h1>
             <p>This is my life</p>
           </div>
         </section>
-      </div>
 
-      <!--- comment-contents -->
-      <section class='shop-comment contents hide'>
-        <div class='shop-one-comment'>
-          <div class='shop-one-comment-left'>
-            <img src='./img/shop/shun-comment.png' /><br><br>
-            <p class='shop-one-comment-name'>&nbsp;Shun</p>
+        <!--- comment-contents -->
+        <section class='comment contents opace'>
+          <div class='one-comment'>
+            <div class='comment-left'>
+              <img src='./img/shop/shun-comment.png' /><br><br>
+              <p class='comment-name'>Shun</p>
+            </div>
+            <div class='comment-right'>
+              <p>Awesome! How many Gpants do you have?</p>
+            </div>
           </div>
-          <div class='shop-one-comment-right'>
-            <p>Awesome! How many Gpants do you have?</p>
-          </div>
-        </div>
 
-        <div class='shop-one-comment'>
-          <div class='shop-one-comment-left'>
-            <img src='./img/shop/yuuki-comment.png' /><br><br>
-            <p class='shop-one-comment-name'>&nbsp;<a href='./view.html'>Yuuki</a><p>
+          <div class='one-comment'>
+            <div class='comment-left'>
+              <img src='./img/shop/yuuki-comment.png' /><br><br>
+              <p class='comment-name'><a href='./view.html'>Yuuki</a><p>
+            </div>
+            <div class='comment-right'>
+              <p>Good question man! Last ... 10!!</p>
+            </div>
           </div>
-          <div class='shop-one-comment-right'>
-            <p>Good question man! Last ... 10!!</p>
-          </div>
-        </div>
 
-        <div class='shop-comment-area'>
-          <textarea name='shop-comment-leave' rows="5" cols="60">Leave a message.</textarea><br>
-        </div>
-        <div class="general-button button-submit">
-          <div class="button-content">
-            <span class="button-text">SUBMIT</span>
-          </div>
-        </div>
-      </section>
+          <div class='commentarea'>
+            <textarea class="form-control" rows="5">Leave a message.</textarea><br>
+            <button type="button" class="btn btn-danger">SUBMIT</button>
+        </section>
 
-    </article>
 
+      </article>
+    </div>
+
+    <!-- footer -->
     <footer>
       <ul class='social-icon'>
-        <li><a><img src='./img/footer/facebook.png' /></a></li>
-        <li><a><img src='./img/footer/twitter.png' /></a></li>
-        <li><a><img src='./img/footer/youtube.png' /></a></li>
-        <li><a><img src='./img/footer/contact.png' /></a></li>
+        <li><a href='#'><img src='./img/footer/facebook.png' /></a></li>
+        <li><a href='#'><img src='./img/footer/twitter.png' /></a></li>
+        <li><a href='#'><img src='./img/footer/youtube.png' /></a></li>
+        <li><a href='#'><img src='./img/footer/contact.png' /></a></li>
       </ul>
       <img class='footer-line' src='./img/footer/footer-line.png' />
       <ul class='general'>
-        <li>HOME</li>
-        <li>ABOUT</li>
-        <li>CONTACT</li>
-        <li>PLIBACY POLICY</li>
-        <li>TERMS</li>
+        <li><a href='./index.html'>HOME</a></li>
+        <li><a href='./about.html'>ABOUT</a></li>
+        <li><a href='./contact.html'>CONTACT</a></li>
+        <li><a href='./policy.html'>PLIBACY POLICY</a></li>
+        <li><a href='./terms.html'>TERMS</a></li>
       </ul>
       <p class='copyright'>Copyright Playorder Inc, 2016 All Rights Reserved</p>
     </footer>
+
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="js/bootstrap.min.js"></script>
   </body>
 </html>

@@ -1,11 +1,25 @@
-<html>
+<!DOCTYPE html>
+<html lang="en">
   <head>
-    <title>Playorder - feed</title>
-    <link rel="stylesheet" type="text/css" href="./css/reset.css">
-    <link rel="stylesheet" type="text/css" href="./css/header.css">
-    <link rel="stylesheet" type="text/css" href="./css/feed.css">
-    <link rel="stylesheet" type="text/css" href="./css/footer.css">
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <title>playorder - payment</title>
+
+    <!-- Bootstrap -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
+
+    <script src="jquery.min.js" type="text/javascript"></script>
+    <script src="./js/bootstrap-datepicker.js" type="text/javascript"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
     <script>
     /* nav-toggle */
     $(function(){
@@ -18,167 +32,201 @@
       });
     });
     </script>
-
   </head>
   <body>
-    <header>
-      <div class='header-logo'>
-        <a href='./index.html'><img class='header-logo' src='./img/header/header-logo.png' /></a>
-      </div>
-      <nav class='header-menu'>
-        <ul>
-          <li><a href='./category.html'>Discovery</a></li>
-          <li><a href='./start.html'>Startup</a></li>
-          <li><a href='./about.html'>About</a></li>
-        </ul>
+    <!-- header -->
+    <header class="container">
+      <nav class="navbar">
+        <div class="container-fluid">
+          <!-- Brand and toggle get grouped for better mobile display -->
+          <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+              <span class="sr-only">Toggle navigation</span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="./index.html">
+              <img src="./img/header/logo.png" />
+            </a>
+          </div>
+
+          <!-- Collect the nav links, forms, and other content for toggling -->
+          <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+            <ul class="nav navbar-nav">
+              <li><a href="./discover.html">Discover</a></li>
+              <li><a href="./startup.html">Startup</a></li>
+              <li><a href="./about.html">About</a></li>
+            </ul>
+            <form class="navbar-form navbar-left" role="search">
+              <div class="form-group">
+                <input type="text" class="form-control" placeholder="Search">
+              </div>
+              <button type="submit" class="btn btn-default">Search</button>
+            </form>
+            <ul class="nav navbar-nav navbar-right">
+              <li class="dropdown">
+                <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
+                  <img src="./img/header/header-icon.png" width="28" height="28" />
+                  <span class="caret"></span>
+                </a>
+                <ul class="dropdown-menu">
+                  <li><a href="./account.html">Profile</a></li>
+                  <li><a href="./account.html">Activity</a></li>
+                  <li><a href="./account.html">Message</a></li>
+                  <li><a href="./account.html">PlayShop</a></li>
+                  <li><a href="./setting.html">Settings</a></li>
+                  <li><a href="#">Sign Out</a></li>
+                </ul>
+              </li>
+            </ul>
+          </div><!-- /.navbar-collapse -->
+        </div><!-- /.container-fluid -->
       </nav>
-      <input class='header-search' type="search">
-
-      <div hidden>
-        <nav>
-          <span>Sign Up</span>
-          <span>Log in</span>
-        </nav>
-      </div>
-
-      <div>
-        <a><img class='header-icon' src='./img/header/header-icon.png' /></a>
-        <a><img class='header-arrow' src='./img/header/header-arrow.png' /></a>
-      </div>
-
-      <div hidden>
-        <ul>
-          <li>Profile</li>
-          <li>Activity</li>
-          <li>Message</li>
-          <li>PlayShop</li>
-          <li>Settings</li>
-          <li>Sign Out</li>
-        </ul>
-      </div>
     </header>
 
-    <div class='feed-layer'>
-      <section class='feed-title'>
-        <h1>Mr.Tanaka Thanks Day</h1>
-      </section>
-
-      <section class='feed-left'>
-        <div class='card'>
-          <div class='card-img'>
-            <img src='./img/payment/payment-main.png' />
-          </div>
-          <div class='card-info'>
-            <span class='info'>WEAR</span>
-            <span class='price'>$400</span>
-            <h3>Gpants from YUUKI ASANO</h3>
-            <p>Tell us about your needs and we&#39;ll introduce you to several experienced professionals in your area who are ready to complete your project</p>
-          </div>
-          <div class='card-name'>
-            <img class='card-line' src='./img/payment/payment-card-line.png' />
-            <img class='card-icon' src='./img/payment/payment-owner.png' />
-            <div class='nametag'>
-              <span class='namae'>Yuuki Asano</span><br>
-              <span class='shozoku'>Realm</span>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <section class='feed-right'>
-        <div class='feed-right-top'>
-          <h2>Playorderer</h2>
-          <br>
-          <div class='share-name-box'>
-            <img src='./img/sharepayment/sharepayment-icon.png' />
-            <div class='share-namaetag'>
-              <span class='share-namae'>Shun Yamada</span><br>
-              <span class='share-shozoku'>Playorder</span>
-          </div>
-        </div>
-
-        <div class="share-balloon">
-          Hey, whats up guys! I am Shun, freerider. So, let&#39;s get started celebration to your friends.
-        <div class="share-triangle"></div>
-        </div>
-
-        </div>
-        <div class='feed-right-bottom'>
-          <div class='feed-right-bottom-1'>
-            <div class='total'><h2>Total Funds</h2></div>
-            <span class='feed-total-funds'>$670</span>&nbsp;&nbsp;<span class='feed-duration'>7days left</span>
-          </div>
-
-          <div class='feed-right-bottom-2'>
-            <div class="general-button order">
-              <div class="button-content">
-                <span class="button-text">ORDER NOW</span>
-              </div>
-            </div><br><br><br><br>
-            <div class="general-button contribute">
-              <div class="button-content">
-                <span class="button-text">CONTRIBUTE</span>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-        <nav class='feed-activity-nav'>
-          <ul class='nav-index'>
-            <li>ACTIVITY</li>
-            <li>INVITE</li>
+    <!-- slider -->
+    <section class="feed-slider">
+      <!-- wear -->
+      <div class="jumbotron sliders">
+        <div class="dropdown photo-icon">
+          <button id="dLabel" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            <span class="glyphicon glyphicon-search color-white" aria-hidden="true"></span>
+          </button>
+          <ul class="dropdown-menu" aria-labelledby="dLabel">
+            <li>Update Photo</li>
           </ul>
-        </nav>
-        <section class='feed-activity contents'>
-        <div class='activity-talk'>
-          <div class='activity-talk-left'>
-            <img src='./img/feed/feed-icon.png' /><br><br>
-            <p class='feed-icon-name'>&nbsp;Shun</p>
-          </div>
-          <div class='activity-talk-right'>
-            <p>Hey! Wthat&#39;s up guys!</p>
-          </div>
         </div>
-        <div class='shop-comment-area'>
-          <textarea name='shop-comment-leave' rows="5" cols="60">Leave a message.</textarea><br>
-        </div>
-        <div class="general-button">
-          <div class="button-content">
-            <span class="button-text">SUBMIT</span>
-          </div>
-        </div>
-      </section>
+        <h1>Mr Tanaka Thanks day</h1>
 
-      <section class='feed-invite contents hide'>
-        <div class='recipant-form'>
-          <textarea name='email' wor="5" cols="60">Please insert email or account</textarea>
-        </div>
-        <div class="general-button">
-          <div class="button-content">
-            <span class="button-text">SUBMIT</span>
-          </div>
-        </div>
-      </section>
+        <p>You can enjoy share payment gift!</p>
+      </div>
+    </section>
 
+    <div class="container">
+
+      <article class="feed-contents">
+        <section class="feed-left">
+          <div class="row">
+            <div class="col-sm-6 col-md-4">
+              <div class="thumbnail">
+                <img src="./img/main/card-1.png" alt="image">
+                <div class="caption">
+                  <p><span class="genre">WEAR</span></p>
+                  <h3>Global Pants</h3>
+                  <p>Tell us about your needs and we'll introduce you to several experienced professionals in your area who are ready to complete your project.</p>
+                  <p><img src="./img/index/card-line.png" /></p>
+                  <div class="card-icon">
+                    <img src="./img/main/yuuki-cardicon.png" />
+                  </div>
+                  <div class="card-profile">
+                    <p class="namae">Yuuki Asano</p>
+                    <p class="shozoku">Realm</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+        </section>
+
+        <section class="feed-right">
+          <div class="playorderer">
+            <h2>Playorderer</h2>
+            <ul class="ordererlist">
+              <li><img src="./img/sharepayment/sharepayment-icon.png" /></li>
+              <li>
+                <h3>Shun Yamada</h3>
+                <p>Playorder</p>
+              </li>
+            </Ul>
+            <div class="balloon">
+              <span>Hey, whats up guys! I am Shun, freerider. So, let&#39;s get started celebration to your friends.</span>
+            <div class="triangle"></div>
+            </div>
+          </div>
+
+          <div class="totalfunds">
+            <h2>Total Funds</h2>
+            <div class="amount">
+              <h1>$670</h1>
+              <span>14days left</span>
+              <div class="progress">
+                <div class="progress-bar" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 60%;">
+                  60%
+                </div>
+              </div>
+            </div>
+            <div class="fundbutton">
+              <ul>
+                <li>
+                  <button type="button" class="btn btn-danger btn-lg">PLAY DONE</button>
+                </li>
+                <li>
+                  <button type="button" class="btn btn-danger btn-lg">CONTRIBUTE</button>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </section>
+      </article>
+
+      <article class="feed-alt">
+
+      <div class="container-3">  
+          <!-- global nav -->
+          <nav class='global-nav'>
+            <ul class='nav-index'>
+              <li class="selected">ACTIVITY</li>
+              <li>INVITE</li>
+            </ul>
+          </nav>
+          <!-- activity -->
+          <section class='activity contents'>
+          <div class='talk'>
+            <div class='talk-left'>
+              <img src='./img/feed/feed-icon.png' /><br><br>
+              <p class='talk-name'>&nbsp;Shun</p>
+            </div>
+            <div class='talk-right'>
+              <p>Hey! Wthat&#39;s up guys!</p>
+            </div>
+          </div>
+          <textarea class="form-control" rows="5"></textarea>
+          <button type="button" class="btn btn-danger btn-lg">SEND</button>
+        </section>
+
+          <!-- invite -->
+          <section class='invite contents opace'>
+            <div class='recipant-form'>
+              <input type="text" class="form-control mail" placeholder="Insert account or email">
+              <button type="button" class="btn btn-danger btn-lg">SEND</button>
+            </div>
+          </section>
+        </article>
+      </div>
     </div>
 
+    <!-- footer -->
     <footer>
       <ul class='social-icon'>
-        <li><a><img src='./img/footer/facebook.png' /></a></li>
-        <li><a><img src='./img/footer/twitter.png' /></a></li>
-        <li><a><img src='./img/footer/youtube.png' /></a></li>
-        <li><a><img src='./img/footer/contact.png' /></a></li>
+        <li><a href='#'><img src='./img/footer/facebook.png' /></a></li>
+        <li><a href='#'><img src='./img/footer/twitter.png' /></a></li>
+        <li><a href='#'><img src='./img/footer/youtube.png' /></a></li>
+        <li><a href='#'><img src='./img/footer/contact.png' /></a></li>
       </ul>
       <img class='footer-line' src='./img/footer/footer-line.png' />
       <ul class='general'>
-        <li>HOME</li>
-        <li>ABOUT</li>
-        <li>CONTACT</li>
-        <li>PLIBACY POLICY</li>
-        <li>TERMS</li>
+        <li><a href='./index.html'>HOME</a></li>
+        <li><a href='./about.html'>ABOUT</a></li>
+        <li><a href='./contact.html'>CONTACT</a></li>
+        <li><a href='./policy.html'>PLIBACY POLICY</a></li>
+        <li><a href='./terms.html'>TERMS</a></li>
       </ul>
       <p class='copyright'>Copyright Playorder Inc, 2016 All Rights Reserved</p>
     </footer>
+
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="js/bootstrap.min.js"></script>
   </body>
 </html>

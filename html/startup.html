@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
-    <title>playorder - thanks</title>
+    <title>playorder - confirmation</title>
 
     <!-- Bootstrap -->
     <link href="css/bootstrap.min.css" rel="stylesheet">
@@ -25,7 +25,7 @@
         $(".contents").fadeOut();
         $(".contents").eq(num).fadeIn();
         $(".nav-index li").removeClass('select');
-        $(".nav-index li").eq(num).addClass('select');
+          $(".nav-index li").eq(num).addClass('select');
       });
     });
     </script>
@@ -82,20 +82,119 @@
       </nav>
     </header>
 
-    <section class="about-slider">
+    <!-- startup slider -->
+    <section class="startup-slider">
       <div class="jumbotron sliders">
-        <h1>ABOUT</h1>
-        <p>What is Playorder?</p>
+        <h1>START PLAYSHOP</h1>
+        <p>Let's launch Your playshop</p>
       </div>
     </section>
 
     <div class="container">
-      <div class="thanks">
-        <h1>Playorder is Share Gift Service!</h1>
-        <p>Awesome Product!</p>
-      </div>
 
-    </div>
+    <!-- playshop indo -->
+    <section class="exhibition">
+      <form>
+        <div class="form-group">
+          <label for="exampleInputTitle">Playshop Title</label>
+          <input type="title" class="form-control" id="exampleInputTitle" placeholder="Playshop Title">
+        </div>
+        <div class="exinfo">
+          <div class="form-group city">
+            <label for="exampleInputCity">City</label>
+            <input type="city" class="form-control" id="exampleInputCity" placeholder="City">
+          </div>
+          <div class="form-group price">
+            <label for="exampleInputTitle">Price</label>
+            <input type="price" class="form-control" id="exampleInputPrice" placeholder="Price">
+          </div>
+        </div>
+      </form>
+
+    </section>
+
+    <!-- global nav -->
+    <nav class='global-nav startnav'>
+      <ul class='nav-index'>
+        <li class="selected">BASIC</li>
+        <li>STORY</li>
+      </ul>
+    </nav>
+
+    <!-- basic -->
+    <section class="basic contents">
+      <h2>Basic</h2>
+      <p>Make a good first impression: introduce your playshop objectives and entice people to learn more. This basic information will represent your playshop
+on your playshop page, on your playshop card, and in searches.</p>
+      <form>
+        <div class="form-group">
+          <label for="startTagline">Tagline</label>
+          <input type="tagline" class="form-control" id="startTagline" placeholder="Tagline">
+        </div>
+
+        <div class="form-group">
+          <label for="startImage">Playshop Image</label><br>
+          <img src="./img/start/img-default.png" /><br>
+          <button type="button" class="btn btn-danger">UPLOAD</button>
+        </div>
+
+        <div class="form-group">
+          <label for="startCategory">Category</label><br>
+          <select class="selectpicker">
+            <option value="1">EAT</option>
+            <option value="2">WEAR</option>
+            <option value="3">TOUCH</option>
+          </select>
+       </div>
+
+        <div class="form-group">
+          <label for="startTag">Tag</label>
+          <input type="tag" class="form-control" id="startTagline" placeholder="5Keywords">
+        </div>
+
+        <div class="form-group">
+          <label for="startDelivery">Delivery Guideline</label>
+          <input type="delivery" class="form-control" id="startDelivery" placeholder="">
+          <span>Date</span>
+        </div>
+
+      </form>
+
+    </section>
+
+    <!-- story -->
+    <section class="startstory contents opace">
+      <h2>Story</h2>
+      <p>Make a good first impression: introduce your playshop objectives and entice people to learn more. This basic information will represent your playshop
+on your playshop page, on your playshop card, and in searches.</p>
+      <ul class='basic-holder'>
+        <li>
+          <label class='sentaku-label' for='sentaku' name='sentaku-button'>Pitch Video or Image</label><br><br>
+          <div class="sentaku">
+            <input type="radio" name="s2" id="on" value="1" checked="">
+            <label for="on" class="switch-on">IMAGE</label>
+            <input type="radio" name="s2" id="off" value="0">
+            <label for="off" class="switch-off">VIDEO</label>
+          </div>
+        </li><br>
+        <li class="inserturl">
+          <label for='imageorvideo'>Image or Video URL</label><br>
+          <input type="imageorvideo" class="form-control" id="imageorvideo" placeholder="URL">
+          <button type="button" class="btn btn-danger">UPLOAD</button>
+        </li>
+        <li>
+          <label for='category'>Story</label><br><br>
+          <textarea class="form-control" rows="20"></textarea>
+        </li>
+      </ul>
+    </section>
+
+
+    <section class="startbutton">
+      <button type="button" class="btn btn-danger">SUBMIT</button>
+    </section>
+
+  </div>
 
     <!-- footer -->
     <footer>

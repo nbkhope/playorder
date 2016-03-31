@@ -1,21 +1,23 @@
 <!DOCTYPE html>
-<html lang="en-US">
+<html lang="en">
   <head>
-    <title>playorder - edit</title>
-    <link rel="stylesheet" type="text/css" href="./css/reset.css">
-    <link rel="stylesheet" type="text/css" href="./css/main.css">
-    <link rel="stylesheet" type="text/css" href="./css/pstart.css">
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <title>playorder - confirmation</title>
+
+    <!-- Bootstrap -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
     <script>
-    /* header pulldown */
-    $(function() {
-      $(".panel-btn").click(function(){
-        var clickPanel = $("+.panel",this);
-        clickPanel.toggle();
-        $(".panel").not(clickPanel).slideUp(0);
-        return false;
-      });
-    });
     /* nav-toggle */
     $(function(){
       $(".nav-index li").on("click" , function(){
@@ -23,170 +25,178 @@
         $(".contents").fadeOut();
         $(".contents").eq(num).fadeIn();
         $(".nav-index li").removeClass('select');
-        $(".nav-index li").eq(num).addClass('select');
+          $(".nav-index li").eq(num).addClass('select');
       });
     });
     </script>
   </head>
   <body>
-    <header>
-      <div class="logo">
-        <a href="./index.html"><img class="header-logo" src="./img/header/logo.png" /></a>
-      </div>
-      <nav class="header-nav">
-        <ul>
-          <li><a href="./category.html">Discovery</a></li>
-          <li><a href="./start.html">Startup</a></li>
-          <li><a href="./about.html">About</a></li>
-          <li><input type="search" /></li>
-        </ul>
-      </nav>
-      <div class="header-log">
-        <!-- signin -->
-        <div class="signin">
-          <div class="header-icon">
-            <img src="./img/header/header-icon.png">
+    <!-- header -->
+    <header class="container">
+      <nav class="navbar">
+        <div class="container-fluid">
+          <!-- Brand and toggle get grouped for better mobile display -->
+          <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+              <span class="sr-only">Toggle navigation</span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="./index.html">
+              <img src="./img/header/logo.png" />
+            </a>
           </div>
-          <div class="header-arrow">
-            <div class="panel-wrap">
 
-              <div class="panel-wrap">
-                <a href="#" class="panel-btn">
-                  <img src="./img/header/header-arrow.png" />
-                </a>
-                <div class="panel">
-                  <ul>
-                    <li><a href="./account.html">Profile</a></li>
-                    <li><a href="./account.html">Activity</a></li>
-                    <li><a href="./account.html">Message</a></li>
-                    <li><a href="./account.html">PlayShop</a></li>
-                    <li><a href="./setting.html">Settings</a></li>
-                    <li><a href="#">Sign Out</a></li>
-                  </ul>
-                </div>
+          <!-- Collect the nav links, forms, and other content for toggling -->
+          <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+            <ul class="nav navbar-nav">
+              <li><a href="./discover.html">Discover</a></li>
+              <li><a href="./startup.html">Startup</a></li>
+              <li><a href="./about.html">About</a></li>
+            </ul>
+            <form class="navbar-form navbar-left" role="search">
+              <div class="form-group">
+                <input type="text" class="form-control" placeholder="Search">
               </div>
-            </div>
-          </div>
-        </div>
-        <!-- signout -->
-        <div class="signout">
-        </div>
-      </div>
-    </header>
-
-    <div class='container'>
-
-      <section class='prime'>
-        <h1>Edit Playshop</h1>
-        <ul class='holder'>
-          <li>
-            <label for='title'>Playshop Title</label><br>
-            <input id='title' type='text' name='title' size='60' />
-          </li>
-          <li>
-            <ul class='holder-info'>
-              <li>
-                <label for='city'>City</label><br>
-                <input id='city' type='text' name='city' size='20' />
-              </li>
-              <li>
-                <label for='price'>Price</label><br>
-                <input id='price' type='text' name='price' size='20' placeholder='$' />
+              <button type="submit" class="btn btn-default">Submit</button>
+            </form>
+            <ul class="nav navbar-nav navbar-right">
+              <li class="dropdown">
+                <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
+                  <img src="./img/header/header-icon.png" width="28" height="28" />
+                  <span class="caret"></span>
+                </a>
+                <ul class="dropdown-menu">
+                  <li><a href="./account.html">Profile</a></li>
+                  <li><a href="./account.html">Activity</a></li>
+                  <li><a href="./account.html">Message</a></li>
+                  <li><a href="./account.html">PlayShop</a></li>
+                  <li><a href="./setting.html">Settings</a></li>
+                  <li><a href="#">Sign Out</a></li>
+                </ul>
               </li>
             </ul>
-          </li>
-      </section>
-
-      <nav class='global-nav'>
-        <ul class='nav-index'>
-          <li>BASIC</li>
-          <li>STORY</li>
-        </ul>
+          </div><!-- /.navbar-collapse -->
+        </div><!-- /.container-fluid -->
       </nav>
-      <!-- basic -->
-      <div class='basic contents'>
-        <h2>Basic</h2>
-        <p>Make a good first impression: introduce your playshop objectives and entice people to learn more. This basic information will represent your playshop
-on your playshop page, on your playshop card, and in searches.</p>
-        <ul class='basic-holder'>
-          <li>
-            <label for='tag'>Tagline</label><br>
-            <input id='tag' type='text' name='tag' size='60' />
-          </li>
-          <li>
-            <label for='img-upload'>Playshop Image</label><br>
-            <img id='img-upload' name='img-upload' src='./img/start/img-default.png' /><br>
-            <div class="general-button">
-              <div class="button-content">
-                <span class="button-text">UPLOAD IMAGE</span>
-              </div>
-            </div>
-          </li>
-          <li>
-            <label for='category'>Category</label><br>
-            <select id='category' type='text' name='category'>
-              <option value='eat'>EAT</option>
-              <option value='wear'>WEAR</option>
-            </select>
-          </li>
-          <li>
-            <label for='tags'>Tags</label><br>
-            <input id='tags' type='text' name='tags' size='60' />
-          </li>
-          <li style='font-size: 12px; color: #8d8f8f;'>
-            <label for='guide'>Delivery Guideline</label><br>
-            <input id='guide' type='text' name='guide' size='5' />&nbsp;&nbsp;<span class='gd'>days&#040;about&#041;</span>
-          </li>
-        </ul>
+    </header>
+
+    <!-- startup slider -->
+    <section class="startup-slider">
+      <div class="jumbotron sliders">
+        <h1>EDIT PLAYSHOP</h1>
+        <p>Let's launch Your playshop</p>
       </div>
+    </section>
 
-      <!-- story -->
-      <section class='story contents hide'>
-        <h2>Story</h2>
-        <p>Make a good first impression: introduce your playshop objectives and entice people to learn more. This basic information will represent your playshop
-on your playshop page, on your playshop card, and in searches.</p>
-        <ul class='basic-holder'>
-          <li>
-            <label class='sentaku-label' for='sentaku' name='sentaku-button'>Pitch Video or Image</label><br><br>
-            <div class="sentaku">
-              <input type="radio" name="s2" id="on" value="1" checked="">
-              <label for="on" class="switch-on">IMAGE</label>
-              <input type="radio" name="s2" id="off" value="0">
-              <label for="off" class="switch-off">VIDEO</label>
-            </div>
-          </li><br>
-          <li>
-            <label for='tags'>Image or Video URL</label><br>
-            <input id='tags' type='text' name='tags' size='60' /><br>
-            <div class="general-button">
-              <div class="button-content">
-                <span class="button-text">ADD CONTENTS</span>
-              </div>
-            </div>
-          </li>
-          <li>
-            <label for='category'>Story</label><br><br>
-            <textarea id='category' type='text' name='category'></textarea>
-          </li>
-        </ul>
-      </section>
+    <div class="container">
 
-      <!-- submit button -->
-      <section class='submit-button'>
-        <!--
-          Using Modernizr.js for smartphone.
-          http://modernizr.com
-        -->
-        <a href='./sent.html'>
-          <div class="general-button">
-            <div class="button-content">
-              <span class="button-text">SUBMIT</span>
-            </div>
+    <!-- playshop indo -->
+    <section class="exhibition">
+      <form>
+        <div class="form-group">
+          <label for="exampleInputTitle">Playshop Title</label>
+          <input type="title" class="form-control" id="exampleInputTitle" placeholder="Playshop Title">
+        </div>
+        <div class="exinfo">
+          <div class="form-group city">
+            <label for="exampleInputCity">City</label>
+            <input type="city" class="form-control" id="exampleInputCity" placeholder="City">
           </div>
-        </a>
-      </section>
+          <div class="form-group price">
+            <label for="exampleInputTitle">Price</label>
+            <input type="price" class="form-control" id="exampleInputPrice" placeholder="Price">
+          </div>
+        </div>
+      </form>
 
-    </div>
+    </section>
+
+    <!-- global nav -->
+    <nav class='global-nav startnav'>
+      <ul class='nav-index'>
+        <li class="selected">BASIC</li>
+        <li>STORY</li>
+      </ul>
+    </nav>
+
+    <!-- basic -->
+    <section class="basic contents">
+      <h2>Basic</h2>
+      <p>Make a good first impression: introduce your playshop objectives and entice people to learn more. This basic information will represent your playshop
+on your playshop page, on your playshop card, and in searches.</p>
+      <form>
+        <div class="form-group">
+          <label for="startTagline">Tagline</label>
+          <input type="tagline" class="form-control" id="startTagline" placeholder="Tagline">
+        </div>
+
+        <div class="form-group">
+          <label for="startImage">Playshop Image</label><br>
+          <img src="./img/start/img-default.png" /><br>
+          <button type="button" class="btn btn-danger">UPLOAD</button>
+        </div>
+
+        <div class="form-group">
+          <label for="startCategory">Category</label><br>
+          <select class="selectpicker">
+            <option value="1">EAT</option>
+            <option value="2">WEAR</option>
+            <option value="3">TOUCH</option>
+          </select>
+       </div>
+
+        <div class="form-group">
+          <label for="startTag">Tag</label>
+          <input type="tag" class="form-control" id="startTagline" placeholder="5Keywords">
+        </div>
+
+        <div class="form-group">
+          <label for="startDelivery">Delivery Guideline</label>
+          <input type="delivery" class="form-control" id="startDelivery" placeholder="">
+          <span>Date</span>
+        </div>
+
+      </form>
+
+    </section>
+
+    <!-- story -->
+    <section class="startstory contents opace">
+      <h2>Story</h2>
+      <p>Make a good first impression: introduce your playshop objectives and entice people to learn more. This basic information will represent your playshop
+on your playshop page, on your playshop card, and in searches.</p>
+      <ul class='basic-holder'>
+        <li>
+          <label class='sentaku-label' for='sentaku' name='sentaku-button'>Pitch Video or Image</label><br><br>
+          <div class="sentaku">
+            <input type="radio" name="s2" id="on" value="1" checked="">
+            <label for="on" class="switch-on">IMAGE</label>
+            <input type="radio" name="s2" id="off" value="0">
+            <label for="off" class="switch-off">VIDEO</label>
+          </div>
+        </li><br>
+        <li class="inserturl">
+          <label for='imageorvideo'>Image or Video URL</label><br>
+          <input type="imageorvideo" class="form-control" id="imageorvideo" placeholder="URL">
+          <button type="button" class="btn btn-danger">UPLOAD</button>
+        </li>
+        <li>
+          <label for='category'>Story</label><br><br>
+          <textarea class="form-control" rows="20"></textarea>
+        </li>
+      </ul>
+    </section>
+
+
+    <section class="startbutton">
+      <button type="button" class="btn btn-danger">SUBMIT</button>
+    </section>
+
+  </div>
+
+    <!-- footer -->
     <footer>
       <ul class='social-icon'>
         <li><a href='#'><img src='./img/footer/facebook.png' /></a></li>
@@ -196,14 +206,18 @@ on your playshop page, on your playshop card, and in searches.</p>
       </ul>
       <img class='footer-line' src='./img/footer/footer-line.png' />
       <ul class='general'>
-        <li><a href='#'>HOME</a></li>
-        <li><a href='#'>ABOUT</a></li>
-        <li><a href='#'>CONTACT</a></li>
-        <li><a href='#'>PLIBACY POLICY</a></li>
-        <li><a href='#'>TERMS</a></li>
+        <li><a href='./index.html'>HOME</a></li>
+        <li><a href='./about.html'>ABOUT</a></li>
+        <li><a href='./contact.html'>CONTACT</a></li>
+        <li><a href='./policy.html'>PLIBACY POLICY</a></li>
+        <li><a href='./terms.html'>TERMS</a></li>
       </ul>
       <p class='copyright'>Copyright Playorder Inc, 2016 All Rights Reserved</p>
     </footer>
-  </div>
-</body>
+
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="js/bootstrap.min.js"></script>
+  </body>
 </html>

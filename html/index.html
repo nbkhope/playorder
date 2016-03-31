@@ -1,23 +1,23 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
   <head>
-    <title>Playorder - index</title>
-    <link rel="stylesheet" type="text/css" href="./css/reset.css" />
-    <link rel="stylesheet" type="text/css" href="./css/header.css" />
-    <link rel="stylesheet" type="text/css" href="./css/footer.css" />
-    <link rel="stylesheet" type="text/css" href="./css/index.css" />
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <title>playorder - home</title>
+
     <!-- Bootstrap -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
     <script>
-    /* pulldown-menu */
-    $(function() {
-      $(".panel-btn").click(function(){
-        var clickPanel = $("+.panel",this);
-        clickPanel.toggle();
-        $(".panel").not(clickPanel).slideUp(0);
-        return false;
-      });
-    });
     /* nav-toggle */
     $(function(){
       $(".nav-index li").on("click" , function(){
@@ -25,366 +25,1340 @@
         $(".contents").fadeOut();
         $(".contents").eq(num).fadeIn();
         $(".nav-index li").removeClass('select');
-        $(".nav-index li").eq(num).addClass('select');
+          $(".nav-index li").eq(num).addClass('select');
       });
     });
-  </script>
+    </script>
   </head>
   <body>
-    <header>
-      <div class='logo'>
-        <a href='./index.html'><img class='header-logo' src='./img/header/header-logo.png' /></a>
+    <!-- header -->
+    <header class="container">
+      <nav class="navbar">
+        <div class="container-fluid">
+          <!-- Brand and toggle get grouped for better mobile display -->
+          <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+              <span class="sr-only">Toggle navigation</span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="./index.html">
+              <img src="./img/header/logo.png" />
+            </a>
+          </div>
+
+          <!-- Collect the nav links, forms, and other content for toggling -->
+          <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+            <ul class="nav navbar-nav">
+              <li><a href="./discover.html">Discover</a></li>
+              <li><a href="./startup.html">Startup</a></li>
+              <li><a href="./about.html">About</a></li>
+            </ul>
+            <form class="navbar-form navbar-left" role="search">
+              <div class="form-group">
+                <input type="text" class="form-control" placeholder="Search">
+              </div>
+              <button type="submit" class="btn btn-default">Submit</button>
+            </form>
+            <ul class="nav navbar-nav navbar-right">
+              <li class="dropdown">
+                <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
+                  <img src="./img/header/header-icon.png" width="28" height="28" />
+                  <span class="caret"></span>
+                </a>
+                <ul class="dropdown-menu">
+                  <li><a href="./account.html">Profile</a></li>
+                  <li><a href="./account.html">Activity</a></li>
+                  <li><a href="./account.html">Message</a></li>
+                  <li><a href="./account.html">PlayShop</a></li>
+                  <li><a href="./setting.html">Settings</a></li>
+                  <li><a href="#">Sign Out</a></li>
+                </ul>
+              </li>
+            </ul>
+          </div><!-- /.navbar-collapse -->
+        </div><!-- /.container-fluid -->
+      </nav>
+    </header>
+
+    <!-- slider -->
+    <section class="slider">
+      <div class="jumbotron">
+        <div class="container">
+          <h1>Send GIFT with<br>Your friends</h1>
+          <p class="explain">You can enjoy "made-to-order" gift community.</p>
+          <p><a class="btn btn-danger btn-lg" href="#" role="button">Learn more</a></p>
+        </div>
       </div>
-      <nav class='header-menu'>
-        <ul>
-          <li><a href='./category.html'>Discovery</a></li>
-          <li><a href='./start.html'>Startup</a></li>
-          <li><a href='./about.html'>About</a></li>
+    </section>
+
+    <!-- card index -->
+    <section class="container card-roll">
+
+      <nav class="container global-nav">
+        <ul class="nav nav-index">
+          <li class="select">WEAR</li>
+          <li>EAT</li>
+          <li>TOUCH</li>
+          <li>DISPLAY</li>
+          <li>TRAVEL</li>
+          <li>LISTEN</li>
         </ul>
       </nav>
-      <input class='header-search' type="search">
 
-      <div hidden>
-        <nav>
-          <span>Sign Up</span>
-          <span>Log in</span>
-        </nav>
-      </div>
+      <!-- wear -->
+      <ul class="contents card">
+        <!-- one card -->
+        <li>
+          <a href="./shop.html">
+            <div class="row">
+              <div class="col-sm-6 col-md-4">
+                <div class="thumbnail">
+                  <img src="./img/main/card-1.png" alt="image">
+                  <div class="caption">
+                    <p><span class="genre">WEAR</span></p>
+                    <h3>Global Pants</h3>
+                    <p>Tell us about your needs and we'll introduce you to several experienced professionals in your area who are ready to complete your project.</p>
+                    <p><img src="./img/index/card-line.png" /></p>
+                  <div class="card-icon">
+                    <img src="./img/main/yuuki-cardicon.png" />
+                  </div>
+                  <div class="card-profile">
+                    <p class="namae">Yuuki Asano</p>
+                    <p class="shozoku">Realm</p>
+                 </div>
+                </div>
+              </div>
+            </div>
+          </a>
+        </li>
 
-        <div class='infomation'>
-          <ul>
-            <li>
-              <span a href='./account.html'><img class='header-icon' src='./img/header/header-icon.png' /></a></span>
+          <!-- one card -->
+          <li>
+            <a href="./shop.html">
+              <div class="row">
+                <div class="col-sm-6 col-md-4">
+                  <div class="thumbnail">
+                    <img src="./img/main/card-3.png" alt="image">
+                    <div class="caption">
+                      <p><span class="genre">WEAR</span></p>
+                      <h3>Korean Sweets</h3>
+                      <p>Tell us about your needs and we'll introduce you to several experienced professionals in your area who are ready to complete your project.</p>
+                      <p><img src="./img/index/card-line.png" /></p>
+                      <div class="card-icon">
+                        <img src="./img/main/korean-cardicon.png" />
+                      </div>
+                      <div class="card-profile">
+                        <p class="namae">Kim san</p>
+                        <p class="shozoku">Joys Place</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </a>
             </li>
+
+            <!-- one card -->
             <li>
-              <div class="btn-menu"><img class='menu-arrow' class='header-arrow' src='./img/header/header-arrow.png' /></div>
-              <div class="pull-menu">
-                <ul>
-                  <li><a href='./account.html'>Profile</a></li>
-                  <li><a href='./account.html'>Activity</a></li>
-                  <li><a href='./account.html'>Message</a></li>
-                  <li><a href='./account.html'>PlayShop</a></li>
-                  <li><a href='./setting.html'>Settings</a></li>
-                  <li><a href='#'>Sign Out</a></li>
-                </ul>
+              <a href="./shop.html">
+                <div class="row">
+                  <div class="col-sm-6 col-md-4">
+                    <div class="thumbnail">
+                      <img src="./img/main/card-2.png" alt="image">
+                      <div class="caption">
+                        <p><span class="genre">WEAR</span></p>
+                        <h3>Iron man Mask</h3>
+                        <p>Tell us about your needs and we'll introduce you to several experienced professionals in your area who are ready to complete your project.</p>
+                        <p><img src="./img/index/card-line.png" /></p>
+                        <div class="card-icon">
+                          <img src="./img/main/yukke-cardicon.png" />
+                        </div>
+                        <div class="card-profile">
+                          <p class="namae">Yusuke Nakam</p>
+                          <p class="shozoku">Startup Cast</p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </a>
+              </li>
+
+              <!-- one card -->
+              <li>
+                <a href="./shop.html">
+                  <div class="row">
+                    <div class="col-sm-6 col-md-4">
+                      <div class="thumbnail">
+                        <img src="./img/main/card-1.png" alt="image">
+                        <div class="caption">
+                          <p><span class="genre">WEAR</span></p>
+                          <h3>Global Pants</h3>
+                          <p>Tell us about your needs and we'll introduce you to several experienced professionals in your area who are ready to complete your project.</p>
+                          <p><img src="./img/index/card-line.png" /></p>
+                          <div class="card-icon">
+                            <img src="./img/main/yuuki-cardicon.png" />
+                          </div>
+                          <div class="card-profile">
+                            <p class="namae">Yuuki Asano</p>
+                            <p class="shozoku">Realm</p>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </a>
+                </li>
+
+                <!-- one card -->
+                <li>
+                  <a href="./shop.html">
+                    <div class="row">
+                      <div class="col-sm-6 col-md-4">
+                        <div class="thumbnail">
+                          <img src="./img/main/card-3.png" alt="image">
+                          <div class="caption">
+                            <p><span class="genre">WEAR</span></p>
+                            <h3>Korean Sweets</h3>
+                            <p>Tell us about your needs and we'll introduce you to several experienced professionals in your area who are ready to complete your project.</p>
+                            <p><img src="./img/index/card-line.png" /></p>
+                            <div class="card-icon">
+                              <img src="./img/main/korean-cardicon.png" />
+                            </div>
+                            <div class="card-profile">
+                              <p class="namae">Kim san</p>
+                              <p class="shozoku">Joys Place</p>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </a>
+                  </li>
+
+                  <!-- one card -->
+                  <li>
+                    <a href="./shop.html">
+                      <div class="row">
+                        <div class="col-sm-6 col-md-4">
+                          <div class="thumbnail">
+                            <img src="./img/main/card-2.png" alt="image">
+                            <div class="caption">
+                              <p><span class="genre">WEAR</span></p>
+                              <h3>Iron man Mask</h3>
+                              <p>Tell us about your needs and we'll introduce you to several experienced professionals in your area who are ready to complete your project.</p>
+                              <p><img src="./img/index/card-line.png" /></p>
+                              <div class="card-icon">
+                                <img src="./img/main/yukke-cardicon.png" />
+                              </div>
+                              <div class="card-profile">
+                                <p class="namae">Yusuke Nakam</p>
+                                <p class="shozoku">Startup Cast</p>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </a>
+                    </li>
+
+                    <!-- one card -->
+                    <li>
+                      <a href="./shop.html">
+                        <div class="row">
+                          <div class="col-sm-6 col-md-4">
+                            <div class="thumbnail">
+                              <img src="./img/main/card-1.png" alt="image">
+                              <div class="caption">
+                                <p><span class="genre">WEAR</span></p>
+                                <h3>Global Pants</h3>
+                                <p>Tell us about your needs and we'll introduce you to several experienced professionals in your area who are ready to complete your project.</p>
+                                <p><img src="./img/index/card-line.png" /></p>
+                                <div class="card-icon">
+                                  <img src="./img/main/yuuki-cardicon.png" />
+                                </div>
+                                <div class="card-profile">
+                                  <p class="namae">Yuuki Asano</p>
+                                  <p class="shozoku">Realm</p>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </a>
+                      </li>
+
+                      <!-- one card -->
+                      <li>
+                        <a href="./shop.html">
+                          <div class="row">
+                            <div class="col-sm-6 col-md-4">
+                              <div class="thumbnail">
+                                <img src="./img/main/card-3.png" alt="image">
+                                <div class="caption">
+                                  <p><span class="genre">WEAR</span></p>
+                                  <h3>Korean Sweets</h3>
+                                  <p>Tell us about your needs and we'll introduce you to several experienced professionals in your area who are ready to complete your project.</p>
+                                  <p><img src="./img/index/card-line.png" /></p>
+                                  <div class="card-icon">
+                                    <img src="./img/main/korean-cardicon.png" />
+                                  </div>
+                                  <div class="card-profile">
+                                    <p class="namae">Kim san</p>
+                                    <p class="shozoku">Joys Place</p>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </a>
+                        </li>
+
+        </div>
+      </ul>
+      <!-- eat -->
+      <ul class="contents card opace">
+        <!-- one card -->
+        <li>
+          <a href="./shop.html">
+            <div class="row">
+              <div class="col-sm-6 col-md-4">
+                <div class="thumbnail">
+                  <img src="./img/main/card-1.png" alt="image">
+                  <div class="caption">
+                    <p><span class="genre">WEAR</span></p>
+                    <h3>Global Pants</h3>
+                    <p>Tell us about your needs and we'll introduce you to several experienced professionals in your area who are ready to complete your project.</p>
+                    <p><img src="./img/index/card-line.png" /></p>
+                  <div class="card-icon">
+                    <img src="./img/main/yuuki-cardicon.png" />
+                  </div>
+                  <div class="card-profile">
+                    <p class="namae">Yuuki Asano</p>
+                    <p class="shozoku">Realm</p>
+                 </div>
+                </div>
               </div>
             </div>
+          </a>
+        </li>
+
+          <!-- one card -->
+          <li>
+            <a href="./shop.html">
+              <div class="row">
+                <div class="col-sm-6 col-md-4">
+                  <div class="thumbnail">
+                    <img src="./img/main/card-3.png" alt="image">
+                    <div class="caption">
+                      <p><span class="genre">WEAR</span></p>
+                      <h3>Korean Sweets</h3>
+                      <p>Tell us about your needs and we'll introduce you to several experienced professionals in your area who are ready to complete your project.</p>
+                      <p><img src="./img/index/card-line.png" /></p>
+                      <div class="card-icon">
+                        <img src="./img/main/korean-cardicon.png" />
+                      </div>
+                      <div class="card-profile">
+                        <p class="namae">Kim san</p>
+                        <p class="shozoku">Joys Place</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </a>
+            </li>
+
+            <!-- one card -->
+            <li>
+              <a href="./shop.html">
+                <div class="row">
+                  <div class="col-sm-6 col-md-4">
+                    <div class="thumbnail">
+                      <img src="./img/main/card-2.png" alt="image">
+                      <div class="caption">
+                        <p><span class="genre">WEAR</span></p>
+                        <h3>Iron man Mask</h3>
+                        <p>Tell us about your needs and we'll introduce you to several experienced professionals in your area who are ready to complete your project.</p>
+                        <p><img src="./img/index/card-line.png" /></p>
+                        <div class="card-icon">
+                          <img src="./img/main/yukke-cardicon.png" />
+                        </div>
+                        <div class="card-profile">
+                          <p class="namae">Yusuke Nakam</p>
+                          <p class="shozoku">Startup Cast</p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </a>
+              </li>
+
+              <!-- one card -->
+              <li>
+                <a href="./shop.html">
+                  <div class="row">
+                    <div class="col-sm-6 col-md-4">
+                      <div class="thumbnail">
+                        <img src="./img/main/card-1.png" alt="image">
+                        <div class="caption">
+                          <p><span class="genre">WEAR</span></p>
+                          <h3>Global Pants</h3>
+                          <p>Tell us about your needs and we'll introduce you to several experienced professionals in your area who are ready to complete your project.</p>
+                          <p><img src="./img/index/card-line.png" /></p>
+                          <div class="card-icon">
+                            <img src="./img/main/yuuki-cardicon.png" />
+                          </div>
+                          <div class="card-profile">
+                            <p class="namae">Yuuki Asano</p>
+                            <p class="shozoku">Realm</p>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </a>
+                </li>
+
+                <!-- one card -->
+                <li>
+                  <a href="./shop.html">
+                    <div class="row">
+                      <div class="col-sm-6 col-md-4">
+                        <div class="thumbnail">
+                          <img src="./img/main/card-3.png" alt="image">
+                          <div class="caption">
+                            <p><span class="genre">WEAR</span></p>
+                            <h3>Korean Sweets</h3>
+                            <p>Tell us about your needs and we'll introduce you to several experienced professionals in your area who are ready to complete your project.</p>
+                            <p><img src="./img/index/card-line.png" /></p>
+                            <div class="card-icon">
+                              <img src="./img/main/korean-cardicon.png" />
+                            </div>
+                            <div class="card-profile">
+                              <p class="namae">Kim san</p>
+                              <p class="shozoku">Joys Place</p>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </a>
+                  </li>
+
+                  <!-- one card -->
+                  <li>
+                    <a href="./shop.html">
+                      <div class="row">
+                        <div class="col-sm-6 col-md-4">
+                          <div class="thumbnail">
+                            <img src="./img/main/card-2.png" alt="image">
+                            <div class="caption">
+                              <p><span class="genre">WEAR</span></p>
+                              <h3>Iron man Mask</h3>
+                              <p>Tell us about your needs and we'll introduce you to several experienced professionals in your area who are ready to complete your project.</p>
+                              <p><img src="./img/index/card-line.png" /></p>
+                              <div class="card-icon">
+                                <img src="./img/main/yukke-cardicon.png" />
+                              </div>
+                              <div class="card-profile">
+                                <p class="namae">Yusuke Nakam</p>
+                                <p class="shozoku">Startup Cast</p>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </a>
+                    </li>
+
+                    <!-- one card -->
+                    <li>
+                      <a href="./shop.html">
+                        <div class="row">
+                          <div class="col-sm-6 col-md-4">
+                            <div class="thumbnail">
+                              <img src="./img/main/card-1.png" alt="image">
+                              <div class="caption">
+                                <p><span class="genre">WEAR</span></p>
+                                <h3>Global Pants</h3>
+                                <p>Tell us about your needs and we'll introduce you to several experienced professionals in your area who are ready to complete your project.</p>
+                                <p><img src="./img/index/card-line.png" /></p>
+                                <div class="card-icon">
+                                  <img src="./img/main/yuuki-cardicon.png" />
+                                </div>
+                                <div class="card-profile">
+                                  <p class="namae">Yuuki Asano</p>
+                                  <p class="shozoku">Realm</p>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </a>
+                      </li>
+
+                      <!-- one card -->
+                      <li>
+                        <a href="./shop.html">
+                          <div class="row">
+                            <div class="col-sm-6 col-md-4">
+                              <div class="thumbnail">
+                                <img src="./img/main/card-3.png" alt="image">
+                                <div class="caption">
+                                  <p><span class="genre">WEAR</span></p>
+                                  <h3>Korean Sweets</h3>
+                                  <p>Tell us about your needs and we'll introduce you to several experienced professionals in your area who are ready to complete your project.</p>
+                                  <p><img src="./img/index/card-line.png" /></p>
+                                  <div class="card-icon">
+                                    <img src="./img/main/korean-cardicon.png" />
+                                  </div>
+                                  <div class="card-profile">
+                                    <p class="namae">Kim san</p>
+                                    <p class="shozoku">Joys Place</p>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </a>
+                        </li>
+
+        </div>
+      </ul>
+      <!-- touch -->
+      <ul class="contents card opace">
+        <!-- one card -->
+        <li>
+          <a href="./shop.html">
+            <div class="row">
+              <div class="col-sm-6 col-md-4">
+                <div class="thumbnail">
+                  <img src="./img/main/card-1.png" alt="image">
+                  <div class="caption">
+                    <p><span class="genre">WEAR</span></p>
+                    <h3>Global Pants</h3>
+                    <p>Tell us about your needs and we'll introduce you to several experienced professionals in your area who are ready to complete your project.</p>
+                    <p><img src="./img/index/card-line.png" /></p>
+                  <div class="card-icon">
+                    <img src="./img/main/yuuki-cardicon.png" />
+                  </div>
+                  <div class="card-profile">
+                    <p class="namae">Yuuki Asano</p>
+                    <p class="shozoku">Realm</p>
+                 </div>
+                </div>
+              </div>
+            </div>
+          </a>
+        </li>
+
+          <!-- one card -->
+          <li>
+            <a href="./shop.html">
+              <div class="row">
+                <div class="col-sm-6 col-md-4">
+                  <div class="thumbnail">
+                    <img src="./img/main/card-3.png" alt="image">
+                    <div class="caption">
+                      <p><span class="genre">WEAR</span></p>
+                      <h3>Korean Sweets</h3>
+                      <p>Tell us about your needs and we'll introduce you to several experienced professionals in your area who are ready to complete your project.</p>
+                      <p><img src="./img/index/card-line.png" /></p>
+                      <div class="card-icon">
+                        <img src="./img/main/korean-cardicon.png" />
+                      </div>
+                      <div class="card-profile">
+                        <p class="namae">Kim san</p>
+                        <p class="shozoku">Joys Place</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </a>
+            </li>
+
+            <!-- one card -->
+            <li>
+              <a href="./shop.html">
+                <div class="row">
+                  <div class="col-sm-6 col-md-4">
+                    <div class="thumbnail">
+                      <img src="./img/main/card-2.png" alt="image">
+                      <div class="caption">
+                        <p><span class="genre">WEAR</span></p>
+                        <h3>Iron man Mask</h3>
+                        <p>Tell us about your needs and we'll introduce you to several experienced professionals in your area who are ready to complete your project.</p>
+                        <p><img src="./img/index/card-line.png" /></p>
+                        <div class="card-icon">
+                          <img src="./img/main/yukke-cardicon.png" />
+                        </div>
+                        <div class="card-profile">
+                          <p class="namae">Yusuke Nakam</p>
+                          <p class="shozoku">Startup Cast</p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </a>
+              </li>
+
+              <!-- one card -->
+              <li>
+                <a href="./shop.html">
+                  <div class="row">
+                    <div class="col-sm-6 col-md-4">
+                      <div class="thumbnail">
+                        <img src="./img/main/card-1.png" alt="image">
+                        <div class="caption">
+                          <p><span class="genre">WEAR</span></p>
+                          <h3>Global Pants</h3>
+                          <p>Tell us about your needs and we'll introduce you to several experienced professionals in your area who are ready to complete your project.</p>
+                          <p><img src="./img/index/card-line.png" /></p>
+                          <div class="card-icon">
+                            <img src="./img/main/yuuki-cardicon.png" />
+                          </div>
+                          <div class="card-profile">
+                            <p class="namae">Yuuki Asano</p>
+                            <p class="shozoku">Realm</p>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </a>
+                </li>
+
+                <!-- one card -->
+                <li>
+                  <a href="./shop.html">
+                    <div class="row">
+                      <div class="col-sm-6 col-md-4">
+                        <div class="thumbnail">
+                          <img src="./img/main/card-3.png" alt="image">
+                          <div class="caption">
+                            <p><span class="genre">WEAR</span></p>
+                            <h3>Korean Sweets</h3>
+                            <p>Tell us about your needs and we'll introduce you to several experienced professionals in your area who are ready to complete your project.</p>
+                            <p><img src="./img/index/card-line.png" /></p>
+                            <div class="card-icon">
+                              <img src="./img/main/korean-cardicon.png" />
+                            </div>
+                            <div class="card-profile">
+                              <p class="namae">Kim san</p>
+                              <p class="shozoku">Joys Place</p>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </a>
+                  </li>
+
+                  <!-- one card -->
+                  <li>
+                    <a href="./shop.html">
+                      <div class="row">
+                        <div class="col-sm-6 col-md-4">
+                          <div class="thumbnail">
+                            <img src="./img/main/card-2.png" alt="image">
+                            <div class="caption">
+                              <p><span class="genre">WEAR</span></p>
+                              <h3>Iron man Mask</h3>
+                              <p>Tell us about your needs and we'll introduce you to several experienced professionals in your area who are ready to complete your project.</p>
+                              <p><img src="./img/index/card-line.png" /></p>
+                              <div class="card-icon">
+                                <img src="./img/main/yukke-cardicon.png" />
+                              </div>
+                              <div class="card-profile">
+                                <p class="namae">Yusuke Nakam</p>
+                                <p class="shozoku">Startup Cast</p>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </a>
+                    </li>
+
+                    <!-- one card -->
+                    <li>
+                      <a href="./shop.html">
+                        <div class="row">
+                          <div class="col-sm-6 col-md-4">
+                            <div class="thumbnail">
+                              <img src="./img/main/card-1.png" alt="image">
+                              <div class="caption">
+                                <p><span class="genre">WEAR</span></p>
+                                <h3>Global Pants</h3>
+                                <p>Tell us about your needs and we'll introduce you to several experienced professionals in your area who are ready to complete your project.</p>
+                                <p><img src="./img/index/card-line.png" /></p>
+                                <div class="card-icon">
+                                  <img src="./img/main/yuuki-cardicon.png" />
+                                </div>
+                                <div class="card-profile">
+                                  <p class="namae">Yuuki Asano</p>
+                                  <p class="shozoku">Realm</p>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </a>
+                      </li>
+
+                      <!-- one card -->
+                      <li>
+                        <a href="./shop.html">
+                          <div class="row">
+                            <div class="col-sm-6 col-md-4">
+                              <div class="thumbnail">
+                                <img src="./img/main/card-3.png" alt="image">
+                                <div class="caption">
+                                  <p><span class="genre">WEAR</span></p>
+                                  <h3>Korean Sweets</h3>
+                                  <p>Tell us about your needs and we'll introduce you to several experienced professionals in your area who are ready to complete your project.</p>
+                                  <p><img src="./img/index/card-line.png" /></p>
+                                  <div class="card-icon">
+                                    <img src="./img/main/korean-cardicon.png" />
+                                  </div>
+                                  <div class="card-profile">
+                                    <p class="namae">Kim san</p>
+                                    <p class="shozoku">Joys Place</p>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </a>
+                        </li>
+
+        </div>
+      </ul>
+      <!-- display -->
+      <ul class="contents card opace">
+        <!-- one card -->
+        <li>
+          <a href="./shop.html">
+            <div class="row">
+              <div class="col-sm-6 col-md-4">
+                <div class="thumbnail">
+                  <img src="./img/main/card-1.png" alt="image">
+                  <div class="caption">
+                    <p><span class="genre">WEAR</span></p>
+                    <h3>Global Pants</h3>
+                    <p>Tell us about your needs and we'll introduce you to several experienced professionals in your area who are ready to complete your project.</p>
+                    <p><img src="./img/index/card-line.png" /></p>
+                  <div class="card-icon">
+                    <img src="./img/main/yuuki-cardicon.png" />
+                  </div>
+                  <div class="card-profile">
+                    <p class="namae">Yuuki Asano</p>
+                    <p class="shozoku">Realm</p>
+                 </div>
+                </div>
+              </div>
+            </div>
+          </a>
+        </li>
+
+          <!-- one card -->
+          <li>
+            <a href="./shop.html">
+              <div class="row">
+                <div class="col-sm-6 col-md-4">
+                  <div class="thumbnail">
+                    <img src="./img/main/card-3.png" alt="image">
+                    <div class="caption">
+                      <p><span class="genre">WEAR</span></p>
+                      <h3>Korean Sweets</h3>
+                      <p>Tell us about your needs and we'll introduce you to several experienced professionals in your area who are ready to complete your project.</p>
+                      <p><img src="./img/index/card-line.png" /></p>
+                      <div class="card-icon">
+                        <img src="./img/main/korean-cardicon.png" />
+                      </div>
+                      <div class="card-profile">
+                        <p class="namae">Kim san</p>
+                        <p class="shozoku">Joys Place</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </a>
+            </li>
+
+            <!-- one card -->
+            <li>
+              <a href="./shop.html">
+                <div class="row">
+                  <div class="col-sm-6 col-md-4">
+                    <div class="thumbnail">
+                      <img src="./img/main/card-2.png" alt="image">
+                      <div class="caption">
+                        <p><span class="genre">WEAR</span></p>
+                        <h3>Iron man Mask</h3>
+                        <p>Tell us about your needs and we'll introduce you to several experienced professionals in your area who are ready to complete your project.</p>
+                        <p><img src="./img/index/card-line.png" /></p>
+                        <div class="card-icon">
+                          <img src="./img/main/yukke-cardicon.png" />
+                        </div>
+                        <div class="card-profile">
+                          <p class="namae">Yusuke Nakam</p>
+                          <p class="shozoku">Startup Cast</p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </a>
+              </li>
+
+              <!-- one card -->
+              <li>
+                <a href="./shop.html">
+                  <div class="row">
+                    <div class="col-sm-6 col-md-4">
+                      <div class="thumbnail">
+                        <img src="./img/main/card-1.png" alt="image">
+                        <div class="caption">
+                          <p><span class="genre">WEAR</span></p>
+                          <h3>Global Pants</h3>
+                          <p>Tell us about your needs and we'll introduce you to several experienced professionals in your area who are ready to complete your project.</p>
+                          <p><img src="./img/index/card-line.png" /></p>
+                          <div class="card-icon">
+                            <img src="./img/main/yuuki-cardicon.png" />
+                          </div>
+                          <div class="card-profile">
+                            <p class="namae">Yuuki Asano</p>
+                            <p class="shozoku">Realm</p>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </a>
+                </li>
+
+                <!-- one card -->
+                <li>
+                  <a href="./shop.html">
+                    <div class="row">
+                      <div class="col-sm-6 col-md-4">
+                        <div class="thumbnail">
+                          <img src="./img/main/card-3.png" alt="image">
+                          <div class="caption">
+                            <p><span class="genre">WEAR</span></p>
+                            <h3>Korean Sweets</h3>
+                            <p>Tell us about your needs and we'll introduce you to several experienced professionals in your area who are ready to complete your project.</p>
+                            <p><img src="./img/index/card-line.png" /></p>
+                            <div class="card-icon">
+                              <img src="./img/main/korean-cardicon.png" />
+                            </div>
+                            <div class="card-profile">
+                              <p class="namae">Kim san</p>
+                              <p class="shozoku">Joys Place</p>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </a>
+                  </li>
+
+                  <!-- one card -->
+                  <li>
+                    <a href="./shop.html">
+                      <div class="row">
+                        <div class="col-sm-6 col-md-4">
+                          <div class="thumbnail">
+                            <img src="./img/main/card-2.png" alt="image">
+                            <div class="caption">
+                              <p><span class="genre">WEAR</span></p>
+                              <h3>Iron man Mask</h3>
+                              <p>Tell us about your needs and we'll introduce you to several experienced professionals in your area who are ready to complete your project.</p>
+                              <p><img src="./img/index/card-line.png" /></p>
+                              <div class="card-icon">
+                                <img src="./img/main/yukke-cardicon.png" />
+                              </div>
+                              <div class="card-profile">
+                                <p class="namae">Yusuke Nakam</p>
+                                <p class="shozoku">Startup Cast</p>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </a>
+                    </li>
+
+                    <!-- one card -->
+                    <li>
+                      <a href="./shop.html">
+                        <div class="row">
+                          <div class="col-sm-6 col-md-4">
+                            <div class="thumbnail">
+                              <img src="./img/main/card-1.png" alt="image">
+                              <div class="caption">
+                                <p><span class="genre">WEAR</span></p>
+                                <h3>Global Pants</h3>
+                                <p>Tell us about your needs and we'll introduce you to several experienced professionals in your area who are ready to complete your project.</p>
+                                <p><img src="./img/index/card-line.png" /></p>
+                                <div class="card-icon">
+                                  <img src="./img/main/yuuki-cardicon.png" />
+                                </div>
+                                <div class="card-profile">
+                                  <p class="namae">Yuuki Asano</p>
+                                  <p class="shozoku">Realm</p>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </a>
+                      </li>
+
+                      <!-- one card -->
+                      <li>
+                        <a href="./shop.html">
+                          <div class="row">
+                            <div class="col-sm-6 col-md-4">
+                              <div class="thumbnail">
+                                <img src="./img/main/card-3.png" alt="image">
+                                <div class="caption">
+                                  <p><span class="genre">WEAR</span></p>
+                                  <h3>Korean Sweets</h3>
+                                  <p>Tell us about your needs and we'll introduce you to several experienced professionals in your area who are ready to complete your project.</p>
+                                  <p><img src="./img/index/card-line.png" /></p>
+                                  <div class="card-icon">
+                                    <img src="./img/main/korean-cardicon.png" />
+                                  </div>
+                                  <div class="card-profile">
+                                    <p class="namae">Kim san</p>
+                                    <p class="shozoku">Joys Place</p>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </a>
+                        </li>
+
+        </div>
+      </ul>
+      <!-- travel -->
+      <ul class="contents card opace">
+        <!-- one card -->
+        <li>
+          <a href="./shop.html">
+            <div class="row">
+              <div class="col-sm-6 col-md-4">
+                <div class="thumbnail">
+                  <img src="./img/main/card-1.png" alt="image">
+                  <div class="caption">
+                    <p><span class="genre">WEAR</span></p>
+                    <h3>Global Pants</h3>
+                    <p>Tell us about your needs and we'll introduce you to several experienced professionals in your area who are ready to complete your project.</p>
+                    <p><img src="./img/index/card-line.png" /></p>
+                  <div class="card-icon">
+                    <img src="./img/main/yuuki-cardicon.png" />
+                  </div>
+                  <div class="card-profile">
+                    <p class="namae">Yuuki Asano</p>
+                    <p class="shozoku">Realm</p>
+                 </div>
+                </div>
+              </div>
+            </div>
+          </a>
+        </li>
+
+          <!-- one card -->
+          <li>
+            <a href="./shop.html">
+              <div class="row">
+                <div class="col-sm-6 col-md-4">
+                  <div class="thumbnail">
+                    <img src="./img/main/card-3.png" alt="image">
+                    <div class="caption">
+                      <p><span class="genre">WEAR</span></p>
+                      <h3>Korean Sweets</h3>
+                      <p>Tell us about your needs and we'll introduce you to several experienced professionals in your area who are ready to complete your project.</p>
+                      <p><img src="./img/index/card-line.png" /></p>
+                      <div class="card-icon">
+                        <img src="./img/main/korean-cardicon.png" />
+                      </div>
+                      <div class="card-profile">
+                        <p class="namae">Kim san</p>
+                        <p class="shozoku">Joys Place</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </a>
+            </li>
+
+            <!-- one card -->
+            <li>
+              <a href="./shop.html">
+                <div class="row">
+                  <div class="col-sm-6 col-md-4">
+                    <div class="thumbnail">
+                      <img src="./img/main/card-2.png" alt="image">
+                      <div class="caption">
+                        <p><span class="genre">WEAR</span></p>
+                        <h3>Iron man Mask</h3>
+                        <p>Tell us about your needs and we'll introduce you to several experienced professionals in your area who are ready to complete your project.</p>
+                        <p><img src="./img/index/card-line.png" /></p>
+                        <div class="card-icon">
+                          <img src="./img/main/yukke-cardicon.png" />
+                        </div>
+                        <div class="card-profile">
+                          <p class="namae">Yusuke Nakam</p>
+                          <p class="shozoku">Startup Cast</p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </a>
+              </li>
+
+              <!-- one card -->
+              <li>
+                <a href="./shop.html">
+                  <div class="row">
+                    <div class="col-sm-6 col-md-4">
+                      <div class="thumbnail">
+                        <img src="./img/main/card-1.png" alt="image">
+                        <div class="caption">
+                          <p><span class="genre">WEAR</span></p>
+                          <h3>Global Pants</h3>
+                          <p>Tell us about your needs and we'll introduce you to several experienced professionals in your area who are ready to complete your project.</p>
+                          <p><img src="./img/index/card-line.png" /></p>
+                          <div class="card-icon">
+                            <img src="./img/main/yuuki-cardicon.png" />
+                          </div>
+                          <div class="card-profile">
+                            <p class="namae">Yuuki Asano</p>
+                            <p class="shozoku">Realm</p>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </a>
+                </li>
+
+                <!-- one card -->
+                <li>
+                  <a href="./shop.html">
+                    <div class="row">
+                      <div class="col-sm-6 col-md-4">
+                        <div class="thumbnail">
+                          <img src="./img/main/card-3.png" alt="image">
+                          <div class="caption">
+                            <p><span class="genre">WEAR</span></p>
+                            <h3>Korean Sweets</h3>
+                            <p>Tell us about your needs and we'll introduce you to several experienced professionals in your area who are ready to complete your project.</p>
+                            <p><img src="./img/index/card-line.png" /></p>
+                            <div class="card-icon">
+                              <img src="./img/main/korean-cardicon.png" />
+                            </div>
+                            <div class="card-profile">
+                              <p class="namae">Kim san</p>
+                              <p class="shozoku">Joys Place</p>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </a>
+                  </li>
+
+                  <!-- one card -->
+                  <li>
+                    <a href="./shop.html">
+                      <div class="row">
+                        <div class="col-sm-6 col-md-4">
+                          <div class="thumbnail">
+                            <img src="./img/main/card-2.png" alt="image">
+                            <div class="caption">
+                              <p><span class="genre">WEAR</span></p>
+                              <h3>Iron man Mask</h3>
+                              <p>Tell us about your needs and we'll introduce you to several experienced professionals in your area who are ready to complete your project.</p>
+                              <p><img src="./img/index/card-line.png" /></p>
+                              <div class="card-icon">
+                                <img src="./img/main/yukke-cardicon.png" />
+                              </div>
+                              <div class="card-profile">
+                                <p class="namae">Yusuke Nakam</p>
+                                <p class="shozoku">Startup Cast</p>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </a>
+                    </li>
+
+                    <!-- one card -->
+                    <li>
+                      <a href="./shop.html">
+                        <div class="row">
+                          <div class="col-sm-6 col-md-4">
+                            <div class="thumbnail">
+                              <img src="./img/main/card-1.png" alt="image">
+                              <div class="caption">
+                                <p><span class="genre">WEAR</span></p>
+                                <h3>Global Pants</h3>
+                                <p>Tell us about your needs and we'll introduce you to several experienced professionals in your area who are ready to complete your project.</p>
+                                <p><img src="./img/index/card-line.png" /></p>
+                                <div class="card-icon">
+                                  <img src="./img/main/yuuki-cardicon.png" />
+                                </div>
+                                <div class="card-profile">
+                                  <p class="namae">Yuuki Asano</p>
+                                  <p class="shozoku">Realm</p>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </a>
+                      </li>
+
+                      <!-- one card -->
+                      <li>
+                        <a href="./shop.html">
+                          <div class="row">
+                            <div class="col-sm-6 col-md-4">
+                              <div class="thumbnail">
+                                <img src="./img/main/card-3.png" alt="image">
+                                <div class="caption">
+                                  <p><span class="genre">WEAR</span></p>
+                                  <h3>Korean Sweets</h3>
+                                  <p>Tell us about your needs and we'll introduce you to several experienced professionals in your area who are ready to complete your project.</p>
+                                  <p><img src="./img/index/card-line.png" /></p>
+                                  <div class="card-icon">
+                                    <img src="./img/main/korean-cardicon.png" />
+                                  </div>
+                                  <div class="card-profile">
+                                    <p class="namae">Kim san</p>
+                                    <p class="shozoku">Joys Place</p>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </a>
+                        </li>
+
+        </div>
+      </ul>
+      <!-- listen -->
+      <ul class="contents card opace">
+        <!-- one card -->
+        <li>
+          <a href="./shop.html">
+            <div class="row">
+              <div class="col-sm-6 col-md-4">
+                <div class="thumbnail">
+                  <img src="./img/main/card-1.png" alt="image">
+                  <div class="caption">
+                    <p><span class="genre">WEAR</span></p>
+                    <h3>Global Pants</h3>
+                    <p>Tell us about your needs and we'll introduce you to several experienced professionals in your area who are ready to complete your project.</p>
+                    <p><img src="./img/index/card-line.png" /></p>
+                  <div class="card-icon">
+                    <img src="./img/main/yuuki-cardicon.png" />
+                  </div>
+                  <div class="card-profile">
+                    <p class="namae">Yuuki Asano</p>
+                    <p class="shozoku">Realm</p>
+                 </div>
+                </div>
+              </div>
+            </div>
+          </a>
+        </li>
+
+          <!-- one card -->
+          <li>
+            <a href="./shop.html">
+              <div class="row">
+                <div class="col-sm-6 col-md-4">
+                  <div class="thumbnail">
+                    <img src="./img/main/card-3.png" alt="image">
+                    <div class="caption">
+                      <p><span class="genre">WEAR</span></p>
+                      <h3>Korean Sweets</h3>
+                      <p>Tell us about your needs and we'll introduce you to several experienced professionals in your area who are ready to complete your project.</p>
+                      <p><img src="./img/index/card-line.png" /></p>
+                      <div class="card-icon">
+                        <img src="./img/main/korean-cardicon.png" />
+                      </div>
+                      <div class="card-profile">
+                        <p class="namae">Kim san</p>
+                        <p class="shozoku">Joys Place</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </a>
+            </li>
+
+            <!-- one card -->
+            <li>
+              <a href="./shop.html">
+                <div class="row">
+                  <div class="col-sm-6 col-md-4">
+                    <div class="thumbnail">
+                      <img src="./img/main/card-2.png" alt="image">
+                      <div class="caption">
+                        <p><span class="genre">WEAR</span></p>
+                        <h3>Iron man Mask</h3>
+                        <p>Tell us about your needs and we'll introduce you to several experienced professionals in your area who are ready to complete your project.</p>
+                        <p><img src="./img/index/card-line.png" /></p>
+                        <div class="card-icon">
+                          <img src="./img/main/yukke-cardicon.png" />
+                        </div>
+                        <div class="card-profile">
+                          <p class="namae">Yusuke Nakam</p>
+                          <p class="shozoku">Startup Cast</p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </a>
+              </li>
+
+              <!-- one card -->
+              <li>
+                <a href="./shop.html">
+                  <div class="row">
+                    <div class="col-sm-6 col-md-4">
+                      <div class="thumbnail">
+                        <img src="./img/main/card-1.png" alt="image">
+                        <div class="caption">
+                          <p><span class="genre">WEAR</span></p>
+                          <h3>Global Pants</h3>
+                          <p>Tell us about your needs and we'll introduce you to several experienced professionals in your area who are ready to complete your project.</p>
+                          <p><img src="./img/index/card-line.png" /></p>
+                          <div class="card-icon">
+                            <img src="./img/main/yuuki-cardicon.png" />
+                          </div>
+                          <div class="card-profile">
+                            <p class="namae">Yuuki Asano</p>
+                            <p class="shozoku">Realm</p>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </a>
+                </li>
+
+                <!-- one card -->
+                <li>
+                  <a href="./shop.html">
+                    <div class="row">
+                      <div class="col-sm-6 col-md-4">
+                        <div class="thumbnail">
+                          <img src="./img/main/card-3.png" alt="image">
+                          <div class="caption">
+                            <p><span class="genre">WEAR</span></p>
+                            <h3>Korean Sweets</h3>
+                            <p>Tell us about your needs and we'll introduce you to several experienced professionals in your area who are ready to complete your project.</p>
+                            <p><img src="./img/index/card-line.png" /></p>
+                            <div class="card-icon">
+                              <img src="./img/main/korean-cardicon.png" />
+                            </div>
+                            <div class="card-profile">
+                              <p class="namae">Kim san</p>
+                              <p class="shozoku">Joys Place</p>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </a>
+                  </li>
+
+                  <!-- one card -->
+                  <li>
+                    <a href="./shop.html">
+                      <div class="row">
+                        <div class="col-sm-6 col-md-4">
+                          <div class="thumbnail">
+                            <img src="./img/main/card-2.png" alt="image">
+                            <div class="caption">
+                              <p><span class="genre">WEAR</span></p>
+                              <h3>Iron man Mask</h3>
+                              <p>Tell us about your needs and we'll introduce you to several experienced professionals in your area who are ready to complete your project.</p>
+                              <p><img src="./img/index/card-line.png" /></p>
+                              <div class="card-icon">
+                                <img src="./img/main/yukke-cardicon.png" />
+                              </div>
+                              <div class="card-profile">
+                                <p class="namae">Yusuke Nakam</p>
+                                <p class="shozoku">Startup Cast</p>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </a>
+                    </li>
+
+                    <!-- one card -->
+                    <li>
+                      <a href="./shop.html">
+                        <div class="row">
+                          <div class="col-sm-6 col-md-4">
+                            <div class="thumbnail">
+                              <img src="./img/main/card-1.png" alt="image">
+                              <div class="caption">
+                                <p><span class="genre">WEAR</span></p>
+                                <h3>Global Pants</h3>
+                                <p>Tell us about your needs and we'll introduce you to several experienced professionals in your area who are ready to complete your project.</p>
+                                <p><img src="./img/index/card-line.png" /></p>
+                                <div class="card-icon">
+                                  <img src="./img/main/yuuki-cardicon.png" />
+                                </div>
+                                <div class="card-profile">
+                                  <p class="namae">Yuuki Asano</p>
+                                  <p class="shozoku">Realm</p>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </a>
+                      </li>
+
+                      <!-- one card -->
+                      <li>
+                        <a href="./shop.html">
+                          <div class="row">
+                            <div class="col-sm-6 col-md-4">
+                              <div class="thumbnail">
+                                <img src="./img/main/card-3.png" alt="image">
+                                <div class="caption">
+                                  <p><span class="genre">WEAR</span></p>
+                                  <h3>Korean Sweets</h3>
+                                  <p>Tell us about your needs and we'll introduce you to several experienced professionals in your area who are ready to complete your project.</p>
+                                  <p><img src="./img/index/card-line.png" /></p>
+                                  <div class="card-icon">
+                                    <img src="./img/main/korean-cardicon.png" />
+                                  </div>
+                                  <div class="card-profile">
+                                    <p class="namae">Kim san</p>
+                                    <p class="shozoku">Joys Place</p>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </a>
+                        </li>
+
+        </div>
+      </ul>
+
+    </section>
+
+    <!-- how it work -->
+    <div class="hiw-cover">
+      <section class="container hiw">
+        <h2>HOW PLAYORDER WORKS</h2>
+        <ul class='how-it-works'>
+          <li>
+            <img src='./img/index/hiw-1.png' />
+            <h2>1. Pick a Gift</h2>
+            <p>Choose around huge Payorder plattform</p>
           </li>
-      </ul>
-    </header>
-    <section class='slider'>
-      <div class='slider-left'>
-        <h1>Hot-Air Balloon Ride</h1>
-        <p>There&#39;s nothing quite like floating over the yellow grasses of the Serengeti while lions and zebras frolic just a hundred feet below.</p>
-      </div>
-      <div class='slider-right'>
-        <span>TRAVEL</span>
-      </div>
-    </section>
+          <li>
+            <img src='./img/index/hiw-2.png' />
+            <h2>2. Share Payment</h2>
+            <p>Let&#39;s share payment with your friends</p>
+          </li>
+          <li>
+            <img src='./img/index/hiw-3.png' />
+            <h2>3. Deliver Amazingly</h2>
+            <p>Enjoy this amazing experience</p>
+          </li>
+        </ul>
+      </section>
+    </div>
 
-    <nav class='global-nav'>
-      <ul class='nav-index'>
-        <li class='select'><a class='nav-category'>WEAR</a></li>
-        <li><a class='nav-category'>EAT</a></li>
-        <li><a class='nav-category'>TOUCH</a></li>
-        <li><a class='nav-category'>DISPLAY</a></li>
-        <li><a class='nav-category'>TRAVEL</a></li>
-        <li><a class='nav-category'>LISTEN</a></li>
-      </ul>
-    </nav>
-
-    <section class='index-roll'>
-      <!-- Wear category -->
-      <ul class='contents'>
-        <li>
-          <div class='card'>
-            <div class='card-img'>
-              <img src='./img/index/index-korean-main.png' />
-            </div>
-            <div class='card-info'>
-              <span class='info'>WEAR</span>
-              <span class='price'>$40 -</span>
-              <h3>Korean wear mode so cute</h3>
-              <p>Tell us about your needs and we&#39;ll introduce you to several experienced professionals in your area who are ready to complete your project</p>
-            </div>
-            <div class='card-name'>
-              <img class='card-line' src='./img/index/index-card-line.png' />
-              <img class='card-icon' src='./img/index/index-korean.png' />
-              <div class='nametag'>
-                <span class='namae'>Min Heong Kang</span><br>
-                <span class='shozoku'>Joys Place Coffee</span>
-              </div>
-            </div>
-          </div>
-        </li>
-        <li>
-          <div class='card'>
-            <div class='card-img'>
-              <img src='./img/index/index-yukke-main.png' />
-            </div>
-            <div class='card-info'>
-              <span class='info'>WEAR</span>
-              <span class='price'>$200 -</span>
-              <h3>Super suits like Iron man</h3>
-              <p>Tell us about your needs and we&#39;ll introduce you to several experienced professionals in your area who are ready to complete your project</p>
-            </div>
-            <div class='card-name'>
-              <img class='card-line' src='./img/index/index-card-line.png' />
-              <img class='card-icon' src='./img/index/index-yukke.png' />
-              <div class='nametag'>
-                <span class='namae'>Yusuke Nakamura</span><br>
-                <span class='shozoku'>Startup Cast</span>
-              </div>
-            </div>
-          </div>
-        </li>
-        <li>
-          <a href='./shop.html'>
-            <div class='card'>
-              <div class='card-img'>
-                <img src='./img/index/index-yuuki-main.png' />
-              </div>
-              <div class='card-info'>
-                <span class='info'>WEAR</span>
-                <span class='price'>$400 -</span>
-                <h3>GPants from YUUKI ASANO</h3>
-                <p>Tell us about your needs and we&#39;ll introduce you to several experienced professionals in your area who are ready to complete your project</p>
-              </div>
-              <div class='card-name'>
-                <img class='card-line' src='./img/index/index-card-line.png' />
-                <img class='card-icon' src='./img/index/index-yuuki.png' />
-                <div class='nametag'>
-                  <span class='namae'>Yuuki Asano</span><br>
-                  <span class='shozoku'>Realm</span>
-                </div>
-              </div>
-            </div>
-          </a>
-        </li>
-
-        <li>
-          <div class='card'>
-            <div class='card-img'>
-              <img src='./img/index/index-korean-main.png' />
-            </div>
-            <div class='card-info'>
-              <span class='info'>WEAR</span>
-              <span class='price'>$40 -</span>
-              <h3>Korean wear mode so cute</h3>
-              <p>Tell us about your needs and we&#39;ll introduce you to several experienced professionals in your area who are ready to complete your project</p>
-            </div>
-            <div class='card-name'>
-              <img class='card-line' src='./img/index/index-card-line.png' />
-              <img class='card-icon' src='./img/index/index-korean.png' />
-              <div class='nametag'>
-                <span class='namae'>Min Heong Kang</span><br>
-                <span class='shozoku'>Joys Place Coffee</span>
-              </div>
-            </div>
-          </div>
-        </li>
-        <li>
-          <div class='card'>
-            <div class='card-img'>
-              <img src='./img/index/index-yukke-main.png' />
-            </div>
-            <div class='card-info'>
-              <span class='info'>WEAR</span>
-              <span class='price'>$200 -</span>
-              <h3>Super suits like Iron man</h3>
-              <p>Tell us about your needs and we&#39;ll introduce you to several experienced professionals in your area who are ready to complete your project</p>
-            </div>
-            <div class='card-name'>
-              <img class='card-line' src='./img/index/index-card-line.png' />
-              <img class='card-icon' src='./img/index/index-yukke.png' />
-              <div class='nametag'>
-                <span class='namae'>Yusuke Nakamura</span><br>
-                <span class='shozoku'>Startup Cast</span>
-              </div>
-            </div>
-          </div>
-        </li>
-        <li>
-          <a href='./shop.html'>
-            <div class='card'>
-              <div class='card-img'>
-                <img src='./img/index/index-yuuki-main.png' />
-              </div>
-              <div class='card-info'>
-                <span class='info'>WEAR</span>
-                <span class='price'>$400 -</span>
-                <h3>GPants from YUUKI ASANO</h3>
-                <p>Tell us about your needs and we&#39;ll introduce you to several experienced professionals in your area who are ready to complete your project</p>
-              </div>
-              <div class='card-name'>
-                <img class='card-line' src='./img/index/index-card-line.png' />
-                <img class='card-icon' src='./img/index/index-yuuki.png' />
-                <div class='nametag'>
-                  <span class='namae'>Yuuki Asano</span><br>
-                  <span class='shozoku'>Realm</span>
-                </div>
-              </div>
-            </div>
-          </a>
-        </li>
-      </ul>
-
-      <!-- Eat category -->
-      <ul class='contents hide' id='eat-category'>
-        <li>
-          <div class='card'>
-            <div class='card-img'>
-              <img src='./img/index/index-yukke-main.png' />
-            </div>
-            <div class='card-info'>
-              <span class='info'>WEAR</span>
-              <span class='price'>$200 -</span>
-              <h3>Super suits like Iron man</h3>
-              <p>Tell us about your needs and we&#39;ll introduce you to several experienced professionals in your area who are ready to complete your project</p>
-            </div>
-            <div class='card-name'>
-              <img class='card-line' src='./img/index/index-card-line.png' />
-              <img class='card-icon' src='./img/index/index-yukke.png' />
-              <div class='nametag'>
-                <span class='namae'>Yusuke Nakamura</span><br>
-                <span class='shozoku'>Startup Cast</span>
-              </div>
-            </div>
-          </div>
-        </li>
-        <li>
-          <a href='./shop.html'>
-            <div class='card'>
-              <div class='card-img'>
-                <img src='./img/index/index-yuuki-main.png' />
-              </div>
-              <div class='card-info'>
-                <span class='info'>WEAR</span>
-                <span class='price'>$400 -</span>
-                <h3>GPants from YUUKI ASANO</h3>
-                <p>Tell us about your needs and we&#39;ll introduce you to several experienced professionals in your area who are ready to complete your project</p>
-              </div>
-              <div class='card-name'>
-                <img class='card-line' src='./img/index/index-card-line.png' />
-                <img class='card-icon' src='./img/index/index-yuuki.png' />
-                <div class='nametag'>
-                  <span class='namae'>Yuuki Asano</span><br>
-                  <span class='shozoku'>Realm</span>
-                </div>
-              </div>
-            </div>
-          </a>
-        </li>
-        <li>
-          <div class='card'>
-            <div class='card-img'>
-              <img src='./img/index/index-korean-main.png' />
-            </div>
-            <div class='card-info'>
-              <span class='info'>WEAR</span>
-              <span class='price'>$40 -</span>
-              <h3>Korean wear mode so cute</h3>
-              <p>Tell us about your needs and we&#39;ll introduce you to several experienced professionals in your area who are ready to complete your project</p>
-            </div>
-            <div class='card-name'>
-              <img class='card-line' src='./img/index/index-card-line.png' />
-              <img class='card-icon' src='./img/index/index-korean.png' />
-              <div class='nametag'>
-                <span class='namae'>Min Heong Kang</span><br>
-                <span class='shozoku'>Joys Place Coffee</span>
-              </div>
-            </div>
-          </div>
-        </li>
-        <li>
-          <div class='card'>
-            <div class='card-img'>
-              <img src='./img/index/index-yukke-main.png' />
-            </div>
-            <div class='card-info'>
-              <span class='info'>WEAR</span>
-              <span class='price'>$200 -</span>
-              <h3>Super suits like Iron man</h3>
-              <p>Tell us about your needs and we&#39;ll introduce you to several experienced professionals in your area who are ready to complete your project</p>
-            </div>
-            <div class='card-name'>
-              <img class='card-line' src='./img/index/index-card-line.png' />
-              <img class='card-icon' src='./img/index/index-yukke.png' />
-              <div class='nametag'>
-                <span class='namae'>Yusuke Nakamura</span><br>
-                <span class='shozoku'>Startup Cast</span>
-              </div>
-            </div>
-          </div>
-        </li>
-
-        <li>
-          <div class='card'>
-            <div class='card-img'>
-              <img src='./img/index/index-korean-main.png' />
-            </div>
-            <div class='card-info'>
-              <span class='info'>WEAR</span>
-              <span class='price'>$40 -</span>
-              <h3>Korean wear mode so cute</h3>
-              <p>Tell us about your needs and we&#39;ll introduce you to several experienced professionals in your area who are ready to complete your project</p>
-            </div>
-            <div class='card-name'>
-              <img class='card-line' src='./img/index/index-card-line.png' />
-              <img class='card-icon' src='./img/index/index-korean.png' />
-              <div class='nametag'>
-                <span class='namae'>Min Heong Kang</span><br>
-                <span class='shozoku'>Joys Place Coffee</span>
-              </div>
-            </div>
-          </div>
-        </li>
-        <li>
-          <a href='./shop.html'>
-            <div class='card'>
-              <div class='card-img'>
-                <img src='./img/index/index-yuuki-main.png' />
-              </div>
-              <div class='card-info'>
-                <span class='info'>WEAR</span>
-                <span class='price'>$400 -</span>
-                <h3>GPants from YUUKI ASANO</h3>
-                <p>Tell us about your needs and we&#39;ll introduce you to several experienced professionals in your area who are ready to complete your project</p>
-              </div>
-              <div class='card-name'>
-                <img class='card-line' src='./img/index/index-card-line.png' />
-                <img class='card-icon' src='./img/index/index-yuuki.png' />
-                <div class='nametag'>
-                  <span class='namae'>Yuuki Asano</span><br>
-                  <span class='shozoku'>Realm</span>
-                </div>
-              </div>
-            </div>
-          </a>
-        </li>
-      </ul>
-    </section>
-
-    <section class='hiw'>
-      <ul class='how-it-works'>
-        <li class='pick-a-gift'>
-          <img src='./img/index/hiw-gift.png' />
-          <h2>1. Pick a Gift</h2>
-          <p>Choose around huge Payorder plattform</p>
-        </li>
-        <li class='share-payment'>
-          <img src='./img/index/hiw-share.png' />
-          <h2>2. Share Payment</h2>
-          <p>Let&#39;s share payment with your friends</p>
-        </li>
-        <li class='delivery-amazingly'>
-          <img src='./img/index/hiw-happy.png' />
-          <h2>3. Deliver Amazingly</h2>
-          <p>Enjoy this amazing experience</p>
-        </li>
-      </ul>
-    </section>
-
+    <!-- footer -->
     <footer>
       <ul class='social-icon'>
         <li><a href='#'><img src='./img/footer/facebook.png' /></a></li>
@@ -394,13 +1368,18 @@
       </ul>
       <img class='footer-line' src='./img/footer/footer-line.png' />
       <ul class='general'>
-        <li><a href='#'>HOME</a></li>
-        <li><a href='#'>ABOUT</a></li>
-        <li><a href='#'>CONTACT</a></li>
-        <li><a href='#'>PLIBACY POLICY</a></li>
-        <li><a href='#'>TERMS</a></li>
+        <li><a href='./index.html'>HOME</a></li>
+        <li><a href='./about.html'>ABOUT</a></li>
+        <li><a href='./contact.html'>CONTACT</a></li>
+        <li><a href='./policy.html'>PLIBACY POLICY</a></li>
+        <li><a href='./terms.html'>TERMS</a></li>
       </ul>
       <p class='copyright'>Copyright Playorder Inc, 2016 All Rights Reserved</p>
     </footer>
+
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="js/bootstrap.min.js"></script>
   </body>
 </html>
