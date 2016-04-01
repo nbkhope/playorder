@@ -752,22 +752,38 @@ p.namae {
 }
 
 .chatbox {
-	width: 100%;
+	width: 500px;
 	height: 80px;
-	background-color: red;
 }
 
 .chaticon {
 	float: left;
 	width: 80px;
 	height: 100%;
-	background-color: blue;
+	padding: 10px;
 }
 
 .chatname {
-	float: left;
-	width: 500px;
-	background-color: green;
+	float: right;
+	width: 420px;
+	height: 30%;
+}
+
+.chatconversation {
+	float: right;
+	width: 420px;
+	height: 70%;
+	padding-top: 20px;
+}
+
+.sendmail {
+	width: 600px;
+	margin: 0px 0px 0px 370px;
+	padding-top: 40px;
+}
+
+.sendmail .btn {
+	margin-top: 30px;
 }
 
 
@@ -976,6 +992,23 @@ p.namae {
     display: none;
 }
 
+.form-group select {
+    -webkit-appearance: button;
+    -moz-appearance: button;
+    appearance: button;
+    text-indent: 1em;
+    background:#EEE url(../img_common/arw_select_down.png) no-repeat;
+    background-size:20px 10px;
+    background-position: right center;
+		width: 100px;
+		padding-left: 20px;
+    height: 30px;
+    line-height: 30px;
+    font-size: 15px;
+    vertical-align: middle;
+    border:1px solid #CCC;
+    margin-bottom:5px;
+}
 
 .sentaku label{
     display: block;
