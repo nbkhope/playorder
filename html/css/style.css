@@ -26,6 +26,14 @@ li a {
   margin: 0px 35px 15px 0px;
 }
 
+.nav-index li:hover {
+	color: #e460c1;
+}
+
+.main-nav-index li:hover {
+	color: #e460c1;
+}
+
 /* header */
 header {
   margin-top: 10px;
@@ -571,6 +579,30 @@ p.namae {
 .container-3 {
 	padding-right: 160px;
 	padding-left: 160px;
+}
+
+.dropdown .glyphicon {
+	padding-right: 1300px;
+	padding-bottom: 10px
+}
+
+.camera {
+	padding-top: 20px;
+}
+
+.cameradown {
+	margin-left: 20px;
+}
+
+.white {
+	color: white;
+	font-size: 24px;
+	opacity: 0.4;
+}
+
+.white:hover {
+	opacity:1.0;
+	cursor: pointer;
 }
 
 .amount {
