@@ -43,6 +43,13 @@ ActiveRecord::Schema.define(version: 20160402214258) do
     t.datetime "updated_at", null: false
   end
 
+  create_table "invited_users", force: :cascade do |t|
+    t.integer  "user_id"
+    t.integer  "project_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
   create_table "messages", force: :cascade do |t|
     t.integer  "user_id"
     t.integer  "project_id"
