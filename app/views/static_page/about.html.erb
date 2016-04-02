@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
-    <title>playorder - thanks</title>
+    <title>playorder - home</title>
 
     <!-- Bootstrap -->
     <link href="css/bootstrap.min.css" rel="stylesheet">
@@ -25,7 +25,7 @@
         $(".contents").fadeOut();
         $(".contents").eq(num).fadeIn();
         $(".nav-index li").removeClass('select');
-        $(".nav-index li").eq(num).addClass('select');
+          $(".nav-index li").eq(num).addClass('select');
       });
     });
     </script>
@@ -44,7 +44,7 @@
               <span class="icon-bar"></span>
             </button>
             <a class="navbar-brand" href="./index.html">
-              <img src="./img/header/logo.png" />
+              <%= image_tag "header/logo.png" %>
             </a>
           </div>
 
@@ -64,7 +64,7 @@
             <ul class="nav navbar-nav navbar-right">
               <li class="dropdown">
                 <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
-                  <img src="./img/header/header-icon.png" width="28" height="28" />
+                  <%= image_tag "header/header-icon.png" %>
                   <span class="caret"></span>
                 </a>
                 <ul class="dropdown-menu">
@@ -73,7 +73,7 @@
                   <li><a href="./account.html">Message</a></li>
                   <li><a href="./account.html">PlayShop</a></li>
                   <li><a href="./setting.html">Settings</a></li>
-                  <li><a href="#">Sign Out</a></li>
+                  <li><a href="./index-2.html">Sign Out</a></li>
                 </ul>
               </li>
             </ul>
