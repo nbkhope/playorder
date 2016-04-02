@@ -3,12 +3,13 @@ class CreateProducts < ActiveRecord::Migration
     create_table :products do |t|
       t.string :title
       t.string :city
-      t.string :category
+      t.integer :category, default: 0, null: false, limit: 1
+      
       t.integer :price
-      t.integer :delivery
-      t.text :sign
       t.text :story
-      t.belongs_to :project
+      
+      t.integer :delivery # 届くまでの日数
+      t.text :phrase
 
       t.timestamps null: false
     end
