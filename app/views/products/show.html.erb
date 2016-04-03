@@ -89,7 +89,7 @@
         <div class='one-comment'>
           <div class='comment-left'>
             <%= image_tag comment.user.image.url(:thumb) %><br/><br/>
-            <p class='comment-name'>Shun</p>
+            <p class='comment-name'><%= comment.user.name %></p>
           </div>
           <div class='comment-right'>
             <p><%= comment.text %></p>
