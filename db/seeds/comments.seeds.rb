@@ -5,14 +5,14 @@ comment_data = [
   {:text => "No, I want this!!"}
 ]
 
-after :projects do
-  puts "Create #{comment_data.count} Project data"
-  Project.all.each_with_index do |project, i|
+after :products do
+  puts "Create #{comment_data.count} Comments data"
+  Product.all.each_with_index do |product, i|
     comments = comment_data.map do |c|
       comment = Comment.create(c)
       comment.user = User.all[rand(User.all.count)]
       comment
     end
-    project.comments = comments
+    product.comments = comments
   end
 end

@@ -85,25 +85,17 @@
 
     <!--- comment-contents -->
     <section class='comment contents opace'>
-      <div class='one-comment'>
-        <div class='comment-left'>
-          <%= image_tag "shop/shun-comment.png" %><br><br>
-          <p class='comment-name'>Shun</p>
+      <% @product.comments.each do |comment| %>
+        <div class='one-comment'>
+          <div class='comment-left'>
+            <%= image_tag comment.user.image.url(:thumb) %><br/><br/>
+            <p class='comment-name'>Shun</p>
+          </div>
+          <div class='comment-right'>
+            <p><%= comment.text %></p>
+          </div>
         </div>
-        <div class='comment-right'>
-          <p>Awesome! How many Gpants do you have?</p>
-        </div>
-      </div>
-
-      <div class='one-comment'>
-        <div class='comment-left'>
-          <%= image_tag "shop/yuuki-comment.png" %><br><br>
-          <p class='comment-name'><a href='./view.html'>Yuuki</a><p>
-        </div>
-        <div class='comment-right'>
-          <p>Good question man! Last ... 10!!</p>
-        </div>
-      </div>
+      <% end %>
 
       <div class='commentarea'>
         <textarea class="form-control" rows="5">Leave a message.</textarea><br>

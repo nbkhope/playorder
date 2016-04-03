@@ -51,5 +51,10 @@ group :development do
 end
 
 gem "paperclip", "~> 5.0.0.beta1"
-gem 'pry'
 gem 'seedbank'
+
+gem 'pry'
+gem 'pry-rails'
+gem 'pry-doc'
+gem 'pry-byebug'
+gem 'pry-stack_explorer'
