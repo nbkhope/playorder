@@ -13,6 +13,9 @@
 
 ActiveRecord::Schema.define(version: 20160402214258) do
 
+  # These are extensions that must be enabled in order to support this database
+  enable_extension "plpgsql"
+
   create_table "activities", force: :cascade do |t|
     t.integer  "project_id"
     t.datetime "created_at", null: false
@@ -53,7 +56,7 @@ ActiveRecord::Schema.define(version: 20160402214258) do
   create_table "products", force: :cascade do |t|
     t.string   "title"
     t.string   "city"
-    t.integer  "category",           limit: 1, default: 0, null: false
+    t.integer  "category",           limit: 2, default: 0, null: false
     t.integer  "price"
     t.text     "story"
     t.integer  "delivery"
