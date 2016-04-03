@@ -6,10 +6,13 @@ Rails.application.routes.draw do
   get '/terms',  to: 'static_page#terms'
   get '/policy', to: 'static_page#policy'
   get '/contact', to: 'static_page#contact'
-  
+
   resources :products
-  
+
   get '/discover', to: 'products#discover'
+
+  resources :projects
+
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
