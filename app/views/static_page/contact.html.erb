@@ -1,72 +1,33 @@
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
-    <title>playorder - thanks</title>
+<!-- slider -->
+<section class="contact-slider">
+  <!-- wear -->
+  <div class="jumbotron sliders">
+    <h1>CONTACT</h1>
+    <p>Dont't hesitate to ask us, everything!</p>
+  </div>
 
-    <!-- Bootstrap -->
-    <link href="css/bootstrap.min.css" rel="stylesheet">
-    <link href="css/style.css" rel="stylesheet">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
-    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
-    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
-    <!--[if lt IE 9]>
-      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
-      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
-    <![endif]-->
-    <script>
-    /* nav-toggle */
-    $(function(){
-      $(".nav-index li").on("click" , function(){
-        var num = $(".nav-index li").index(this);
-        $(".contents").fadeOut();
-        $(".contents").eq(num).fadeIn();
-        $(".nav-index li").removeClass('select');
-        $(".nav-index li").eq(num).addClass('select');
-      });
-    });
-    </script>
-  </head>
-  <body>
-    <%= render 'layouts/header' %>
-
-    <!-- slider -->
-    <section class="contact-slider">
-      <!-- wear -->
-      <div class="jumbotron sliders">
-        <h1>CONTACT</h1>
-        <p>Dont't hesitate to ask us, everything!</p>
-      </div>
-
-    <div class="container">
-      <div class="contact-form">
-        <form>
-          <fieldset class="form-group">
-            <label for="exampleInputEmail1">Email address</label>
-            <input type="email" class="form-control" id="exampleInputEmail1" placeholder="Enter email">
-            <small class="text-muted">We'll never share your email with anyone else.</small>
-          </fieldset>
-          <fieldset class="form-group">
-            <label for="exampleInputPassword1">Password</label>
-            <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
-          </fieldset>
-          <fieldset class="form-group">
-            <label for="exampleTextarea">Message</label>
-            <textarea class="form-control" id="exampleTextarea" rows="3"></textarea>
-          </fieldset>
-          <fieldset class="form-group">
-            <label for="exampleInputFile">File input</label>
-            <input type="file" class="form-control-file" id="exampleInputFile">
-            <small class="text-muted">This is some placeholder block-level help text for the above input. It's a bit lighter and easily wraps to a new line.</small>
-          </fieldset>
-          <button type="submit" class="btn btn-danger">Submit</button>
-        </form>
-      </div>
-    </div>
-
-    <%= render 'layouts/footer' %>
-  </body>
-</html>
+<div class="container">
+  <div class="contact-form">
+    <form>
+      <fieldset class="form-group">
+        <label for="exampleInputEmail1">Email address</label>
+        <input type="email" class="form-control" id="exampleInputEmail1" placeholder="Enter email">
+        <small class="text-muted">We'll never share your email with anyone else.</small>
+      </fieldset>
+      <fieldset class="form-group">
+        <label for="exampleInputPassword1">Password</label>
+        <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
+      </fieldset>
+      <fieldset class="form-group">
+        <label for="exampleTextarea">Message</label>
+        <textarea class="form-control" id="exampleTextarea" rows="3"></textarea>
+      </fieldset>
+      <fieldset class="form-group">
+        <label for="exampleInputFile">File input</label>
+        <input type="file" class="form-control-file" id="exampleInputFile">
+        <small class="text-muted">This is some placeholder block-level help text for the above input. It's a bit lighter and easily wraps to a new line.</small>
+      </fieldset>
+      <button type="submit" class="btn btn-danger">Submit</button>
+    </form>
+  </div>
+</div>

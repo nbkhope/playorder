@@ -248,6 +248,10 @@ a.circle { color: transparent; } /* IE fix: removes blue border */
 	height: 100%;
 }
 
+.shop-main img {
+	width: 550px;
+}
+
 .sright {
 	float: right;
 	width: 40%;

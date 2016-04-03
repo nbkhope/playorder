@@ -3,43 +3,36 @@
     <article class="shop-top">
 
       <section class="bigsign">
-        <h2>Global Pants Around the World</h2>
+        <h2><%= @product.title %></h2>
         <ul class='title-list'>
-          <li><%= image_tag "shop/location-icon.png" %><span>San Francisco</span></li>
-          <li><%= image_tag "shop/wear-icon.png" %><span>WEAR</span></li>
+          <li><%= image_tag "shop/location-icon.png" %><span><%= @product.city %></span></li>
+          <li><%= image_tag "shop/wear-icon.png" %><span><%= @product.category %></span></li>
         </ul>
       </section>
 
       <section class="shop-middle">
-
         <div class="shop-main">
-          <%= image_tag "shop/shop-main-img.ong" %>
+          <%= image_tag @product.image.url(:product_page) %>
         </div>
-
         <div class="sright">
-
           <section class="number">
-            <h1>$400</h1>
+            <h1>$<%= @product.price %></h1>
             <p>Price</p>
-            <h1>14 days</h1>
+            <h1><%= @product.delivery %> days</h1>
             <p>Delivery Guidance<b>&#040;About&#041;</b></p>
           </section>
-
           <section class="shopbutton">
             <p>Let's order soon!</p>
             <a href="./payment.html">
               <button type="button" class="btn btn-danger btn-lg">ORDER NOW</button>
             </a>
           </section>
-
-      </div>
-
-    </section>
+        </div>
+      </section>
 
       <section class="smallsign">
-
         <div class="shop-phase">
-          <h2>Have you every tried to wear GLOBAL PANTS,<br>Amazing experience makes you change at all.</h2>
+          <h2><%= @product.phrase %></h2>
           <ul class='share-b'>
             <li><span>Share: </span></li>
             <li class="twitter"><%= image_tag "shop/share-twitter.png" %></li>
@@ -50,10 +43,9 @@
         </div>
 
         <div class="profile">
-
           <div class='owner-describe'>
-            <h3><a href='./view.html'>Yuuki Asano</a></h3>
-            <p>Realm</p>
+            <h3><a href='./view.html'><%= @product.user.name %></a></h3>
+            <p><%= @product.user.organization %></p>
             <ul class='social-i'>
               <li><%= image_tag "shop/shop-twitter.png" %></li>
               <li><%= image_tag "shop/shop-facebook.png" %></li>
@@ -61,11 +53,9 @@
             </ul>
           </div>
           <div class='owner-icon main-owner'>
-            <%= image_tag "shop/shop-main-owner-img.png" %>
+            <%= image_tag @product.user.image.url(:thumb) %>
           </div>
-
         </div>
-
       </section>
 
     </article>
@@ -116,8 +106,8 @@
       <div class='commentarea'>
         <textarea class="form-control" rows="5">Leave a message.</textarea><br>
         <button type="button" class="btn btn-danger">SUBMIT</button>
+      </div>
     </section>
-
 
   </article>
 </div>
