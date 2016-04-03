@@ -10,6 +10,10 @@ class CreateProducts < ActiveRecord::Migration
       
       t.integer :delivery # 届くまでの日数
       t.text :phrase
+      
+      t.belongs_to :user
+      
+      t.attachment :image
 
       t.timestamps null: false
     end

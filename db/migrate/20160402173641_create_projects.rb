@@ -9,6 +9,8 @@ class CreateProjects < ActiveRecord::Migration
       
       t.belongs_to :product
       t.belongs_to :user
+      
+      t.attachment :image
 
       t.timestamps null: false
     end

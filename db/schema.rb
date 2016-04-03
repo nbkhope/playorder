@@ -53,13 +53,18 @@ ActiveRecord::Schema.define(version: 20160402214258) do
   create_table "products", force: :cascade do |t|
     t.string   "title"
     t.string   "city"
-    t.integer  "category",   limit: 1, default: 0, null: false
+    t.integer  "category",           limit: 1, default: 0, null: false
     t.integer  "price"
     t.text     "story"
     t.integer  "delivery"
     t.text     "phrase"
-    t.datetime "created_at",                       null: false
-    t.datetime "updated_at",                       null: false
+    t.integer  "user_id"
+    t.string   "image_file_name"
+    t.string   "image_content_type"
+    t.integer  "image_file_size"
+    t.datetime "image_updated_at"
+    t.datetime "created_at",                               null: false
+    t.datetime "updated_at",                               null: false
   end
 
   create_table "projects", force: :cascade do |t|
@@ -69,8 +74,12 @@ ActiveRecord::Schema.define(version: 20160402214258) do
     t.integer  "goal_amount"
     t.integer  "product_id"
     t.integer  "user_id"
-    t.datetime "created_at",  null: false
-    t.datetime "updated_at",  null: false
+    t.string   "image_file_name"
+    t.string   "image_content_type"
+    t.integer  "image_file_size"
+    t.datetime "image_updated_at"
+    t.datetime "created_at",         null: false
+    t.datetime "updated_at",         null: false
   end
 
   create_table "tags", force: :cascade do |t|
@@ -83,8 +92,13 @@ ActiveRecord::Schema.define(version: 20160402214258) do
     t.string   "name"
     t.string   "email"
     t.string   "password"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
+    t.string   "image_file_name"
+    t.string   "image_content_type"
+    t.integer  "image_file_size"
+    t.datetime "image_updated_at"
+    t.string   "organization"
+    t.datetime "created_at",         null: false
+    t.datetime "updated_at",         null: false
   end
 
 end
