@@ -61,7 +61,7 @@
         <% end %>
 
         <% @products[category].each do |product| %>
-        <%= render 'common/card' %>
+        <%= render 'common/card', {:product => product, :category => category} %>
         <% end %>
         </ul>
       <% end %>
