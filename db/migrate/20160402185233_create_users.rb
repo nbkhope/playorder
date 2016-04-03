@@ -6,6 +6,10 @@ class CreateUsers < ActiveRecord::Migration
       t.string :password
       t.attachment :image
       t.string :organization
+      
+      t.string :twitter
+      t.string :facebook
+      t.string :website
 
       t.timestamps null: false
     end

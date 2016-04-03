@@ -49,9 +49,9 @@
             </h3>
             <p><%= @product.user.organization %></p>
             <ul class='social-i'>
-              <li><%= image_tag "shop/shop-twitter.png" %></li>
-              <li><%= image_tag "shop/shop-facebook.png" %></li>
-              <li><%= image_tag "shop/internet.png" %></li>
+              <li><a href='<%= @product.user.twitter %>'><%= image_tag "shop/shop-twitter.png" %></a></li>
+              <li><a href='<%= @product.user.facebook %>'><%= image_tag "shop/shop-facebook.png" %></a></li>
+              <li><a href='<%= @product.user.website %>'><%= image_tag "shop/internet.png" %></a></li>
             </ul>
           </div>
           <div class='owner-icon main-owner'>
