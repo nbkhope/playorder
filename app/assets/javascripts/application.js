@@ -11,13 +11,14 @@
 // about supported directives.
 //
 //= require moment
+//= require bootstrap.min
 //= require jquery
 //= require jquery_ujs
+//= require jquery.turbolinks
 //= require turbolinks
 //= require_tree .
 
 /* nav-toggle */
-
 $(function(){
   $(".nav-index li").on("click" , function(){
     var num = $(".nav-index li").index(this);
