@@ -44,13 +44,16 @@ categories = [
 after :users do
   puts "Create #{products_data.count} Product data"
   categories.each do |category|
-    products_data.each_with_index do |data, i|
-      params = data.dup
-      params[:category] = category
-      file_path = correct_path(params[:image])
-      params[:image] = File.open(file_path)
-      product = Product.create(params)
-      product.user = User.all[i]
+    2.times do
+      products_data.each_with_index do |data, i|
+        params = data.dup
+        params[:category] = category
+        file_path = correct_path(params[:image])
+        params[:image] = File.open(file_path)
+        product = Product.create(params)
+        product.user = User.all[i]
+        product.save
+      end
     end
   end
 end
