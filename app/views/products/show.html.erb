@@ -44,7 +44,9 @@
 
         <div class="profile">
           <div class='owner-describe'>
-            <h3><a href='./view.html'><%= @product.user.name %></a></h3>
+            <h3>
+              <%= link_to @product.user.name, @product.user %>
+            </h3>
             <p><%= @product.user.organization %></p>
             <ul class='social-i'>
               <li><%= image_tag "shop/shop-twitter.png" %></li>

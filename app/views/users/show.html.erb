@@ -1,0 +1,118 @@
+<!-- discover -->
+<!-- slider -->
+<section class="view-slider">
+  <div class="jumbotron sliders">
+    <h1>PROFILE VIEW</h1>
+    <p>I have so many girl friends around the world. lol</p>
+  </div>
+</section>
+
+<div class="container">
+
+  <!-- profile icon -->
+  <section class="viewprofile">
+    <h2>Basic Infomration</h2>
+    <ul>
+      <li><h3>Yuuki Asano</h3></li>
+      <li><p>Realm</p></li>
+      <li><%= image_tag "view/yuuki-view.png" %></li>
+      <li><button type="button" class="btn btn-danger" data-toggle="modal" data-target="#exampleModal">CONTACT</button></li>
+    </ul>
+  </section>
+
+  <!-- contact modal -->
+
+  <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+          <h4 class="modal-title" id="exampleModalLabel">New message</h4>
+        </div>
+        <div class="modal-body">
+          <form>
+            <div class="form-group">
+              <label for="recipient-name" class="control-label">Title:</label>
+              <input type="text" class="form-control" id="recipient-name">
+            </div>
+            <div class="form-group">
+              <label for="message-text" class="control-label">Message:</label>
+              <textarea class="form-control" id="message-text"></textarea>
+            </div>
+          </form>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+          <a href="./sent.html">
+            <button type="button" class="btn btn-danger">Send message</button>
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+  <script>
+    $('#exampleModal').on('show.bs.modal', function (event) {
+      var button = $(event.relatedTarget) // Button that triggered the modal
+      var recipient = button.data('whatever') // Extract info from data-* attributes
+      // If necessary, you could initiate an AJAX request here (and then do the updating in a callback).
+      // Update the modal's content. We'll use jQuery here, but you could use a data binding library or other methods instead.
+      var modal = $(this)
+      modal.find('.modal-title').text('New message to ' + recipient)
+      modal.find('.modal-body input').val(recipient)
+    })
+  </script>
+
+  <!-- playorder -->
+  <section class="vieworder">
+    <h2>Play Order</h2>
+    <a href="./shop.html">
+      <div class="row">
+        <div class="col-sm-6 col-md-4">
+          <div class="thumbnail">
+            <img src="./img/main/card-2.png" alt="image">
+            <div class="caption">
+              <p><span class="genre">WEAR</span></p>
+              <h3>Iron man Mask</h3>
+              <p>Tell us about your needs and we'll introduce you to several experienced professionals in your area who are ready to complete your project.</p>
+              <p><img src="./img/index/card-line.png" /></p>
+              <div class="card-icon">
+                <img src="./img/main/yukke-cardicon.png" />
+              </div>
+              <div class="card-profile">
+                <p class="namae">Yusuke Nakam</p>
+                <p class="shozoku">Startup Cast</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </a>
+  </section>
+
+  <!-- playshop -->
+  <section class="viewshop">
+    <h2>Play Shop</h2>
+    <a href="./shop.html">
+      <div class="row">
+        <div class="col-sm-6 col-md-4">
+          <div class="thumbnail">
+            <%= image_tag "main/card-1.png" %>
+            <div class="caption">
+              <p><span class="genre">WEAR</span></p>
+              <h3>Global Pants</h3>
+              <p>Tell us about your needs and we'll introduce you to several experienced professionals in your area who are ready to complete your project.</p>
+              <p><img src="./img/index/card-line.png" /></p>
+              <div class="card-icon">
+                <%= image_tag "main/yuuki-cardicon.png" %>
+              </div>
+              <div class="card-profile">
+                <p class="namae">Yuuki Asano</p>
+                <p class="shozoku">Realm</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </a>
+  </section>
+</div>
