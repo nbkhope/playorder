@@ -1,96 +1,65 @@
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
-    <title>playorder - home</title>
 
-    <!-- Bootstrap -->
-    <script src="js/bootstrap.min.js"></script>
-    <link href="css/bootstrap.min.css" rel="stylesheet">
-    <link href="css/style.css" rel="stylesheet">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
-    <link href="css/bootstrap-social.css" rel="stylesheet">
-    <link href="css/bootstrap-social.less" rel="stylesheet">
-    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
-    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
-    <!--[if lt IE 9]>
-      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
-      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
-    <![endif]-->
-    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
-    <!-- Include all compiled plugins (below), or include individual files as needed -->
-    <script src="js/bootstrap.min.js"></script>
-  </head>
-  <body>
-    <%= render 'layouts/header' %>
-    <!-- slider -->
-    <section class="slider">
-      <div class="jumbotron">
-        <div class="container">
-          <h1>Send GIFT with<br>Your friends</h1>
-          <p class="explain">You can enjoy "made-to-order" gift community.</p>
-          <p><a class="btn btn-danger btn-lg" href="#" role="button">Learn more</a></p>
-        </div>
-      </div>
-    </section>
+<!-- slider -->
+<section class="slider">
+  <div class="jumbotron">
+    <div class="container">
+      <h1>Send GIFT with<br>Your friends</h1>
+      <p class="explain">You can enjoy "made-to-order" gift community.</p>
+      <p><a class="btn btn-danger btn-lg" href="#" role="button">Learn more</a></p>
+    </div>
+  </div>
+</section>
 
-    <!-- card index -->
-    <section class="container card-roll">
+<!-- card index -->
+<section class="container card-roll">
 
-      <nav class="container global-nav">
-        <ul class="nav nav-index">
-          <% @products.keys.each_with_index do |category, i| %>
-            <% if i == 0 %>
-              <li class='select'><%= category.upcase %></li>
-            <% else %>
-              <li><%= category.upcase %></li>
-            <% end %>
-          <% end %>
-        </ul>
-      </nav>
-
+  <nav class="container global-nav">
+    <ul class="nav nav-index">
       <% @products.keys.each_with_index do |category, i| %>
         <% if i == 0 %>
-          <ul class="contents card">
+          <li class='select'><%= category.upcase %></li>
         <% else %>
-          <ul class="contents card opace">
+          <li><%= category.upcase %></li>
         <% end %>
-
-        <% @products[category].each do |product| %>
-        <%= render 'common/card', {:product => product, :category => category} %>
-        <% end %>
-        </ul>
       <% end %>
+    </ul>
+  </nav>
 
-    </section>
+  <% @products.keys.each_with_index do |category, i| %>
+    <% if i == 0 %>
+      <ul class="contents card">
+    <% else %>
+      <ul class="contents card opace">
+    <% end %>
 
-    <!-- how it work -->
-    <div class="hiw-cover">
-      <section class="container hiw">
-        <h2>HOW PLAYORDER WORKS</h2>
-        <ul class='how-it-works'>
-          <li>
-            <%= image_tag "index/hiw-1.png" %>
-            <h2>1. Pick a Gift</h2>
-            <p>Choose around huge Payorder plattform</p>
-          </li>
-          <li>
-            <%= image_tag "index/hiw-2.png" %>
-            <h2>2. Share Payment</h2>
-            <p>Let&#39;s share payment with your friends</p>
-          </li>
-          <li>
-            <%= image_tag "index/hiw-3.png" %>
-            <h2>3. Deliver Amazingly</h2>
-            <p>Enjoy this amazing experience</p>
-          </li>
-        </ul>
-      </section>
-    </div>
-    <%= render 'layouts/footer' %>
-  </body>
-</html>
+    <% @products[category].each do |product| %>
+    <%= render 'common/card', {:product => product, :category => category} %>
+    <% end %>
+    </ul>
+  <% end %>
+
+</section>
+
+<!-- how it work -->
+<div class="hiw-cover">
+  <section class="container hiw">
+    <h2>HOW PLAYORDER WORKS</h2>
+    <ul class='how-it-works'>
+      <li>
+        <%= image_tag "index/hiw-1.png" %>
+        <h2>1. Pick a Gift</h2>
+        <p>Choose around huge Payorder plattform</p>
+      </li>
+      <li>
+        <%= image_tag "index/hiw-2.png" %>
+        <h2>2. Share Payment</h2>
+        <p>Let&#39;s share payment with your friends</p>
+      </li>
+      <li>
+        <%= image_tag "index/hiw-3.png" %>
+        <h2>3. Deliver Amazingly</h2>
+        <p>Enjoy this amazing experience</p>
+      </li>
+    </ul>
+  </section>
+</div>

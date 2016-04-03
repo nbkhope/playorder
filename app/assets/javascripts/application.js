@@ -10,15 +10,15 @@
 // Read Sprockets README (https://github.com/rails/sprockets#sprockets-directives) for details
 // about supported directives.
 //
+//= require moment
 //= require jquery
 //= require jquery_ujs
 //= require turbolinks
 //= require_tree .
-//= require jquery
 //= require bootstrap.min
-//= require_tree .
 
 /* nav-toggle */
+
 $(function(){
   $(".nav-index li").on("click" , function(){
     var num = $(".nav-index li").index(this);
