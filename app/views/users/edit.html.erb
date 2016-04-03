@@ -1,0 +1,60 @@
+<!-- payment slider -->
+<section class="setting-slider">
+  <div class="jumbotron sliders">
+    <h1>SETTING</h1>
+    <p>Config your account</p>
+  </div>
+</section>
+
+<div class="container">
+
+  <section class="update">
+    <h2>Update Your Email Address</h2>
+    <form>
+      <div class="form-group">
+        <label for="updateOldEmail">Current Email Address</label>
+        <input type="email" class="form-control" id="updateOldEmail" placeholder="Inser current email address">
+      </div>
+      <div class="form-group">
+        <label for="updateNewEmail">New Email Address</label>
+        <input type="email" class="form-control" id="updateNewEmail" placeholder="Inser new email address">
+      </div>
+      <div class="form-group">
+        <label for="updateConEmail">Email Address Confirm</label>
+        <input type="email" class="form-control" id="updateOldEmail" placeholder="Inser new email address again">
+      </div>
+    </form>
+    <button type="button" class="btn btn-danger">SAVE</button>
+  </section>
+
+  <section class="update">
+    <h2>Update Your Password Address</h2>
+    <form>
+      <div class="form-group">
+        <label for="updateOldEmail">Current Password Address</label>
+        <input type="password" class="form-control" id="updateOldEmail" placeholder="Inser current password">
+      </div>
+      <div class="form-group">
+        <label for="updateNewPassword">New Password Address</label>
+        <input type="password" class="form-control" id="updateNewPassword" placeholder="Inser new password">
+      </div>
+      <div class="form-group">
+        <label for="updateConEmail">Password Confirm</label>
+        <input type="password" class="form-control" id="updateOldPassword" placeholder="Inser new password again">
+      </div>
+    </form>
+    <button type="button" class="btn btn-danger">SAVE</button>
+  </section>
+
+  </section>
+
+  <section class="update">
+    <h2>Update Your Photo</h2>
+    <form>
+      <%= image_tag "setting/image.png" %>
+    </form>
+    <button type="button" class="btn btn-danger set">ADD PHOTO</button>
+    <button type="button" class="btn btn-danger">SAVE</button>
+  </section>
+
+</div>

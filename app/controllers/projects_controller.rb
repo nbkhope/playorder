@@ -1,4 +1,16 @@
 class ProjectsController < ApplicationController
-  def create
+  def new
+  end
+
+  def show
+  end
+
+  def confirm
+  end
+
+  def playorder
+  end
+
+  def share
   end
 end
