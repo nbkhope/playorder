@@ -14,7 +14,7 @@ body a {
   width: 100%;
   height: 530px;
 
-  background-image: url('../img/index/slider-img.png');
+  background-image: url('g');
   background-repeat: no-repeat;
   position: relative;
 }
