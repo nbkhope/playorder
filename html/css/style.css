@@ -98,6 +98,7 @@ header {
 }
 .card-profile {
   width: 55%;
+	text-align: left;
   float: left;
   line-height: 70%
 }
