@@ -217,7 +217,7 @@
                       <p><%= product.phrase %></p>
                       <p><%= image_tag "index/card-line.png" %>
                     <div class="card-icon">
-                      <%= image_tag product.user.image.url %>
+                      <%= image_tag product.user.image.url(:thumb), class: 'circle' %>
                     </div>
                     <div class="card-profile">
                       <p class="namae"><%= product.user.name %></p>

@@ -51,7 +51,7 @@ after :users do
         file_path = correct_path(params[:image])
         params[:image] = File.open(file_path)
         product = Product.create(params)
-        product.user = User.all[i]
+        product.user = User.all[rand(User.count)]
         product.save
       end
     end

@@ -94,7 +94,6 @@ header {
   width: 35%;
   float: left;
   margin-top: -7px;
-  padding-left: 25px;
 }
 .card-profile {
   width: 55%;
@@ -105,6 +104,22 @@ p.namae {
   font-size: 16px;
   font-weight: bold;
 }
+
+/* thumbnail circle */
+
+.circle {
+	line-height: 0;		/* remove line-height */ 
+	display: inline-block;	/* circle wraps image */
+	margin: 5px;
+	border-radius: 50%;	/* relative value */
+	border: 3px solid white;/* border width   */
+	transition: linear 0.25s;
+}
+.circle img {
+	border-radius: 50%;	/* relative value for
+				   adjustable image size */
+}
+a.circle { color: transparent; } /* IE fix: removes blue border */	
 
 /* index - how it works */
 .hiw-cover {
