@@ -1,0 +1,23 @@
+<li>
+  <a href="./shop.html">
+    <div class="row">
+      <div class="col-sm-6 col-md-4">
+        <div class="thumbnail">
+          <%= image_tag product.image.url %>
+          <div class="caption">
+            <p><span class="genre"><%= category %></span></p>
+            <h3><%= product.title %></h3>
+            <p><%= product.phrase %></p>
+            <p><%= image_tag "index/card-line.png" %>
+          <div class="card-icon">
+            <%= image_tag product.user.image.url(:thumb), class: 'circle' %>
+          </div>
+          <div class="card-profile">
+            <p class="namae"><%= product.user.name %></p>
+            <p class="shozoku"><%= product.user.organization %></p>
+         </div>
+        </div>
+      </div>
+    </div>
+  </a>
+</li>

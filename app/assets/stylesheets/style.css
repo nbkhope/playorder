@@ -108,7 +108,7 @@ p.namae {
 /* thumbnail circle */
 
 .circle {
-	line-height: 0;		/* remove line-height */ 
+	line-height: 0;		/* remove line-height */
 	display: inline-block;	/* circle wraps image */
 	margin: 5px;
 	border-radius: 50%;	/* relative value */
@@ -119,7 +119,7 @@ p.namae {
 	border-radius: 50%;	/* relative value for
 				   adjustable image size */
 }
-a.circle { color: transparent; } /* IE fix: removes blue border */	
+a.circle { color: transparent; } /* IE fix: removes blue border */
 
 /* index - how it works */
 .hiw-cover {
@@ -158,7 +158,7 @@ a.circle { color: transparent; } /* IE fix: removes blue border */
 }
 
 .discover-slider .jumbotron {
-	background:url('../img/discover/discover.png') center no-repeat;
+	background:url('/images/discover/discover.png') center no-repeat;
   background-size: cover;
   height: 320px;
 	text-align: center;
@@ -413,7 +413,7 @@ a.circle { color: transparent; } /* IE fix: removes blue border */
 
 /* payment */
 .payment-slider .jumbotron {
-	background:url('../img/payment/payment.png') center no-repeat;
+	background:url('/images/payment/payment.png') center no-repeat;
   background-size: cover;
   height: 320px;
 	text-align: center;
@@ -513,7 +513,7 @@ a.circle { color: transparent; } /* IE fix: removes blue border */
 
 /* thanks */
 .thanks-slider .jumbotron {
-	background:url('../img/main/thanks.png') center no-repeat;
+	background:url('/images/main/thanks.png') center no-repeat;
   background-size: cover;
   height: 320px;
 	text-align: center;
@@ -531,7 +531,7 @@ a.circle { color: transparent; } /* IE fix: removes blue border */
 /* feed */
 
 .feed-slider .jumbotron {
-	background:url('../img/feed/feed.png') center no-repeat;
+	background:url('/images/feed/feed.png') center no-repeat;
   background-size: cover;
   height: 320px;
 	text-align: center;
@@ -718,7 +718,7 @@ a.circle { color: transparent; } /* IE fix: removes blue border */
 
 /* account */
 .account-slider .jumbotron {
-	background:url('../img/account/account.png') center no-repeat;
+	background:url('/images/account/account.png') center no-repeat;
   background-size: cover;
   height: 320px;
 	text-align: center;
@@ -906,7 +906,7 @@ a.circle { color: transparent; } /* IE fix: removes blue border */
 
 /* setting */
 .setting-slider .jumbotron {
-	background:url('../img/setting/setting.png') center no-repeat;
+	background:url('/images/setting/setting.png') center no-repeat;
   background-size: cover;
   height: 320px;
 	text-align: center;
@@ -949,7 +949,7 @@ a.circle { color: transparent; } /* IE fix: removes blue border */
 
 /* startup */
 .startup-slider .jumbotron {
-	background:url('../img/start/startup.png') center no-repeat;
+	background:url('/images/start/startup.png') center no-repeat;
   background-size: cover;
   height: 320px;
 	text-align: center;
@@ -1088,7 +1088,7 @@ a.circle { color: transparent; } /* IE fix: removes blue border */
 
 /* About */
 .about-slider .jumbotron {
-	background:url('../img/main/about.png') center no-repeat;
+	background:url('/images/main/about.png') center no-repeat;
   background-size: cover;
   height: 320px;
 	text-align: center;
@@ -1112,7 +1112,7 @@ a.circle { color: transparent; } /* IE fix: removes blue border */
 /* Contact */
 
 .contact-slider .jumbotron {
-	background:url('../img/main/contact.png') center no-repeat;
+	background:url('/images/main/contact.png') center no-repeat;
   background-size: cover;
   height: 320px;
 	text-align: center;
@@ -1141,7 +1141,7 @@ a.circle { color: transparent; } /* IE fix: removes blue border */
 
 /* view */
 .view-slider .jumbotron {
-	background:url('../img/view/view.png') center no-repeat;
+	background:url('/images/view/view.png') center no-repeat;
   background-size: cover;
   height: 320px;
 	text-align: center;
@@ -1218,7 +1218,7 @@ a.circle { color: transparent; } /* IE fix: removes blue border */
 	}
 
 	.signup-slider .jumbotron {
-		background:url('../img/main/signup.png') center no-repeat;
+		background:url('/images/main/signup.png') center no-repeat;
 	  background-size: cover;
 	  height: 320px;
 		text-align: center;

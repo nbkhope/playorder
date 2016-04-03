@@ -24,39 +24,6 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
     <!-- Include all compiled plugins (below), or include individual files as needed -->
     <script src="js/bootstrap.min.js"></script>
-    <script>
-    /* nav-toggle */
-    $(function(){
-      $(".nav-index li").on("click" , function(){
-        var num = $(".nav-index li").index(this);
-        $(".contents").fadeOut();
-        $(".contents").eq(num).fadeIn();
-        $(".nav-index li").removeClass('select');
-          $(".nav-index li").eq(num).addClass('select');
-      });
-
-      $('#exampleModal').on('show.bs.modal', function (event) {
-        var button = $(event.relatedTarget) // Button that triggered the modal
-        var recipient = button.data('whatever') // Extract info from data-* attributes
-        // If necessary, you could initiate an AJAX request here (and then do the updating in a callback).
-        // Update the modal's content. We'll use jQuery here, but you could use a data binding library or other methods instead.
-        var modal = $(this)
-        modal.find('.modal-title').text('New message to ' + recipient)
-        modal.find('.modal-body input').val(recipient)
-      })
-
-      $(".signout-button").on('click', function(){
-        $(".signinpage").hide();
-        $(".signoutpage").show();
-      });
-
-      $(".signin-button").on('click', function(){
-        $(".signoutpage").show();
-        $(".signinpage").hide();
-      });
-
-    });
-    </script>
   </head>
   <body>
     <%= render 'layouts/header' %>
@@ -94,30 +61,7 @@
         <% end %>
 
         <% @products[category].each do |product| %>
-          <!-- one card -->
-          <li>
-            <a href="./shop.html">
-              <div class="row">
-                <div class="col-sm-6 col-md-4">
-                  <div class="thumbnail">
-                    <%= image_tag product.image.url %>
-                    <div class="caption">
-                      <p><span class="genre"><%= category %></span></p>
-                      <h3><%= product.title %></h3>
-                      <p><%= product.phrase %></p>
-                      <p><%= image_tag "index/card-line.png" %>
-                    <div class="card-icon">
-                      <%= image_tag product.user.image.url(:thumb), class: 'circle' %>
-                    </div>
-                    <div class="card-profile">
-                      <p class="namae"><%= product.user.name %></p>
-                      <p class="shozoku"><%= product.user.organization %></p>
-                   </div>
-                  </div>
-                </div>
-              </div>
-            </a>
-          </li>
+        <%= render 'common/card' %>
         <% end %>
         </ul>
       <% end %>
