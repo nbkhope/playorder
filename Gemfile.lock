@@ -177,8 +177,8 @@ DEPENDENCIES
   coffee-rails (~> 4.1.0)
   jbuilder (~> 2.0)
   jquery-rails
-  momentjs-rails
   jquery-turbolinks
+  momentjs-rails
   paperclip (~> 5.0.0.beta1)
   pg
   pry
