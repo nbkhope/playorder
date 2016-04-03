@@ -8,6 +8,9 @@ users = [
     :password => 'yamada',
     :image => 'users/shun_yamada.jpg',
     :organization => 'Playorder',
+    :twitter => 'https://twitter.com/',
+    :facebook => 'https://www.facebook.com/',
+    :website => 'http://hatchstudioinc.com/'
   },
   {
     :name => 'Yuki Asano',
@@ -15,6 +18,9 @@ users = [
     :password => 'asano',
     :image => 'users/yuki_asano.jpg',
     :organization => 'Realm',
+    :twitter => 'https://twitter.com/',
+    :facebook => 'https://www.facebook.com/',
+    :website => 'http://hatchstudioinc.com/'
   },
   {
     :name => 'Yusuke Nakamura',
@@ -22,6 +28,9 @@ users = [
     :password => 'nakamura',
     :image => 'users/yusuke_nakamura_v1.jpg',
     :organization => 'Startup Cast',
+    :twitter => 'https://twitter.com/',
+    :facebook => 'https://www.facebook.com/',
+    :website => 'http://hatchstudioinc.com/'
   },
   {
     :name => 'Yusuke Nakamura',
@@ -29,6 +38,9 @@ users = [
     :password => 'nakamura',
     :image => 'users/yusuke_nakamura_v2.jpg',
     :organization => 'Startup Cast',
+    :twitter => 'https://twitter.com/',
+    :facebook => 'https://www.facebook.com/',
+    :website => 'http://hatchstudioinc.com/'
   },
   {
     :name => 'Yusuke Nakamura',
@@ -36,6 +48,9 @@ users = [
     :password => 'nakamura',
     :image => 'users/yusuke_nakamura_v3.jpg',
     :organization => 'Startup Cast',
+    :twitter => 'https://twitter.com/',
+    :facebook => 'https://www.facebook.com/',
+    :website => 'http://hatchstudioinc.com/'
   },
   {
     :name => 'Yusuke Nakamura',
@@ -43,6 +58,9 @@ users = [
     :password => 'nakamura',
     :image => 'users/yusuke_nakamura_v4.jpg',
     :organization => 'Startup Cast',
+    :twitter => 'https://twitter.com/',
+    :facebook => 'https://www.facebook.com/',
+    :website => 'http://hatchstudioinc.com/'
   },
   {
     :name => 'Yuka Suzuki',
@@ -50,6 +68,9 @@ users = [
     :password => 'suzuki',
     :image => 'users/mean.jpg',
     :organization => "Joy's place",
+    :twitter => 'https://twitter.com/',
+    :facebook => 'https://www.facebook.com/',
+    :website => 'http://hatchstudioinc.com/'
   },
   {
     :name => 'Ross Dyson',
@@ -57,6 +78,9 @@ users = [
     :password => 'ross',
     :image => 'users/ross.jpg',
     :organization => "Hacker house",
+    :twitter => 'https://twitter.com/',
+    :facebook => 'https://www.facebook.com/',
+    :website => 'http://hatchstudioinc.com/'
   },
   {
     :name => 'Aoi Takeda',
@@ -64,6 +88,9 @@ users = [
     :password => 'aoi',
     :image => 'users/aoi.jpg',
     :organization => "Colleage in San Jose",
+    :twitter => 'https://twitter.com/',
+    :facebook => 'https://www.facebook.com/',
+    :website => 'http://hatchstudioinc.com/'
   },
 ]
 

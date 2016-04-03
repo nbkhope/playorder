@@ -58,6 +58,7 @@ ActiveRecord::Schema.define(version: 20160402214258) do
     t.string   "city"
     t.integer  "category",           limit: 2, default: 0, null: false
     t.integer  "price"
+    t.string   "story_title"
     t.text     "story"
     t.integer  "delivery"
     t.text     "phrase"
@@ -100,6 +101,9 @@ ActiveRecord::Schema.define(version: 20160402214258) do
     t.integer  "image_file_size"
     t.datetime "image_updated_at"
     t.string   "organization"
+    t.string   "twitter"
+    t.string   "facebook"
+    t.string   "website"
     t.datetime "created_at",         null: false
     t.datetime "updated_at",         null: false
   end

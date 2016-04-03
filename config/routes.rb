@@ -12,6 +12,7 @@ Rails.application.routes.draw do
   get '/discover', to: 'products#discover'
 
   resources :projects
+  resources :users
 
   get '/confirm', to: 'projects#confirm'
   get '/playorder', to: 'projects#playorder'

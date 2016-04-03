@@ -8,7 +8,9 @@ products_data = [
     :delivery => 10,
     :city => 'Tokyo',
     :price => 100,
-    :image => 'main/card-1.png'
+    :image => 'main/card-1.png',
+    :story_title => 'This is my story about Global Pants',
+    :story => 'blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah',
   },
   {
     :title => 'Korean Sweets',
@@ -16,7 +18,9 @@ products_data = [
     :delivery => 10,
     :city => 'Tokyo',
     :price => 100,
-    :image => 'main/card-3.png'
+    :image => 'main/card-3.png',
+    :story_title => 'This is my story about Global Pants',
+    :story => 'blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah',
   },
   {
     :title => 'Iron Man Mask',
@@ -24,7 +28,9 @@ products_data = [
     :delivery => 10,
     :city => 'Tokyo',
     :price => 100,
-    :image => 'main/card-2.png'
+    :image => 'main/card-2.png',
+    :story_title => 'This is my story about Global Pants',
+    :story => 'blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah',
   },
   {
     :title => 'Global Pants',
@@ -32,7 +38,9 @@ products_data = [
     :delivery => 10,
     :city => 'Tokyo',
     :price => 100,
-    :image => 'main/card-1.png'
+    :image => 'main/card-1.png',
+    :story_title => 'This is my story about Global Pants',
+    :story => 'blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah',
   }
 ]
 
