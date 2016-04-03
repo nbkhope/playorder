@@ -58,6 +58,7 @@ ActiveRecord::Schema.define(version: 20160402214258) do
     t.string   "city"
     t.integer  "category",           limit: 2, default: 0, null: false
     t.integer  "price"
+    t.string   "story_title"
     t.text     "story"
     t.integer  "delivery"
     t.text     "phrase"

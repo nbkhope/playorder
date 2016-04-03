@@ -6,6 +6,8 @@ class CreateProducts < ActiveRecord::Migration
       t.integer :category, default: 0, null: false, limit: 1
       
       t.integer :price
+      
+      t.string :story_title
       t.text :story
       
       t.integer :delivery # 届くまでの日数
