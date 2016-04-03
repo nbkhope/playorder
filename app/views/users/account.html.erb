@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
-    <title>playorder - about</title>
+    <title>playorder - confirmation</title>
 
     <!-- Bootstrap -->
     <link href="css/bootstrap.min.css" rel="stylesheet">
@@ -27,33 +27,11 @@
         $(".nav-index li").removeClass('select');
           $(".nav-index li").eq(num).addClass('select');
       });
-
-      $('#exampleModal').on('show.bs.modal', function (event) {
-        var button = $(event.relatedTarget) // Button that triggered the modal
-        var recipient = button.data('whatever') // Extract info from data-* attributes
-        // If necessary, you could initiate an AJAX request here (and then do the updating in a callback).
-        // Update the modal's content. We'll use jQuery here, but you could use a data binding library or other methods instead.
-        var modal = $(this)
-        modal.find('.modal-title').text('New message to ' + recipient)
-        modal.find('.modal-body input').val(recipient)
-      })
-
-      $(".signout-button").on('click', function(){
-        $(".signinpage").hide();
-        $(".signoutpage").show();
-      });
-
-      $(".signin-button").on('click', function(){
-        $(".signoutpage").show();
-        $(".signinpage").hide();
-      });
-
     });
     </script>
   </head>
   <body>
     <%= render 'layouts/header' %>
-
     <!-- payment slider -->
     <section class="account-slider">
       <div class="jumbotron sliders">
@@ -68,24 +46,75 @@
       <nav class='global-nav'>
         <ul class='nav-index'>
           <li class="selected">PROFILE</li>
-          <li>ACTIVITY</li>
           <li>MESSAGE</li>
-          <li>PLAYSHOP</li>
         </ul>
       </nav>
-      <!-- profile -->
-      <section class="myaccount contents">
-        <%= image_tag "account/profile-icon.png" %>
-        <ul class="profile-text">
-          <li class="pronamae">Shun Yamada</li>
-          <li class="proshozoku">Playorder</li>
-        </ul>
-      </section>
 
-      <!-- my activity -->
-      <section class="myactivity contents opace">
-        <p class="dates">12th March</p>
-        <%= render 'common/card' %>
+      <div class="contents">
+        <!-- profile  -->
+        <section class="viewprofile">
+          <h2>Basic Infomration</h2>
+          <ul>
+            <li><h3>Shun Yamada</h3></li>
+            <li><p>Plaorder</p></li>
+            <li><img src="./img/account/shun-icon.png" /></li>
+          </ul>
+
+        </section>
+
+        <!-- playshop -->
+        <section class="viewshop">
+          <h2>Play Order</h2>
+          <a href="./feed.html">
+            <div class="row">
+              <div class="col-sm-6 col-md-4">
+                <div class="thumbnail">
+                  <img src="./img/main/card-1.png" alt="image">
+                  <div class="caption">
+                    <p><span class="genre">WEAR</span></p>
+                    <h3>Global Pants</h3>
+                    <p>Tell us about your needs and we'll introduce you to several experienced professionals in your area who are ready to complete your project.</p>
+                    <p><img src="./img/index/card-line.png" /></p>
+                    <div class="card-icon">
+                      <img src="./img/main/yuuki-cardicon.png" />
+                    </div>
+                    <div class="card-profile">
+                      <p class="namae">Yuuki Asano</p>
+                      <p class="shozoku">Realm</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </a>
+        </section>
+      </div>
+
+      <!-- playorder -->
+      <section class="vieworder">
+        <h2>Play Shop</h2>
+        <a href="./shop.html">
+          <div class="row">
+            <div class="col-sm-6 col-md-4">
+              <div class="thumbnail">
+                <img src="./img/main/card-2.png" alt="image">
+                <div class="caption">
+                  <p><span class="genre">WEAR</span></p>
+                  <h3>Iron man Mask</h3>
+                  <p>Tell us about your needs and we'll introduce you to several experienced professionals in your area who are ready to complete your project.</p>
+                  <p><img src="./img/index/card-line.png" /></p>
+                  <div class="card-icon">
+                    <img src="./img/main/yukke-cardicon.png" />
+                  </div>
+                  <div class="card-profile">
+                    <p class="namae">Yusuke Nakam</p>
+                    <p class="shozoku">Startup Cast</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </a>
       </section>
 
       <!-- message -->
@@ -96,11 +125,11 @@
               Inbox
             </th>
             <tr>
-              <td><%= image_tag "account/yuuki-chat.png" %></td>
+              <td><img src="./img/account/yuuki-chat.png" /></td>
               <td colspan="2">Yuuki Asano</td>
             </tr>
             <tr>
-              <td><%= image_tag "account/yukke-chat.png" %></td>
+              <td><img src="./img/account/yukke-chat.png" /></td>
               <td colspan="2">Yukke Nakam</td>
             </tr>
           </table>
@@ -112,7 +141,7 @@
           <div class="conversation">
             <div class="chatbox">
               <div class="chaticon">
-                <%= image_tag "account/shun-conversation.png" %>
+                <img src="./img/account/shun-conversation.png" />
               </div>
               <div class="chatname">
                 <h4>Shun Yamada</h4>
@@ -127,7 +156,7 @@
           <div class="conversation">
             <div class="chatbox">
               <div class="chaticon">
-                <%= image_tag "account/shun-conversation.png" %>
+                <img src="./img/account/shun-conversation.png" />
               </div>
               <div class="chatname">
                 <h4>Shun Yamada</h4>
@@ -142,7 +171,7 @@
           <div class="conversation">
             <div class="chatbox">
               <div class="chaticon">
-                <%= image_tag "account/yuuki-conversation.png" %>
+                <img src="./img/account/yuuki-conversation.png" />
               </div>
               <div class="chatname">
                 <h4>Yuuki Asano</h4>
@@ -157,7 +186,7 @@
           <div class="conversation">
             <div class="chatbox">
               <div class="chaticon">
-                <%= image_tag "account/shun-conversation.png" %>
+                <img src="./img/account/shun-conversation.png" />
               </div>
               <div class="chatname">
                 <h4>Shun Yamada</h4>
@@ -176,7 +205,7 @@
         <div class="conversation">
           <div class="chatbox">
             <div class="chaticon">
-              <%= image_tag "account/shun-conversation.png" %>
+              <img src="./img/account/shun-conversation.png" />
             </div>
             <div class="chatname">
               <h4>Shun Yamada</h4>
@@ -191,7 +220,7 @@
         <div class="conversation">
           <div class="chatbox">
             <div class="chaticon">
-              <%= image_tag "account/yukke-conversation.png" %>
+              <img src="./img/account/yukke-conversation.png" />
             </div>
             <div class="chatname">
               <h4>Yusuke Nakamu</h4>
@@ -206,7 +235,7 @@
         <div class="conversation">
           <div class="chatbox">
             <div class="chaticon">
-              <%= image_tag "account/shun-conversation.png" %>
+              <img src="./img/account/shun-conversation.png" />
             </div>
             <div class="chatname">
               <h4>Shun Yamada</h4>
@@ -233,14 +262,14 @@
           <div class="row">
             <div class="col-sm-6 col-md-4">
               <div class="thumbnail">
-                <%= image_tag "main/card-2.png" %>
+                <img src="./img/main/card-2.png" alt="image">
                 <div class="caption">
                   <p><span class="genre">WEAR</span></p>
                   <h3>Iron man Mask</h3>
                   <p>Tell us about your needs and we'll introduce you to several experienced professionals in your area who are ready to complete your project.</p>
-                  <p><%= image_tag "index/card-line.png" %></p>
+                  <p><img src="./img/index/card-line.png" /></p>
                   <div class="card-icon">
-                    <%= image_tag "main/yukke-cardicon.png" %>
+                    <img src="./img/main/yukke-cardicon.png" />
                   </div>
                   <div class="card-profile">
                     <p class="namae">Yusuke Nakam</p>
@@ -256,5 +285,9 @@
 </div>
 
     <%= render 'layouts/footer' %>
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="js/bootstrap.min.js"></script>
   </body>
 </html>
