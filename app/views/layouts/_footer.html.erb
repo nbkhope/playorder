@@ -1,18 +1,33 @@
-<!-- footer -->
 <footer>
-  <ul class='social-icon'>
-    <li><a href='#'><%= image_tag "footer/facebook.png" %></a></li>
-    <li><a href='#'><%= image_tag "footer/twitter.png" %></a></li>
-    <li><a href='#'><%= image_tag "footer/youtube.png" %></a></li>
-    <li><a href='#'><%= image_tag "footer/contact.png" %></a></li>
-  </ul>
-  <div class='footer-line'><%= image_tag "footer/footer-line.png" %></div>
-  <ul class='general'>
-    <li><%= link_to "Home", root_path %></a></li>
-    <li><%= link_to "About", about_path %></li>
-    <li><%= link_to "Contact", contact_path %></a></li>
-    <li><%= link_to "Privacy Policy", policy_path %></a></li>
-    <li><%= link_to "Terms", terms_path %></a></li>
-  </ul>
-  <p class='copyright'>Copyright Playorder Inc, 2016 All Rights Reserved</p>
+  <div class="container">
+    <!-- footer nav -->
+    <ul class="footer-nav">
+      <li><a><%= link_to "Home", root_path %></a></li>
+      <li><a><%= link_to "About", about_path %></a></li>
+      <li><a><%= link_to "Contact", contact_path %></a></li>
+      <li>
+        <a href="./facebook.com">
+          <%= image_tag "index/facebook-icon.png" %>
+        </a>
+      </li>
+      <li>
+        <a href="./twtter.com">
+          <%= image_tag "index/twitter-icon.png" %>
+        </a>
+      </li>
+      <li>
+        <a href="./instagram.com">
+          <%= image_tag "index/instagram-icon.png" %>
+        </a>
+      </li>
+    </ul>
+
+    <!-- under nav -->
+    <ul class="under-nav">
+      <li>Copyrights Playorder Inc. 2016 All Rights Reserved.</li>
+      <li><a href="./policy.html">Privacy Policy</a></li>
+      <li><a href="./terms.html">Terms</a></li>
+    </ul>
+
+  </div>
 </footer>
