@@ -177,8 +177,8 @@ a.circle { color: transparent; } /* IE fix: removes blue border */
 /* index - how it works */
 .hiw-cover {
   background-color: #f5f5f5;
-	padding-top: 40px;
-  height: 440px;
+  /*padding-top: 40px;*/
+  /*height: 440px;*/
 }
 .hiw {
   text-align: center;
@@ -189,7 +189,8 @@ a.circle { color: transparent; } /* IE fix: removes blue border */
 }
 .how-it-works li {
   display: inline-block;
-  margin: 0 100px 20px 0;
+  /*margin: 0 100px 20px 0;*/
+  padding: 0 50px 20px 50px;
 }
 
 .how-it-works li h2 {
