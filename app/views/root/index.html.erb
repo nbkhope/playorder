@@ -1,37 +1,51 @@
 
+<!-- Wrapper for slides -->
 <div class="container">
   <div class="row">
-    <!-- Wrapper for slides -->
-    <div class="carousel-inner" role="listbox">
-      <div class="item active">
-        <%= image_tag "index/carousel-flower.png" %>
-        <div class="carousel-caption">
-          <h1>Celebrate with<br>custom made flowers</h1>
-          <div class="btn btn-white btn-ghost">Learn More</div>
+    
+    <div id="#main-carousel" class="carousel slide" data-ride="carousel">
+
+      <!-- Indicators -->
+      <ol class="carousel-indicators">
+        <li data-target="#main-carousel" data-slide-to="0" class="active"></li>
+        <li data-target="#main-carousel" data-slide-to="1"></li>
+        <li data-target="#main-carousel" data-slide-to="2"></li>
+        <li data-target="#main-carousel" data-slide-to="3"></li>
+      </ol>
+
+      <!-- Carousel Slides -->
+      <div class="carousel-inner" role="listbox">
+        <div class="item active">
+          <%= image_tag "index/carousel-flower.png" %>
+          <div class="carousel-caption">
+            <h1>Celebrate with<br>custom made flowers</h1>
+            <div class="btn btn-white btn-ghost">Learn More</div>
+          </div>
+        </div>
+        <div class="item">
+          <%= image_tag "index/carousel-flower.png" %>
+          <div class="carousel-caption">
+            <h1>Celeberate with<br>custom made cookie</h1>
+            <div class="btn btn-white btn-ghost">Learn More</div>
+          </div>
+        </div>
+        <div class="item">
+          <%= image_tag "index/carousel-flower.png" %>
+          <div class="carousel-caption">
+            <h1>Celeberate with<br>custom made arts</h1>
+            <div class="btn btn-white btn-ghost">Learn More</div>
+          </div>
+        </div>
+        <div class="item">
+          <%= image_tag "index/carousel-flower.png" %>
+          <div class="carousel-caption">
+            <h1>Celeberate with<br>custom made sake</h1>
+            <div class="btn btn-white btn-ghost">Learn More</div>
+          </div>
         </div>
       </div>
-      <div class="item">
-        <%= image_tag "index/carousel-flower.png" %>
-        <div class="carousel-caption">
-          <h1>Celeberate with<br>custom made cookie</h1>
-          <div class="btn btn-white btn-ghost">Learn More</div>
-        </div>
-      </div>
-      <div class="item">
-        <%= image_tag "index/carousel-flower.png" %>
-        <div class="carousel-caption">
-          <h1>Celeberate with<br>custom made arts</h1>
-          <div class="btn btn-white btn-ghost">Learn More</div>
-        </div>
-      </div>
-      <div class="item">
-        <%= image_tag "index/carousel-flower.png" %>
-        <div class="carousel-caption">
-          <h1>Celeberate with<br>custom made sake</h1>
-          <div class="btn btn-white btn-ghost">Learn More</div>
-        </div>
-      </div>
-    </div>
+
+    </div><!-- #main-carousel -->
   </div><!-- .row -->
 </div><!-- .container -->
 
